@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 6
+Sheet 1 8
 Title ""
 Date ""
 Rev ""
@@ -78,4 +78,10 @@ Wire Notes Line
 	3950 2950 4850 2950
 Wire Notes Line
 	5400 2950 6000 2950
+$Sheet
+S 7050 4550 650  200 
+U 5DC26BB6
+F0 "MountingPoints" 50
+F1 "MountingPoints.sch" 50
+$EndSheet
 $EndSCHEMATC
