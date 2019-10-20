@@ -15,25 +15,14 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Relay:FINDER-44.52 K1
-U 1 1 5DA3509C
-P 2950 2850
-F 0 "K1" H 3580 2804 50  0000 L CNN
-F 1 "FINDER-44.52" H 3580 2895 50  0000 L CNN
-F 2 "Relay_THT:Relay_DPDT_Finder_40.52" H 4300 2820 50  0001 C CNN
-F 3 "http://gfinder.findernet.com/assets/Series/359/S44EN.pdf" H 2750 2850 50  0001 C CNN
-	1    2950 2850
-	1    0    0    1   
-$EndComp
-$Comp
 L Device:D D1
 U 1 1 5DA36261
-P 2100 2850
-F 0 "D1" V 2054 2929 50  0000 L CNN
-F 1 "D" V 2145 2929 50  0000 L CNN
-F 2 "Diode_SMD:D_MiniMELF" H 2100 2850 50  0001 C CNN
-F 3 "~" H 2100 2850 50  0001 C CNN
-	1    2100 2850
+P 2000 2850
+F 0 "D1" V 1954 2929 50  0000 L CNN
+F 1 "D" V 2045 2929 50  0000 L CNN
+F 2 "Diode_SMD:D_MiniMELF" H 2000 2850 50  0001 C CNN
+F 3 "~" H 2000 2850 50  0001 C CNN
+	1    2000 2850
 	0    1    1    0   
 $EndComp
 $Comp
@@ -103,13 +92,9 @@ F 3 "" H 1900 4400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2550 3150 2550 3250
-Wire Wire Line
 	2300 4400 2300 4100
 Wire Wire Line
-	2550 3250 2300 3250
-Wire Wire Line
-	2100 3250 2100 3000
+	2000 3250 2000 3000
 Wire Wire Line
 	2000 3900 1900 3900
 Wire Wire Line
@@ -119,12 +104,6 @@ Wire Wire Line
 	1900 3900 1600 3900
 Wire Wire Line
 	1900 4400 1900 4300
-Wire Wire Line
-	2850 3150 2850 3250
-Wire Wire Line
-	2850 3250 3250 3250
-Wire Wire Line
-	3250 3250 3250 3150
 $Comp
 L Device:R R6
 U 1 1 5DA3B2B9
@@ -245,12 +224,8 @@ Wire Wire Line
 	3550 4350 3450 4350
 Wire Wire Line
 	2300 3700 2300 3250
-Connection ~ 2300 3250
 Wire Wire Line
-	2300 3250 2100 3250
-Wire Wire Line
-	3050 3150 3050 3600
-Connection ~ 3050 3600
+	2300 3250 2000 3250
 Wire Wire Line
 	3050 3600 3050 3900
 Wire Wire Line
@@ -262,9 +237,6 @@ Wire Wire Line
 	2850 3900 2850 4000
 Wire Wire Line
 	3450 3600 3450 3900
-Wire Wire Line
-	3450 3150 3450 3600
-Connection ~ 3450 3600
 Connection ~ 3450 3900
 Wire Wire Line
 	3450 3900 3450 4000
@@ -399,28 +371,6 @@ F 1 "105R" H 6081 4105 50  0000 R CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6080 4150 50  0001 C CNN
 F 3 "~" H 6150 4150 50  0001 C CNN
 	1    6150 4150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R15
-U 1 1 5DA654AC
-P 6350 4150
-F 0 "R15" V 6450 4200 50  0000 L CNN
-F 1 "105R" V 6450 3950 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6280 4150 50  0001 C CNN
-F 3 "~" H 6350 4150 50  0001 C CNN
-	1    6350 4150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R18
-U 1 1 5DA654B2
-P 6750 4150
-F 0 "R18" V 6650 4300 50  0000 R CNN
-F 1 "105R" V 6650 4150 50  0000 R CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6680 4150 50  0001 C CNN
-F 3 "~" H 6750 4150 50  0001 C CNN
-	1    6750 4150
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -805,9 +755,7 @@ Wire Wire Line
 Wire Wire Line
 	9950 3900 10150 3900
 Wire Wire Line
-	3350 2550 3350 2350
-Wire Wire Line
-	3350 2350 6250 2350
+	3400 2350 6250 2350
 Wire Wire Line
 	6250 2350 6250 2550
 Wire Wire Line
@@ -820,15 +768,6 @@ Wire Wire Line
 	4500 3900 4400 3900
 Wire Wire Line
 	7700 3900 7600 3900
-Connection ~ 2550 2500
-Wire Wire Line
-	2550 2500 2550 2550
-Wire Wire Line
-	2550 2500 2550 2150
-Wire Wire Line
-	2100 2500 2550 2500
-Wire Wire Line
-	2100 2700 2100 2500
 Wire Wire Line
 	6650 2350 9450 2350
 $Comp
@@ -867,8 +806,6 @@ Wire Wire Line
 	10150 5100 10250 5100
 Wire Wire Line
 	10450 5350 10450 5300
-Wire Wire Line
-	2950 2550 2950 2350
 Text GLabel 1300 2350 0    50   Input ~ 0
 RF_FROM_AMPLIFIER
 $Comp
@@ -973,5 +910,77 @@ REL_2
 Text GLabel 7600 3700 1    50   Input ~ 0
 REL_3
 Wire Wire Line
-	1300 2350 2950 2350
+	1300 2350 2600 2350
+Wire Wire Line
+	2000 2700 2000 2500
+Connection ~ 3450 3600
+Connection ~ 3050 3600
+$Comp
+L Device:R R18
+U 1 1 5DA654B2
+P 6750 4150
+F 0 "R18" V 6650 4050 50  0000 R CNN
+F 1 "105R" V 6650 4300 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6680 4150 50  0001 C CNN
+F 3 "~" H 6750 4150 50  0001 C CNN
+	1    6750 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R15
+U 1 1 5DA654AC
+P 6350 4150
+F 0 "R15" V 6450 3900 50  0000 L CNN
+F 1 "105R" V 6450 4100 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6280 4150 50  0001 C CNN
+F 3 "~" H 6350 4150 50  0001 C CNN
+	1    6350 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 2500 2300 2500
+Wire Wire Line
+	2300 2500 2300 2600
+Wire Wire Line
+	2300 3250 2300 3150
+Connection ~ 2300 3250
+Wire Wire Line
+	2600 2350 2600 2600
+Wire Wire Line
+	2450 2600 2450 2500
+Wire Wire Line
+	2450 2500 2900 2500
+Wire Wire Line
+	2900 2500 2900 3250
+Wire Wire Line
+	2450 3250 2450 3150
+Wire Wire Line
+	2450 3250 2900 3250
+Wire Wire Line
+	2600 3150 2600 3300
+Wire Wire Line
+	2600 3300 3400 3300
+Wire Wire Line
+	3400 3300 3400 2350
+$Comp
+L NumericallyControlledOscillator:RSM850B-6112-85-1005 Rel?
+U 1 1 5DD23C4D
+P 2600 2300
+F 0 "Rel?" H 2828 1771 50  0000 L CNN
+F 1 "RSM850B-6112-85-1005" H 2828 1680 50  0000 L CNN
+F 2 "Relay_THT:Relay_DPDT_Finder_40.52" H 2600 2300 50  0001 C CNN
+F 3 "" H 2600 2300 50  0001 C CNN
+	1    2600 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 3150 3050 3150
+Wire Wire Line
+	3050 3150 3050 3600
+Wire Wire Line
+	2750 2600 2750 2550
+Wire Wire Line
+	2750 2550 3450 2550
+Wire Wire Line
+	3450 2550 3450 3600
 $EndSCHEMATC

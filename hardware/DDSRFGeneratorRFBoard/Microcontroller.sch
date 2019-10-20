@@ -200,4 +200,98 @@ F 3 "~" H 4900 2800 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4900 2800 4900 2850
+$Comp
+L MCU_ST_STM32F0:STM32F030K6Tx U5
+U 1 1 5DC98A9F
+P 7400 4000
+F 0 "U5" H 7350 2911 50  0000 C CNN
+F 1 "STM32F030K6Tx" H 7350 2820 50  0000 C CNN
+F 2 "Package_QFP:LQFP-32_7x7mm_P0.8mm" H 6900 3100 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00088500.pdf" H 7400 4000 50  0001 C CNN
+	1    7400 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Crystal Y1
+U 1 1 5DC9AED3
+P 8550 3450
+F 0 "Y1" V 8504 3319 50  0000 R CNN
+F 1 "Crystal" V 8595 3319 50  0000 R CNN
+F 2 "Crystal:Crystal_HC52-6mm_Vertical" H 8550 3450 50  0001 C CNN
+F 3 "~" H 8550 3450 50  0001 C CNN
+	1    8550 3450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5DC9B5A5
+P 8750 3700
+AR Path="/5DC9B5A5" Ref="C?"  Part="1" 
+AR Path="/5DAEEEF4/5DC9B5A5" Ref="C?"  Part="1" 
+AR Path="/5DD5C7F6/5DC9B5A5" Ref="C25"  Part="1" 
+F 0 "C25" V 8498 3700 50  0000 C CNN
+F 1 "20p" V 8589 3700 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8788 3550 50  0001 C CNN
+F 3 "~" H 8750 3700 50  0001 C CNN
+	1    8750 3700
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DC9B8ED
+P 9050 3300
+AR Path="/5DC9B8ED" Ref="#PWR?"  Part="1" 
+AR Path="/5DAEEEF4/5DC9B8ED" Ref="#PWR?"  Part="1" 
+AR Path="/5DD5C7F6/5DC9B8ED" Ref="#PWR013"  Part="1" 
+F 0 "#PWR013" H 9050 3050 50  0001 C CNN
+F 1 "GND" H 9055 3127 50  0000 C CNN
+F 2 "" H 9050 3300 50  0001 C CNN
+F 3 "" H 9050 3300 50  0001 C CNN
+	1    9050 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DC9BB97
+P 9050 3800
+AR Path="/5DC9BB97" Ref="#PWR?"  Part="1" 
+AR Path="/5DAEEEF4/5DC9BB97" Ref="#PWR?"  Part="1" 
+AR Path="/5DD5C7F6/5DC9BB97" Ref="#PWR016"  Part="1" 
+F 0 "#PWR016" H 9050 3550 50  0001 C CNN
+F 1 "GND" H 9055 3627 50  0000 C CNN
+F 2 "" H 9050 3800 50  0001 C CNN
+F 3 "" H 9050 3800 50  0001 C CNN
+	1    9050 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5DC9BE25
+P 8750 3200
+AR Path="/5DC9BE25" Ref="C?"  Part="1" 
+AR Path="/5DAEEEF4/5DC9BE25" Ref="C?"  Part="1" 
+AR Path="/5DD5C7F6/5DC9BE25" Ref="C24"  Part="1" 
+F 0 "C24" V 8498 3200 50  0000 C CNN
+F 1 "20p" V 8589 3200 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8788 3050 50  0001 C CNN
+F 3 "~" H 8750 3200 50  0001 C CNN
+	1    8750 3200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8600 3200 8550 3200
+Wire Wire Line
+	8550 3200 8550 3300
+Wire Wire Line
+	8600 3700 8550 3700
+Wire Wire Line
+	8550 3700 8550 3600
+Wire Wire Line
+	8900 3200 9050 3200
+Wire Wire Line
+	9050 3200 9050 3300
+Wire Wire Line
+	8900 3700 9050 3700
+Wire Wire Line
+	9050 3700 9050 3800
 $EndSCHEMATC
