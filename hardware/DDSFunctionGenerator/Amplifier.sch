@@ -13,9 +13,9 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text GLabel 1850 2650 0    50   Input ~ 0
+Text GLabel 1800 3400 0    50   Input ~ 0
 RF_DDS
-Text GLabel 5050 6250 2    50   Input ~ 0
+Text GLabel 9050 6250 2    50   Input ~ 0
 RF_FROM_AMPLIFIER
 $Comp
 L NumericallyControlledOscillator:AD8325 U7
@@ -346,91 +346,88 @@ Wire Wire Line
 $Comp
 L Device:C C?
 U 1 1 5DB7A4C8
-P 1900 3500
+P 2450 2800
 AR Path="/5DB7A4C8" Ref="C?"  Part="1" 
 AR Path="/5DAEEEF4/5DB7A4C8" Ref="C?"  Part="1" 
 AR Path="/5DB2ED33/5DB7A4C8" Ref="C34"  Part="1" 
-F 0 "C34" H 2015 3546 50  0000 L CNN
-F 1 "100n" H 2015 3455 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1938 3350 50  0001 C CNN
-F 3 "~" H 1900 3500 50  0001 C CNN
-	1    1900 3500
+F 0 "C34" H 2565 2846 50  0000 L CNN
+F 1 "10u/25V" H 2565 2755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2488 2650 50  0001 C CNN
+F 3 "~" H 2450 2800 50  0001 C CNN
+	1    2450 2800
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5DB7A4CE
-P 1900 3700
+P 2450 3000
 AR Path="/5DB7A4CE" Ref="#PWR?"  Part="1" 
 AR Path="/5DAEEEF4/5DB7A4CE" Ref="#PWR?"  Part="1" 
 AR Path="/5DB2ED33/5DB7A4CE" Ref="#PWR042"  Part="1" 
-F 0 "#PWR042" H 1900 3450 50  0001 C CNN
-F 1 "GND" H 1905 3527 50  0000 C CNN
-F 2 "" H 1900 3700 50  0001 C CNN
-F 3 "" H 1900 3700 50  0001 C CNN
-	1    1900 3700
+F 0 "#PWR042" H 2450 2750 50  0001 C CNN
+F 1 "GND" H 2455 2827 50  0000 C CNN
+F 2 "" H 2450 3000 50  0001 C CNN
+F 3 "" H 2450 3000 50  0001 C CNN
+	1    2450 3000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2300 3300 1900 3300
+	2450 2600 2450 2650
 Wire Wire Line
-	1900 3300 1900 3350
+	2450 3000 2450 2950
 Wire Wire Line
-	1900 3700 1900 3650
+	1950 2600 2050 2600
 Wire Wire Line
-	1400 3300 1500 3300
+	1950 2650 1950 2600
+Connection ~ 1950 2600
 Wire Wire Line
-	1400 3350 1400 3300
-Connection ~ 1400 3300
-Wire Wire Line
-	1400 3700 1400 3650
+	1950 3000 1950 2950
 $Comp
 L power:GND #PWR?
 U 1 1 5DB7A4DB
-P 1400 3700
+P 1950 3000
 AR Path="/5DB7A4DB" Ref="#PWR?"  Part="1" 
 AR Path="/5DAEEEF4/5DB7A4DB" Ref="#PWR?"  Part="1" 
 AR Path="/5DB2ED33/5DB7A4DB" Ref="#PWR041"  Part="1" 
-F 0 "#PWR041" H 1400 3450 50  0001 C CNN
-F 1 "GND" H 1405 3527 50  0000 C CNN
-F 2 "" H 1400 3700 50  0001 C CNN
-F 3 "" H 1400 3700 50  0001 C CNN
-	1    1400 3700
+F 0 "#PWR041" H 1950 2750 50  0001 C CNN
+F 1 "GND" H 1955 2827 50  0000 C CNN
+F 2 "" H 1950 3000 50  0001 C CNN
+F 3 "" H 1950 3000 50  0001 C CNN
+	1    1950 3000
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:L L?
 U 1 1 5DB7A4E1
-P 1650 3300
+P 2200 2600
 AR Path="/5DB7A4E1" Ref="L?"  Part="1" 
 AR Path="/5DAEEEF4/5DB7A4E1" Ref="L?"  Part="1" 
 AR Path="/5DB2ED33/5DB7A4E1" Ref="L9"  Part="1" 
-F 0 "L9" V 1840 3300 50  0000 C CNN
-F 1 "4u7" V 1749 3300 50  0000 C CNN
-F 2 "Inductor_SMD:L_1812_4532Metric_Pad1.30x3.40mm_HandSolder" H 1650 3300 50  0001 C CNN
-F 3 "~" H 1650 3300 50  0001 C CNN
-	1    1650 3300
+F 0 "L9" V 2390 2600 50  0000 C CNN
+F 1 "4u7" V 2299 2600 50  0000 C CNN
+F 2 "Inductor_SMD:L_1812_4532Metric_Pad1.30x3.40mm_HandSolder" H 2200 2600 50  0001 C CNN
+F 3 "~" H 2200 2600 50  0001 C CNN
+	1    2200 2600
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:C C?
 U 1 1 5DB7A4E7
-P 1400 3500
+P 1950 2800
 AR Path="/5DB7A4E7" Ref="C?"  Part="1" 
 AR Path="/5DAEEEF4/5DB7A4E7" Ref="C?"  Part="1" 
 AR Path="/5DB2ED33/5DB7A4E7" Ref="C33"  Part="1" 
-F 0 "C33" H 1515 3546 50  0000 L CNN
-F 1 "100n" H 1515 3455 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1438 3350 50  0001 C CNN
-F 3 "~" H 1400 3500 50  0001 C CNN
-	1    1400 3500
+F 0 "C33" H 2065 2846 50  0000 L CNN
+F 1 "100n" H 2065 2755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1988 2650 50  0001 C CNN
+F 3 "~" H 1950 2800 50  0001 C CNN
+	1    1950 2800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1900 3300 1800 3300
-Connection ~ 1900 3300
+	2450 2600 2350 2600
 Wire Wire Line
-	1200 3300 1400 3300
+	1750 2600 1950 2600
 $Comp
 L Device:Transformer_1P_1S T?
 U 1 1 5DB7CF79
@@ -472,7 +469,7 @@ $EndComp
 Wire Wire Line
 	4450 6150 4450 6250
 Wire Wire Line
-	5050 6250 4850 6250
+	9050 6250 4850 6250
 Wire Wire Line
 	4850 6250 4850 6150
 Wire Wire Line
@@ -490,4 +487,48 @@ Wire Wire Line
 Connection ~ 5300 4150
 Wire Wire Line
 	5300 4150 5300 4350
+Wire Wire Line
+	4200 3150 4200 4150
+Wire Wire Line
+	4200 3150 5100 3150
+Wire Wire Line
+	5100 3150 5100 3850
+Wire Wire Line
+	4250 4350 1800 4350
+Wire Wire Line
+	4250 4250 1800 4250
+Wire Wire Line
+	4250 3950 2400 3950
+Wire Wire Line
+	2400 3950 2400 4150
+Wire Wire Line
+	2400 4150 1800 4150
+Wire Wire Line
+	4250 3850 2300 3850
+Wire Wire Line
+	2300 3850 2300 4050
+Wire Wire Line
+	2300 4050 1800 4050
+Wire Wire Line
+	4250 3750 2200 3750
+Wire Wire Line
+	2200 3750 2200 3950
+Wire Wire Line
+	2200 3950 1800 3950
+Wire Wire Line
+	1800 3400 6150 3400
+Wire Wire Line
+	6150 3400 6150 3950
+Wire Wire Line
+	6150 3950 5050 3950
+Text GLabel 1800 4350 0    50   Input ~ 0
+SLEEP
+Text GLabel 1800 4250 0    50   Input ~ 0
+TXEN
+Text GLabel 1800 4150 0    50   Input ~ 0
+CLK
+Text GLabel 1800 4050 0    50   Input ~ 0
+SDATA
+Text GLabel 1800 3950 0    50   Input ~ 0
+DATAEN
 $EndSCHEMATC
