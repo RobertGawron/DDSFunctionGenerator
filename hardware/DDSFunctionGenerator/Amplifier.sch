@@ -1,9 +1,10 @@
 EESchema Schematic File Version 4
+LIBS:DDSFunctionGenerator-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 8
+Sheet 4 12
 Title ""
 Date ""
 Rev ""
@@ -15,7 +16,7 @@ Comment4 ""
 $EndDescr
 Text GLabel 1800 3400 0    50   Input ~ 0
 RF_DDS
-Text GLabel 9050 6250 2    50   Input ~ 0
+Text GLabel 8400 5750 2    50   Input ~ 0
 RF_FROM_AMPLIFIER
 $Comp
 L NumericallyControlledOscillator:AD8325 U7
@@ -429,49 +430,31 @@ Wire Wire Line
 Wire Wire Line
 	1750 2600 1950 2600
 $Comp
-L Device:Transformer_1P_1S T?
+L Device:Transformer_1P_1S T1
 U 1 1 5DB7CF79
-P 4650 5750
-F 0 "T?" V 4604 5994 50  0000 L CNN
-F 1 "Transformer_1P_1S" V 4695 5994 50  0000 L CNN
-F 2 "" H 4650 5750 50  0001 C CNN
-F 3 "~" H 4650 5750 50  0001 C CNN
-	1    4650 5750
-	0    1    1    0   
+P 5600 5950
+F 0 "T1" V 5554 6194 50  0000 L CNN
+F 1 "Transformer_1P_1S" V 5645 6194 50  0000 L CNN
+F 2 "Transformer_THT:Transformer_Toroid_Horizontal_D9.0mm_Amidon-T30" H 5600 5950 50  0001 C CNN
+F 3 "~" H 5600 5950 50  0001 C CNN
+	1    5600 5950
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	4250 5050 4200 5050
 Wire Wire Line
-	4200 5050 4200 5300
-Wire Wire Line
-	4200 5300 4450 5300
-Wire Wire Line
-	4450 5300 4450 5350
-Wire Wire Line
 	5050 5050 5100 5050
-Wire Wire Line
-	5100 5050 5100 5300
-Wire Wire Line
-	5100 5300 4850 5300
-Wire Wire Line
-	4850 5300 4850 5350
 $Comp
-L power:GND #PWR?
+L power:GND #PWR048
 U 1 1 5DB8614C
-P 4450 6250
-F 0 "#PWR?" H 4450 6000 50  0001 C CNN
-F 1 "GND" H 4455 6077 50  0000 C CNN
-F 2 "" H 4450 6250 50  0001 C CNN
-F 3 "" H 4450 6250 50  0001 C CNN
-	1    4450 6250
+P 6150 6250
+F 0 "#PWR048" H 6150 6000 50  0001 C CNN
+F 1 "GND" H 6155 6077 50  0000 C CNN
+F 2 "" H 6150 6250 50  0001 C CNN
+F 3 "" H 6150 6250 50  0001 C CNN
+	1    6150 6250
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4450 6150 4450 6250
-Wire Wire Line
-	9050 6250 4850 6250
-Wire Wire Line
-	4850 6250 4850 6150
 Wire Wire Line
 	4250 4050 4000 4050
 Wire Wire Line
@@ -487,12 +470,6 @@ Wire Wire Line
 Connection ~ 5300 4150
 Wire Wire Line
 	5300 4150 5300 4350
-Wire Wire Line
-	4200 3150 4200 4150
-Wire Wire Line
-	4200 3150 5100 3150
-Wire Wire Line
-	5100 3150 5100 3850
 Wire Wire Line
 	4250 4350 1800 4350
 Wire Wire Line
@@ -531,4 +508,30 @@ Text GLabel 1800 4050 0    50   Input ~ 0
 SDATA
 Text GLabel 1800 3950 0    50   Input ~ 0
 DATAEN
+Connection ~ 2450 2600
+Wire Wire Line
+	4200 2600 5100 2600
+Connection ~ 4200 2600
+Wire Wire Line
+	4200 2600 4200 4150
+Wire Wire Line
+	5100 2600 5100 3850
+Text GLabel 1750 2600 0    50   Input ~ 0
+5V_ANALOG
+Wire Wire Line
+	6000 5750 8400 5750
+Wire Wire Line
+	5200 5750 5100 5750
+Wire Wire Line
+	5200 6150 4200 6150
+Wire Wire Line
+	4200 5050 4200 6150
+Wire Wire Line
+	5100 5050 5100 5750
+Wire Wire Line
+	6150 6250 6150 6150
+Wire Wire Line
+	6150 6150 6000 6150
+Wire Wire Line
+	2450 2600 4200 2600
 $EndSCHEMATC
