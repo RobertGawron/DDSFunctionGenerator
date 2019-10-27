@@ -17,7 +17,6 @@ PAD_CIRCLE_RADIUS = 0.35;
 $fs=0.01;
 
 module BottomPart() {
-   // linear_extrude(height = CHASSIS_Z_LENGTH, center = true, convexity = 10, twist = 0)
     difference() {
         square([CHASSIS_X_LENGTH,CHASSIS_Y_LENGTH]);
             

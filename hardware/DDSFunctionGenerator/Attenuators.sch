@@ -516,7 +516,7 @@ U 1 1 5DB1C35E
 P 10450 5100
 F 0 "J1" H 10550 5075 50  0000 L CNN
 F 1 "Conn_Coaxial" H 10550 4984 50  0000 L CNN
-F 2 "Connector_Coaxial:SMA_Molex_73251-2200_Horizontal" H 10450 5100 50  0001 C CNN
+F 2 "Connector_Coaxial:BNC_Amphenol_B6252HB-NPP3G-50_Horizontal" H 10450 5100 50  0001 C CNN
 F 3 " ~" H 10450 5100 50  0001 C CNN
 	1    10450 5100
 	1    0    0    -1  
