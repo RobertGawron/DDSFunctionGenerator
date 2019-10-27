@@ -1,9 +1,10 @@
 EESchema Schematic File Version 4
+LIBS:DDSFunctionGenerator-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 8
+Sheet 5 12
 Title ""
 Date ""
 Rev ""
@@ -34,7 +35,7 @@ $EndComp
 Wire Wire Line
 	4900 3300 4900 3250
 Wire Wire Line
-	4900 2850 5450 2850
+	4900 2850 5200 2850
 Wire Wire Line
 	4900 2850 4800 2850
 Connection ~ 4900 2850
@@ -187,18 +188,18 @@ $EndComp
 $Comp
 L power:PWR_FLAG #FLG?
 U 1 1 5DAE257C
-P 4900 2800
+P 4900 2750
 AR Path="/5DAEEEF4/5DAE257C" Ref="#FLG?"  Part="1" 
 AR Path="/5DD5C7F6/5DAE257C" Ref="#FLG0101"  Part="1" 
-F 0 "#FLG0101" H 4900 2875 50  0001 C CNN
-F 1 "PWR_FLAG" H 4900 2973 50  0000 C CNN
-F 2 "" H 4900 2800 50  0001 C CNN
-F 3 "~" H 4900 2800 50  0001 C CNN
-	1    4900 2800
+F 0 "#FLG0101" H 4900 2825 50  0001 C CNN
+F 1 "PWR_FLAG" H 4900 2923 50  0000 C CNN
+F 2 "" H 4900 2750 50  0001 C CNN
+F 3 "~" H 4900 2750 50  0001 C CNN
+	1    4900 2750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4900 2800 4900 2850
+	4900 2750 4900 2850
 $Comp
 L MCU_ST_STM32F0:STM32F030K6Tx U5
 U 1 1 5DC98A9F
@@ -293,4 +294,50 @@ Wire Wire Line
 	8900 3700 9050 3700
 Wire Wire Line
 	9050 3700 9050 3800
+$Comp
+L Connector:TestPoint TP9
+U 1 1 5DBCC0FF
+P 5200 2800
+F 0 "TP9" H 5258 2918 50  0000 L CNN
+F 1 "TestPoint" H 5258 2827 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 5400 2800 50  0001 C CNN
+F 3 "~" H 5400 2800 50  0001 C CNN
+	1    5200 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 2850 5200 2800
+Connection ~ 5200 2850
+Wire Wire Line
+	5200 2850 5450 2850
+$Comp
+L Device:R R?
+U 1 1 5DC4CCFF
+P 3000 4700
+AR Path="/5DC4CCFF" Ref="R?"  Part="1" 
+AR Path="/5DAEEEF4/5DC4CCFF" Ref="R?"  Part="1" 
+AR Path="/5DD5C7F6/5DC4CCFF" Ref="R32"  Part="1" 
+F 0 "R32" H 3070 4746 50  0000 L CNN
+F 1 "49R9" H 3070 4655 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2930 4700 50  0001 C CNN
+F 3 "~" H 3000 4700 50  0001 C CNN
+	1    3000 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DC4D139
+P 3350 4700
+AR Path="/5DC4D139" Ref="R?"  Part="1" 
+AR Path="/5DAEEEF4/5DC4D139" Ref="R?"  Part="1" 
+AR Path="/5DD5C7F6/5DC4D139" Ref="R33"  Part="1" 
+F 0 "R33" H 3420 4746 50  0000 L CNN
+F 1 "49R9" H 3420 4655 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3280 4700 50  0001 C CNN
+F 3 "~" H 3350 4700 50  0001 C CNN
+	1    3350 4700
+	1    0    0    -1  
+$EndComp
+Text Notes 3100 5050 0    50   ~ 0
+for i2c
 $EndSCHEMATC

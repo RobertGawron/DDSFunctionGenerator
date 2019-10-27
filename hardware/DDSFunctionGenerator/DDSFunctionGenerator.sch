@@ -1,9 +1,10 @@
 EESchema Schematic File Version 4
+LIBS:DDSFunctionGenerator-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 8
+Sheet 1 12
 Title ""
 Date ""
 Rev ""
@@ -82,5 +83,29 @@ S 7050 4550 650  200
 U 5DC26BB6
 F0 "MountingPoints" 50
 F1 "MountingPoints.sch" 50
+$EndSheet
+$Sheet
+S 6150 3450 500  150 
+U 5DC4991C
+F0 "ADC" 50
+F1 "ADC.sch" 50
+$EndSheet
+$Sheet
+S 3450 2350 500  150 
+U 5DC73393
+F0 "NoiseGenerator" 50
+F1 "NoiseGenerator.sch" 50
+$EndSheet
+$Sheet
+S 4100 1850 500  150 
+U 5DC850CA
+F0 "SignalSourceSelector" 50
+F1 "SignalSourceSelector.sch" 50
+$EndSheet
+$Sheet
+S 7100 3700 500  150 
+U 5DBB489F
+F0 "LogicLevelOutput" 50
+F1 "LogicLevelOutput.sch" 50
 $EndSheet
 $EndSCHEMATC
