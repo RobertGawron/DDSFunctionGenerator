@@ -1137,7 +1137,7 @@ U 1 1 5DC3D782
 P 3700 5600
 F 0 "X1" H 4050 5850 50  0000 L CNN
 F 1 "XO91" H 4000 5750 50  0000 L CNN
-F 2 "Oscillator:Oscillator_SMD_EuroQuartz_XO91-4Pin_7.0x5.0mm_HandSoldering" H 4400 5250 50  0001 C CNN
+F 2 "DDSFunctionGenerator:LF SPXO018035" H 4400 5250 50  0001 C CNN
 F 3 "http://cdn-reichelt.de/documents/datenblatt/B400/XO91.pdf" H 3600 5600 50  0001 C CNN
 	1    3700 5600
 	1    0    0    -1  

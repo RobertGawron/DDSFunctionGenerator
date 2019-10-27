@@ -435,7 +435,7 @@ U 1 1 5DB7CF79
 P 5600 5950
 F 0 "T1" V 5554 6194 50  0000 L CNN
 F 1 "Transformer_1P_1S" V 5645 6194 50  0000 L CNN
-F 2 "Transformer_THT:Transformer_Toroid_Horizontal_D10.5mm_Amidon-T37" H 5600 5950 50  0001 C CNN
+F 2 "Transformer_THT:Transformer_Toroid_Horizontal_D9.0mm_Amidon-T30" H 5600 5950 50  0001 C CNN
 F 3 "~" H 5600 5950 50  0001 C CNN
 	1    5600 5950
 	1    0    0    1   
