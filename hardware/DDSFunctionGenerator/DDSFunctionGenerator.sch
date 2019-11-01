@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 10
+Sheet 1 9
 Title ""
 Date ""
 Rev ""
@@ -39,23 +39,17 @@ F0 "Microcontroller" 50
 F1 "Microcontroller.sch" 50
 $EndSheet
 $Sheet
-S 4050 4000 550  150 
+S 6000 4650 550  150 
 U 5DD5C870
 F0 "UserInterface" 50
 F1 "UserInterface.sch" 50
 $EndSheet
 $Sheet
-S 5500 4000 500  150 
+S 6000 5100 500  150 
 U 5DD5CD1D
 F0 "ComputerInterface" 50
 F1 "ComputerInterface.sch" 50
 $EndSheet
-Wire Notes Line
-	4600 4050 5050 4050
-Wire Notes Line
-	5050 4050 5050 3600
-Wire Notes Line
-	5500 4050 5250 4050
 Wire Notes Line
 	5250 4050 5250 3600
 Wire Notes Line
@@ -79,21 +73,27 @@ Wire Notes Line
 Wire Notes Line
 	5400 2950 6000 2950
 $Sheet
-S 6150 3450 500  150 
+S 6050 3450 500  150 
 U 5DC4991C
 F0 "ADC" 50
 F1 "ADC.sch" 50
 $EndSheet
 $Sheet
-S 6000 2350 500  150 
-U 5DC73393
-F0 "NoiseGenerator" 50
-F1 "NoiseGenerator.sch" 50
-$EndSheet
-$Sheet
-S 7100 3700 500  150 
+S 6050 4000 500  150 
 U 5DBB489F
 F0 "LogicLevelOutput" 50
 F1 "LogicLevelOutput.sch" 50
 $EndSheet
+Wire Notes Line
+	6050 4050 5250 4050
+Wire Notes Line
+	6050 3500 5400 3500
+Wire Notes Line
+	6000 4700 5100 4700
+Wire Notes Line
+	5100 4700 5100 3600
+Wire Notes Line
+	6000 5200 4950 5200
+Wire Notes Line
+	4950 5200 4950 3600
 $EndSCHEMATC
