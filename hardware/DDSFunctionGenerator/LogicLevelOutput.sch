@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 12 12
+Sheet 10 10
 Title ""
 Date ""
 Rev ""
@@ -50,7 +50,7 @@ AR Path="/5DC4991C/5DBC1EEB" Ref="J?"  Part="1"
 AR Path="/5DBB489F/5DBC1EEB" Ref="J4"  Part="1" 
 F 0 "J4" H 3900 3125 50  0000 L CNN
 F 1 "Conn_Coaxial" H 3900 3034 50  0000 L CNN
-F 2 "Connector_Coaxial:SMA_Molex_73251-2200_Horizontal" H 3800 3150 50  0001 C CNN
+F 2 "Connector_Coaxial:BNC_Amphenol_B6252HB-NPP3G-50_Horizontal" H 3800 3150 50  0001 C CNN
 F 3 " ~" H 3800 3150 50  0001 C CNN
 	1    3800 3150
 	1    0    0    -1  

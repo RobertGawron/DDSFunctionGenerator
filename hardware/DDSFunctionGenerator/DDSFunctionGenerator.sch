@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 12
+Sheet 1 10
 Title ""
 Date ""
 Rev ""
@@ -79,28 +79,16 @@ Wire Notes Line
 Wire Notes Line
 	5400 2950 6000 2950
 $Sheet
-S 7050 4550 650  200 
-U 5DC26BB6
-F0 "MountingPoints" 50
-F1 "MountingPoints.sch" 50
-$EndSheet
-$Sheet
 S 6150 3450 500  150 
 U 5DC4991C
 F0 "ADC" 50
 F1 "ADC.sch" 50
 $EndSheet
 $Sheet
-S 3450 2350 500  150 
+S 6000 2350 500  150 
 U 5DC73393
 F0 "NoiseGenerator" 50
 F1 "NoiseGenerator.sch" 50
-$EndSheet
-$Sheet
-S 4100 1850 500  150 
-U 5DC850CA
-F0 "SignalSourceSelector" 50
-F1 "SignalSourceSelector.sch" 50
 $EndSheet
 $Sheet
 S 7100 3700 500  150 
