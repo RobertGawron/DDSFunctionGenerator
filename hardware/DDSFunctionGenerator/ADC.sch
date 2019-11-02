@@ -63,19 +63,6 @@ F 3 "~" H 4150 3200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:Conn_Coaxial-Connector J?
-U 1 1 5DC50069
-P 6800 3900
-AR Path="/5DA34623/5DC50069" Ref="J?"  Part="1" 
-AR Path="/5DC4991C/5DC50069" Ref="J3"  Part="1" 
-F 0 "J3" H 6900 3875 50  0000 L CNN
-F 1 "Conn_Coaxial" H 6900 3784 50  0000 L CNN
-F 2 "Connector_Coaxial:BNC_Amphenol_B6252HB-NPP3G-50_Horizontal" H 6800 3900 50  0001 C CNN
-F 3 " ~" H 6800 3900 50  0001 C CNN
-	1    6800 3900
-	1    0    0    -1  
-$EndComp
-$Comp
 L DDSFunctionGenerator-rescue:D_Schottky-Device D5
 U 1 1 5DC51A29
 P 5450 3600
@@ -319,4 +306,17 @@ Text GLabel 3200 3900 0    50   Input ~ 0
 SCL
 Text GLabel 3200 4000 0    50   Input ~ 0
 SDA
+$Comp
+L DDSFunctionGenerator-rescue:Conn_Coaxial-Connector J?
+U 1 1 5DC50069
+P 6800 3900
+AR Path="/5DA34623/5DC50069" Ref="J?"  Part="1" 
+AR Path="/5DC4991C/5DC50069" Ref="J3"  Part="1" 
+F 0 "J3" H 6900 3875 50  0000 L CNN
+F 1 "Conn_Coaxial" H 6900 3784 50  0000 L CNN
+F 2 "Connector_Coaxial:BNC_Amphenol_B6252HB-NPP3G-50_Horizontal" H 6800 3900 50  0001 C CNN
+F 3 " ~" H 6800 3900 50  0001 C CNN
+	1    6800 3900
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
