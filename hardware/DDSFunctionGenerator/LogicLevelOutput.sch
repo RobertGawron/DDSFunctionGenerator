@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:DDSFunctionGenerator-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -26,7 +26,7 @@ F 3 "https://www.tme.eu/Document/76d9aceb6423e740d5968a1dc6ac539d/74HC_HCT1G86.p
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:C-Device C?
+L Device:C C?
 U 1 1 5DBC1EE5
 P 2250 2650
 AR Path="/5DBC1EE5" Ref="C?"  Part="1" 
@@ -42,7 +42,7 @@ F 3 "~" H 2250 2650 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:Conn_Coaxial-Connector J?
+L Connector:Conn_Coaxial J?
 U 1 1 5DBC1EEB
 P 3800 3150
 AR Path="/5DA34623/5DBC1EEB" Ref="J?"  Part="1" 
@@ -56,7 +56,7 @@ F 3 " ~" H 3800 3150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:D_Schottky-Device D?
+L Device:D_Schottky D?
 U 1 1 5DBC1EF1
 P 3000 2950
 AR Path="/5DC4991C/5DBC1EF1" Ref="D?"  Part="1" 
@@ -69,7 +69,7 @@ F 3 "~" H 3000 2950 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:R-Device R?
+L Device:R R?
 U 1 1 5DBC1EFD
 P 2700 3150
 AR Path="/5DBC1EFD" Ref="R?"  Part="1" 
@@ -84,7 +84,7 @@ F 3 "~" H 2700 3150 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:D_Schottky-Device D?
+L Device:D_Schottky D?
 U 1 1 5DBC1F03
 P 3000 3350
 AR Path="/5DC4991C/5DBC1F03" Ref="D?"  Part="1" 
@@ -97,7 +97,7 @@ F 3 "~" H 3000 3350 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:GND-power #PWR?
+L power:GND #PWR?
 U 1 1 5DBC1F37
 P 3000 3550
 AR Path="/5DC4991C/5DBC1F37" Ref="#PWR?"  Part="1" 
@@ -119,7 +119,7 @@ Connection ~ 3000 3150
 Wire Wire Line
 	3000 3150 3000 3100
 $Comp
-L DDSFunctionGenerator-rescue:GND-power #PWR?
+L power:GND #PWR?
 U 1 1 5DBC1F53
 P 2450 2750
 AR Path="/5DC4991C/5DBC1F53" Ref="#PWR?"  Part="1" 
@@ -140,7 +140,7 @@ Wire Wire Line
 Wire Wire Line
 	2350 3150 2550 3150
 $Comp
-L DDSFunctionGenerator-rescue:GND-power #PWR?
+L power:GND #PWR?
 U 1 1 5DBC44A4
 P 1700 3400
 AR Path="/5DC4991C/5DBC44A4" Ref="#PWR?"  Part="1" 
@@ -161,7 +161,7 @@ Wire Wire Line
 Text GLabel 1400 3100 0    50   Input ~ 0
 DIGITAL_OUTT_1
 $Comp
-L DDSFunctionGenerator-rescue:GND-power #PWR?
+L power:GND #PWR?
 U 1 1 5DBC5578
 P 2050 3400
 AR Path="/5DC4991C/5DBC5578" Ref="#PWR?"  Part="1" 
@@ -189,7 +189,7 @@ Wire Wire Line
 Wire Wire Line
 	3000 3150 3600 3150
 $Comp
-L DDSFunctionGenerator-rescue:GND-power #PWR?
+L power:GND #PWR?
 U 1 1 5DBCDD05
 P 3800 3550
 AR Path="/5DC4991C/5DBCDD05" Ref="#PWR?"  Part="1" 
