@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:DDSFunctionGenerator-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L DDSFunctionGenerator-rescue:MCP3425A0T-ECH-Analog_ADC U8
+L Analog_ADC:MCP3425A0T-ECH U8
 U 1 1 5DC4998A
 P 3900 4000
 F 0 "U8" H 4300 4500 50  0000 C CNN
@@ -26,7 +26,7 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/22072b.pdf" H 3900 4000 50 
 	-1   0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:CP-Device C37
+L Device:CP C37
 U 1 1 5DC4A1A1
 P 4150 2950
 F 0 "C37" V 4405 2950 50  0000 C CNN
@@ -37,7 +37,7 @@ F 3 "~" H 4150 2950 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:GND-power #PWR049
+L power:GND #PWR049
 U 1 1 5DC4AE41
 P 3900 4700
 F 0 "#PWR049" H 3900 4450 50  0001 C CNN
@@ -48,7 +48,7 @@ F 3 "" H 3900 4700 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:C-Device C?
+L Device:C C?
 U 1 1 5DC4E4AC
 P 4150 3200
 AR Path="/5DC4E4AC" Ref="C?"  Part="1" 
@@ -63,7 +63,20 @@ F 3 "~" H 4150 3200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:D_Schottky-Device D5
+L Connector:Conn_Coaxial J?
+U 1 1 5DC50069
+P 6800 3900
+AR Path="/5DA34623/5DC50069" Ref="J?"  Part="1" 
+AR Path="/5DC4991C/5DC50069" Ref="J3"  Part="1" 
+F 0 "J3" H 6900 3875 50  0000 L CNN
+F 1 "Conn_Coaxial" H 6900 3784 50  0000 L CNN
+F 2 "Connector_Coaxial:BNC_Amphenol_B6252HB-NPP3G-50_Horizontal" H 6800 3900 50  0001 C CNN
+F 3 " ~" H 6800 3900 50  0001 C CNN
+	1    6800 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Schottky D5
 U 1 1 5DC51A29
 P 5450 3600
 F 0 "D5" V 5404 3679 50  0000 L CNN
@@ -74,7 +87,7 @@ F 3 "~" H 5450 3600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:R-Device R?
+L Device:R R?
 U 1 1 5DC54AF6
 P 5150 3900
 AR Path="/5DC54AF6" Ref="R?"  Part="1" 
@@ -88,7 +101,7 @@ F 3 "~" H 5150 3900 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:R-Device R?
+L Device:R R?
 U 1 1 5DC54B45
 P 5150 4100
 AR Path="/5DC54B45" Ref="R?"  Part="1" 
@@ -102,7 +115,7 @@ F 3 "~" H 5150 4100 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:D_Schottky-Device D6
+L Device:D_Schottky D6
 U 1 1 5DC551EC
 P 5450 4300
 F 0 "D6" V 5404 4379 50  0000 L CNN
@@ -113,7 +126,7 @@ F 3 "~" H 5450 4300 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:D_Schottky-Device D8
+L Device:D_Schottky D8
 U 1 1 5DC5575B
 P 6050 4300
 F 0 "D8" V 6004 4379 50  0000 L CNN
@@ -124,7 +137,7 @@ F 3 "~" H 6050 4300 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:D_Schottky-Device D7
+L Device:D_Schottky D7
 U 1 1 5DC55C02
 P 6050 3600
 F 0 "D7" V 6004 3679 50  0000 L CNN
@@ -135,7 +148,7 @@ F 3 "~" H 6050 3600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:C-Device C?
+L Device:C C?
 U 1 1 5DC56989
 P 4500 4450
 AR Path="/5DC56989" Ref="C?"  Part="1" 
@@ -150,7 +163,7 @@ F 3 "~" H 4500 4450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:C-Device C?
+L Device:C C?
 U 1 1 5DC56F6D
 P 4900 4450
 AR Path="/5DC56F6D" Ref="C?"  Part="1" 
@@ -181,7 +194,7 @@ Connection ~ 4900 3900
 Wire Wire Line
 	4900 3900 5000 3900
 $Comp
-L DDSFunctionGenerator-rescue:GND-power #PWR050
+L power:GND #PWR050
 U 1 1 5DC5C211
 P 4500 4700
 F 0 "#PWR050" H 4500 4450 50  0001 C CNN
@@ -194,7 +207,7 @@ $EndComp
 Wire Wire Line
 	4500 4700 4500 4600
 $Comp
-L DDSFunctionGenerator-rescue:GND-power #PWR051
+L power:GND #PWR051
 U 1 1 5DC5C93B
 P 4900 4700
 F 0 "#PWR051" H 4900 4450 50  0001 C CNN
@@ -205,7 +218,7 @@ F 3 "" H 4900 4700 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:GND-power #PWR052
+L power:GND #PWR052
 U 1 1 5DC5CDFB
 P 5450 4700
 F 0 "#PWR052" H 5450 4450 50  0001 C CNN
@@ -216,7 +229,7 @@ F 3 "" H 5450 4700 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:GND-power #PWR053
+L power:GND #PWR053
 U 1 1 5DC5D2B1
 P 6050 4700
 F 0 "#PWR053" H 6050 4450 50  0001 C CNN
@@ -257,7 +270,7 @@ Wire Wire Line
 Wire Wire Line
 	6050 3900 6050 3750
 $Comp
-L DDSFunctionGenerator-rescue:GND-power #PWR0119
+L power:GND #PWR0119
 U 1 1 5DC610A4
 P 4400 3350
 F 0 "#PWR0119" H 4400 3100 50  0001 C CNN
@@ -306,17 +319,4 @@ Text GLabel 3200 3900 0    50   Input ~ 0
 SCL
 Text GLabel 3200 4000 0    50   Input ~ 0
 SDA
-$Comp
-L DDSFunctionGenerator-rescue:Conn_Coaxial-Connector J?
-U 1 1 5DC50069
-P 6800 3900
-AR Path="/5DA34623/5DC50069" Ref="J?"  Part="1" 
-AR Path="/5DC4991C/5DC50069" Ref="J3"  Part="1" 
-F 0 "J3" H 6900 3875 50  0000 L CNN
-F 1 "Conn_Coaxial" H 6900 3784 50  0000 L CNN
-F 2 "Connector_Coaxial:BNC_Amphenol_B6252HB-NPP3G-50_Horizontal" H 6800 3900 50  0001 C CNN
-F 3 " ~" H 6800 3900 50  0001 C CNN
-	1    6800 3900
-	1    0    0    -1  
-$EndComp
 $EndSCHEMATC

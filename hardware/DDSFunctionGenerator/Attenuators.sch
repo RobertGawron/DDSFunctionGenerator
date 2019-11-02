@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:DDSFunctionGenerator-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L DDSFunctionGenerator-rescue:D-Device D1
+L Device:D D1
 U 1 1 5DA36261
 P 2000 2850
 F 0 "D1" V 1954 2929 50  0000 L CNN
@@ -26,7 +26,7 @@ F 3 "~" H 2000 2850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:+9V-power #PWR023
+L power:+9V #PWR023
 U 1 1 5DA36BA8
 P 2300 2150
 F 0 "#PWR023" H 2300 2000 50  0001 C CNN
@@ -37,7 +37,7 @@ F 3 "" H 2300 2150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:Q_NPN_BEC-Device Q1
+L Device:Q_NPN_BEC Q1
 U 1 1 5DA379E5
 P 2200 3900
 F 0 "Q1" H 2391 3946 50  0000 L CNN
@@ -48,7 +48,7 @@ F 3 "~" H 2200 3900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:R-Device R5
+L Device:R R5
 U 1 1 5DA383D5
 P 1900 4150
 F 0 "R5" H 1970 4196 50  0000 L CNN
@@ -59,7 +59,7 @@ F 3 "~" H 1900 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:GND-power #PWR022
+L power:GND #PWR022
 U 1 1 5DA38943
 P 2300 4400
 F 0 "#PWR022" H 2300 4150 50  0001 C CNN
@@ -70,7 +70,7 @@ F 3 "" H 2300 4400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:R-Device R4
+L Device:R R4
 U 1 1 5DA3904E
 P 1350 3900
 F 0 "R4" V 1143 3900 50  0000 C CNN
@@ -81,7 +81,7 @@ F 3 "~" H 1350 3900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:GND-power #PWR021
+L power:GND #PWR021
 U 1 1 5DA39B30
 P 1900 4400
 F 0 "#PWR021" H 1900 4150 50  0001 C CNN
@@ -105,7 +105,7 @@ Wire Wire Line
 Wire Wire Line
 	1900 4400 1900 4300
 $Comp
-L DDSFunctionGenerator-rescue:R-Device R6
+L Device:R R6
 U 1 1 5DA3B2B9
 P 2850 4150
 F 0 "R6" H 2781 4196 50  0000 R CNN
@@ -116,7 +116,7 @@ F 3 "~" H 2850 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:R-Device R7
+L Device:R R7
 U 1 1 5DA3B955
 P 3050 4150
 F 0 "R7" V 3150 4200 50  0000 L CNN
@@ -127,7 +127,7 @@ F 3 "~" H 3050 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:R-Device R10
+L Device:R R10
 U 1 1 5DA3BD27
 P 3450 4150
 F 0 "R10" V 3350 4300 50  0000 R CNN
@@ -138,7 +138,7 @@ F 3 "~" H 3450 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:R-Device R11
+L Device:R R11
 U 1 1 5DA3C011
 P 3650 4150
 F 0 "R11" H 3720 4196 50  0000 L CNN
@@ -149,7 +149,7 @@ F 3 "~" H 3650 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:R-Device R9
+L Device:R R9
 U 1 1 5DA3C955
 P 3250 3900
 F 0 "R9" V 3043 3900 50  0000 C CNN
@@ -160,7 +160,7 @@ F 3 "~" H 3250 3900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:R-Device R8
+L Device:R R8
 U 1 1 5DA3CC7E
 P 3250 3600
 F 0 "R8" V 3043 3600 50  0000 C CNN
@@ -191,7 +191,7 @@ Wire Wire Line
 Wire Wire Line
 	3450 3900 3400 3900
 $Comp
-L DDSFunctionGenerator-rescue:GND-power #PWR024
+L power:GND #PWR024
 U 1 1 5DA466CE
 P 2950 4400
 F 0 "#PWR024" H 2950 4150 50  0001 C CNN
@@ -202,7 +202,7 @@ F 3 "" H 2950 4400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:GND-power #PWR025
+L power:GND #PWR025
 U 1 1 5DA46A9E
 P 3550 4400
 F 0 "#PWR025" H 3550 4150 50  0001 C CNN
@@ -245,7 +245,7 @@ Wire Wire Line
 Wire Wire Line
 	3450 3900 3650 3900
 $Comp
-L DDSFunctionGenerator-rescue:+9V-power #PWR028
+L power:+9V #PWR028
 U 1 1 5DA65471
 P 5600 2150
 F 0 "#PWR028" H 5600 2000 50  0001 C CNN
@@ -256,7 +256,7 @@ F 3 "" H 5600 2150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:R-Device R13
+L Device:R R13
 U 1 1 5DA6547D
 P 5200 4150
 F 0 "R13" H 5270 4196 50  0000 L CNN
@@ -267,7 +267,7 @@ F 3 "~" H 5200 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:R-Device R12
+L Device:R R12
 U 1 1 5DA65489
 P 4650 3900
 F 0 "R12" V 4443 3900 50  0000 C CNN
@@ -278,7 +278,7 @@ F 3 "~" H 4650 3900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:GND-power #PWR026
+L power:GND #PWR026
 U 1 1 5DA6548F
 P 5200 4400
 F 0 "#PWR026" H 5200 4150 50  0001 C CNN
@@ -296,7 +296,7 @@ Connection ~ 5200 3900
 Wire Wire Line
 	5200 4400 5200 4300
 $Comp
-L DDSFunctionGenerator-rescue:+9V-power #PWR033
+L power:+9V #PWR033
 U 1 1 5DA6AABA
 P 8800 2200
 F 0 "#PWR033" H 8800 2050 50  0001 C CNN
@@ -307,7 +307,7 @@ F 3 "" H 8800 2200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:Q_NPN_BEC-Device Q3
+L Device:Q_NPN_BEC Q3
 U 1 1 5DA6AAC0
 P 8700 3900
 F 0 "Q3" H 8891 3946 50  0000 L CNN
@@ -318,7 +318,7 @@ F 3 "~" H 8700 3900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:R-Device R21
+L Device:R R21
 U 1 1 5DA6AAC6
 P 8400 4150
 F 0 "R21" H 8470 4196 50  0000 L CNN
@@ -329,7 +329,7 @@ F 3 "~" H 8400 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:GND-power #PWR032
+L power:GND #PWR032
 U 1 1 5DA6AACC
 P 8800 4400
 F 0 "#PWR032" H 8800 4150 50  0001 C CNN
@@ -340,7 +340,7 @@ F 3 "" H 8800 4400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:R-Device R20
+L Device:R R20
 U 1 1 5DA6AAD2
 P 7850 3900
 F 0 "R20" V 7643 3900 50  0000 C CNN
@@ -351,7 +351,7 @@ F 3 "~" H 7850 3900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:GND-power #PWR031
+L power:GND #PWR031
 U 1 1 5DA6AAD8
 P 8400 4400
 F 0 "#PWR031" H 8400 4150 50  0001 C CNN
@@ -373,7 +373,7 @@ Wire Wire Line
 Wire Wire Line
 	8400 4400 8400 4300
 $Comp
-L DDSFunctionGenerator-rescue:R-Device R22
+L Device:R R22
 U 1 1 5DA6AAEF
 P 9350 4150
 F 0 "R22" H 9281 4196 50  0000 R CNN
@@ -384,7 +384,7 @@ F 3 "~" H 9350 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:R-Device R23
+L Device:R R23
 U 1 1 5DA6AAF5
 P 9550 4150
 F 0 "R23" V 9650 4200 50  0000 L CNN
@@ -395,7 +395,7 @@ F 3 "~" H 9550 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:R-Device R26
+L Device:R R26
 U 1 1 5DA6AAFB
 P 9950 4150
 F 0 "R26" V 9850 4300 50  0000 R CNN
@@ -406,7 +406,7 @@ F 3 "~" H 9950 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:R-Device R27
+L Device:R R27
 U 1 1 5DA6AB01
 P 10150 4150
 F 0 "R27" H 10220 4196 50  0000 L CNN
@@ -417,7 +417,7 @@ F 3 "~" H 10150 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:R-Device R25
+L Device:R R25
 U 1 1 5DA6AB07
 P 9750 3900
 F 0 "R25" V 9543 3900 50  0000 C CNN
@@ -428,7 +428,7 @@ F 3 "~" H 9750 3900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:R-Device R24
+L Device:R R24
 U 1 1 5DA6AB0D
 P 9750 3600
 F 0 "R24" V 9543 3600 50  0000 C CNN
@@ -459,7 +459,7 @@ Wire Wire Line
 Wire Wire Line
 	9950 3900 9900 3900
 $Comp
-L DDSFunctionGenerator-rescue:GND-power #PWR034
+L power:GND #PWR034
 U 1 1 5DA6AB1D
 P 9450 4400
 F 0 "#PWR034" H 9450 4150 50  0001 C CNN
@@ -470,7 +470,7 @@ F 3 "" H 9450 4400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:GND-power #PWR035
+L power:GND #PWR035
 U 1 1 5DA6AB23
 P 10050 4400
 F 0 "#PWR035" H 10050 4150 50  0001 C CNN
@@ -511,7 +511,7 @@ Wire Wire Line
 Wire Wire Line
 	7700 3900 7600 3900
 $Comp
-L DDSFunctionGenerator-rescue:Conn_Coaxial-Connector J1
+L Connector:Conn_Coaxial J1
 U 1 1 5DB1C35E
 P 10450 5100
 F 0 "J1" H 10550 5075 50  0000 L CNN
@@ -522,7 +522,7 @@ F 3 " ~" H 10450 5100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:GND-power #PWR01
+L power:GND #PWR01
 U 1 1 5DB1D6AB
 P 10450 5350
 F 0 "#PWR01" H 10450 5100 50  0001 C CNN
@@ -543,7 +543,7 @@ Wire Wire Line
 Text GLabel 1300 2350 0    50   Input ~ 0
 RF_FROM_AMPLIFIER
 $Comp
-L DDSFunctionGenerator-rescue:C-Device C21
+L Device:C C21
 U 1 1 5DB147C0
 P 1600 4150
 F 0 "C21" H 1486 4196 50  0000 R CNN
@@ -554,7 +554,7 @@ F 3 "~" H 1600 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:C-Device C22
+L Device:C C22
 U 1 1 5DB17108
 P 4900 4150
 F 0 "C22" H 4786 4196 50  0000 R CNN
@@ -565,7 +565,7 @@ F 3 "~" H 4900 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:C-Device C23
+L Device:C C23
 U 1 1 5DB17939
 P 8100 4150
 F 0 "C23" H 7986 4196 50  0000 R CNN
@@ -576,7 +576,7 @@ F 3 "~" H 8100 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:GND-power #PWR07
+L power:GND #PWR07
 U 1 1 5DB2B720
 P 4900 4400
 F 0 "#PWR07" H 4900 4150 50  0001 C CNN
@@ -596,7 +596,7 @@ Wire Wire Line
 Wire Wire Line
 	4900 4400 4900 4300
 $Comp
-L DDSFunctionGenerator-rescue:GND-power #PWR010
+L power:GND #PWR010
 U 1 1 5DB6487B
 P 8100 4400
 F 0 "#PWR010" H 8100 4150 50  0001 C CNN
@@ -614,7 +614,7 @@ Wire Wire Line
 Wire Wire Line
 	8100 4400 8100 4300
 $Comp
-L DDSFunctionGenerator-rescue:GND-power #PWR04
+L power:GND #PWR04
 U 1 1 5DB8F2C5
 P 1600 4400
 F 0 "#PWR04" H 1600 4150 50  0001 C CNN
@@ -677,14 +677,16 @@ Wire Wire Line
 $Comp
 L NumericallyControlledOscillator:RSM850B-6112-85-1005 Rel1
 U 1 1 5DD23C4D
-P 2600 2300
-F 0 "Rel1" H 2828 1771 50  0000 L CNN
-F 1 "RSM850B-6112-85-1005" H 2828 1680 50  0000 L CNN
-F 2 "Relay_THT:Relay_DPDT_Omron_G6K-2P-Y" H 2600 2300 50  0001 C CNN
-F 3 "" H 2600 2300 50  0001 C CNN
-	1    2600 2300
-	1    0    0    -1  
+P 2600 3450
+F 0 "Rel1" H 2828 2921 50  0000 L CNN
+F 1 "RSM850B-6112-85-1005" H 2828 2830 50  0000 L CNN
+F 2 "Relay_THT:Relay_DPDT_Omron_G6K-2P-Y" H 2600 3450 50  0001 C CNN
+F 3 "" H 2600 3450 50  0001 C CNN
+	1    2600 3450
+	1    0    0    1   
 $EndComp
+Wire Wire Line
+	2750 3150 3050 3150
 Wire Wire Line
 	3050 3150 3050 3600
 Wire Wire Line
@@ -697,7 +699,7 @@ Wire Wire Line
 	2300 2500 2300 2150
 Connection ~ 2300 2500
 $Comp
-L DDSFunctionGenerator-rescue:R-Device R15
+L Device:R R15
 U 1 1 5DA654AC
 P 6350 4150
 F 0 "R15" V 6450 3900 50  0000 L CNN
@@ -708,7 +710,7 @@ F 3 "~" H 6350 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:R-Device R18
+L Device:R R18
 U 1 1 5DA654B2
 P 6750 4150
 F 0 "R18" V 6650 4050 50  0000 R CNN
@@ -741,7 +743,7 @@ Wire Wire Line
 Wire Wire Line
 	6250 4400 6250 4350
 $Comp
-L DDSFunctionGenerator-rescue:GND-power #PWR030
+L power:GND #PWR030
 U 1 1 5DA654DA
 P 6850 4400
 F 0 "#PWR030" H 6850 4150 50  0001 C CNN
@@ -752,7 +754,7 @@ F 3 "" H 6850 4400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:GND-power #PWR029
+L power:GND #PWR029
 U 1 1 5DA654D4
 P 6250 4400
 F 0 "#PWR029" H 6250 4150 50  0001 C CNN
@@ -789,7 +791,7 @@ Wire Wire Line
 Wire Wire Line
 	6150 4300 6150 4350
 $Comp
-L DDSFunctionGenerator-rescue:R-Device R16
+L Device:R R16
 U 1 1 5DA654C4
 P 6550 3600
 F 0 "R16" V 6343 3600 50  0000 C CNN
@@ -800,7 +802,7 @@ F 3 "~" H 6550 3600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:R-Device R17
+L Device:R R17
 U 1 1 5DA654BE
 P 6550 3900
 F 0 "R17" V 6343 3900 50  0000 C CNN
@@ -811,7 +813,7 @@ F 3 "~" H 6550 3900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:R-Device R19
+L Device:R R19
 U 1 1 5DA654B8
 P 6950 4150
 F 0 "R19" H 7020 4196 50  0000 L CNN
@@ -822,7 +824,7 @@ F 3 "~" H 6950 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:R-Device R14
+L Device:R R14
 U 1 1 5DA654A6
 P 6150 4150
 F 0 "R14" H 6081 4196 50  0000 R CNN
@@ -833,9 +835,9 @@ F 3 "~" H 6150 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5600 4400 5600 4300
+	5600 4400 5600 4100
 $Comp
-L DDSFunctionGenerator-rescue:GND-power #PWR027
+L power:GND #PWR027
 U 1 1 5DA65483
 P 5600 4400
 F 0 "#PWR027" H 5600 4150 50  0001 C CNN
@@ -846,7 +848,7 @@ F 3 "" H 5600 4400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:Q_NPN_BEC-Device Q2
+L Device:Q_NPN_BEC Q2
 U 1 1 5DA65477
 P 5500 3900
 F 0 "Q2" H 5691 3946 50  0000 L CNN
@@ -857,7 +859,7 @@ F 3 "~" H 5500 3900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DDSFunctionGenerator-rescue:D-Device D2
+L Device:D D2
 U 1 1 5DD71E0D
 P 5300 2850
 F 0 "D2" V 5254 2929 50  0000 L CNN
@@ -914,7 +916,7 @@ Wire Wire Line
 Wire Wire Line
 	6950 2350 9100 2350
 $Comp
-L DDSFunctionGenerator-rescue:D-Device D3
+L Device:D D3
 U 1 1 5DD899CF
 P 8500 2900
 F 0 "D3" V 8454 2979 50  0000 L CNN
@@ -951,13 +953,13 @@ Wire Wire Line
 $Comp
 L NumericallyControlledOscillator:RSM850B-6112-85-1005 Rel3
 U 1 1 5DD899E6
-P 9100 2350
-F 0 "Rel3" H 9328 1821 50  0000 L CNN
-F 1 "RSM850B-6112-85-1005" H 9328 1730 50  0000 L CNN
-F 2 "Relay_THT:Relay_DPDT_Omron_G6K-2P-Y" H 9100 2350 50  0001 C CNN
-F 3 "" H 9100 2350 50  0001 C CNN
-	1    9100 2350
-	1    0    0    -1  
+P 9100 3500
+F 0 "Rel3" H 9328 2971 50  0000 L CNN
+F 1 "RSM850B-6112-85-1005" H 9328 2880 50  0000 L CNN
+F 2 "Relay_THT:Relay_DPDT_Omron_G6K-2P-Y" H 9100 3500 50  0001 C CNN
+F 3 "" H 9100 3500 50  0001 C CNN
+	1    9100 3500
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	9250 3200 9550 3200
@@ -991,20 +993,15 @@ Wire Wire Line
 $Comp
 L NumericallyControlledOscillator:RSM850B-6112-85-1005 Rel2
 U 1 1 5DD71E24
-P 5900 2300
-F 0 "Rel2" H 6128 1771 50  0000 L CNN
-F 1 "RSM850B-6112-85-1005" H 6128 1680 50  0000 L CNN
-F 2 "Relay_THT:Relay_DPDT_Omron_G6K-2P-Y" H 5900 2300 50  0001 C CNN
-F 3 "" H 5900 2300 50  0001 C CNN
-	1    5900 2300
-	1    0    0    -1  
+P 5900 3450
+F 0 "Rel2" H 6128 2921 50  0000 L CNN
+F 1 "RSM850B-6112-85-1005" H 6128 2830 50  0000 L CNN
+F 2 "Relay_THT:Relay_DPDT_Omron_G6K-2P-Y" H 5900 3450 50  0001 C CNN
+F 3 "" H 5900 3450 50  0001 C CNN
+	1    5900 3450
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	8800 3300 8800 3200
 Connection ~ 8800 3300
-Wire Wire Line
-	2750 3150 3050 3150
-Connection ~ 5600 4300
-Wire Wire Line
-	5600 4300 5600 4100
 $EndSCHEMATC
