@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:DDSFunctionGenerator-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -19,7 +19,7 @@ Wire Wire Line
 Wire Wire Line
 	3600 2850 3400 2850
 $Comp
-L power:VCC #PWR?
+L DDSFunctionGenerator-rescue:VCC-power #PWR?
 U 1 1 5DAE2531
 P 3400 2700
 AR Path="/5DAE2531" Ref="#PWR?"  Part="1" 
@@ -60,7 +60,7 @@ Wire Wire Line
 Wire Wire Line
 	3600 3300 3600 3250
 $Comp
-L power:GND #PWR?
+L DDSFunctionGenerator-rescue:GND-power #PWR?
 U 1 1 5DAE2546
 P 4900 3300
 AR Path="/5DAE2546" Ref="#PWR?"  Part="1" 
@@ -74,7 +74,7 @@ F 3 "" H 4900 3300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L DDSFunctionGenerator-rescue:GND-power #PWR?
 U 1 1 5DAE254C
 P 4400 3300
 AR Path="/5DAE254C" Ref="#PWR?"  Part="1" 
@@ -88,7 +88,7 @@ F 3 "" H 4400 3300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L DDSFunctionGenerator-rescue:GND-power #PWR?
 U 1 1 5DAE2552
 P 4000 3300
 AR Path="/5DAE2552" Ref="#PWR?"  Part="1" 
@@ -102,7 +102,7 @@ F 3 "" H 4000 3300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L DDSFunctionGenerator-rescue:GND-power #PWR?
 U 1 1 5DAE2558
 P 3600 3300
 AR Path="/5DAE2558" Ref="#PWR?"  Part="1" 
@@ -116,7 +116,7 @@ F 3 "" H 3600 3300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L DDSFunctionGenerator-rescue:C-Device C?
 U 1 1 5DAE255E
 P 4900 3100
 AR Path="/5DAE255E" Ref="C?"  Part="1" 
@@ -130,7 +130,7 @@ F 3 "~" H 4900 3100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:L L?
+L DDSFunctionGenerator-rescue:L-Device L?
 U 1 1 5DAE2564
 P 4650 2850
 AR Path="/5DAE2564" Ref="L?"  Part="1" 
@@ -144,7 +144,7 @@ F 3 "~" H 4650 2850 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:C C?
+L DDSFunctionGenerator-rescue:C-Device C?
 U 1 1 5DAE256A
 P 4400 3100
 AR Path="/5DAE256A" Ref="C?"  Part="1" 
@@ -158,7 +158,7 @@ F 3 "~" H 4400 3100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L DDSFunctionGenerator-rescue:C-Device C?
 U 1 1 5DAE2570
 P 3600 3100
 AR Path="/5DAE2570" Ref="C?"  Part="1" 
@@ -172,7 +172,7 @@ F 3 "~" H 3600 3100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Regulator_Linear:L7805 U?
+L DDSFunctionGenerator-rescue:L7805-Regulator_Linear U?
 U 1 1 5DAE2576
 P 4000 2850
 AR Path="/5DAE2576" Ref="U?"  Part="1" 
@@ -186,7 +186,7 @@ F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:PWR_FLAG #FLG?
+L DDSFunctionGenerator-rescue:PWR_FLAG-power #FLG?
 U 1 1 5DAE257C
 P 4900 2750
 AR Path="/5DAEEEF4/5DAE257C" Ref="#FLG?"  Part="1" 
@@ -201,7 +201,7 @@ $EndComp
 Wire Wire Line
 	4900 2750 4900 2850
 $Comp
-L MCU_ST_STM32F0:STM32F030K6Tx U5
+L DDSFunctionGenerator-rescue:STM32F030K6Tx-MCU_ST_STM32F0 U5
 U 1 1 5DC98A9F
 P 7400 4000
 F 0 "U5" H 7350 2911 50  0000 C CNN
@@ -212,7 +212,7 @@ F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/da
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Crystal Y1
+L DDSFunctionGenerator-rescue:Crystal-Device Y1
 U 1 1 5DC9AED3
 P 8550 3450
 F 0 "Y1" V 8504 3319 50  0000 R CNN
@@ -223,7 +223,7 @@ F 3 "~" H 8550 3450 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C?
+L DDSFunctionGenerator-rescue:C-Device C?
 U 1 1 5DC9B5A5
 P 8750 3700
 AR Path="/5DC9B5A5" Ref="C?"  Part="1" 
@@ -237,7 +237,7 @@ F 3 "~" H 8750 3700 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR?
+L DDSFunctionGenerator-rescue:GND-power #PWR?
 U 1 1 5DC9B8ED
 P 9050 3300
 AR Path="/5DC9B8ED" Ref="#PWR?"  Part="1" 
@@ -251,7 +251,7 @@ F 3 "" H 9050 3300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L DDSFunctionGenerator-rescue:GND-power #PWR?
 U 1 1 5DC9BB97
 P 9050 3800
 AR Path="/5DC9BB97" Ref="#PWR?"  Part="1" 
@@ -265,7 +265,7 @@ F 3 "" H 9050 3800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L DDSFunctionGenerator-rescue:C-Device C?
 U 1 1 5DC9BE25
 P 8750 3200
 AR Path="/5DC9BE25" Ref="C?"  Part="1" 
@@ -295,7 +295,7 @@ Wire Wire Line
 Wire Wire Line
 	9050 3700 9050 3800
 $Comp
-L Connector:TestPoint TP9
+L DDSFunctionGenerator-rescue:TestPoint-Connector TP9
 U 1 1 5DBCC0FF
 P 5200 2800
 F 0 "TP9" H 5258 2918 50  0000 L CNN
@@ -311,7 +311,7 @@ Connection ~ 5200 2850
 Wire Wire Line
 	5200 2850 5450 2850
 $Comp
-L Device:R R?
+L DDSFunctionGenerator-rescue:R-Device R?
 U 1 1 5DC4CCFF
 P 3000 4700
 AR Path="/5DC4CCFF" Ref="R?"  Part="1" 
@@ -325,7 +325,7 @@ F 3 "~" H 3000 4700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L DDSFunctionGenerator-rescue:R-Device R?
 U 1 1 5DC4D139
 P 3350 4700
 AR Path="/5DC4D139" Ref="R?"  Part="1" 

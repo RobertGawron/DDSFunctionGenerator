@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:DDSFunctionGenerator-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector:USB_B_Micro J?
+L DDSFunctionGenerator-rescue:USB_B_Micro-Connector J?
 U 1 1 5DDD73C9
 P 2850 3050
 AR Path="/5DD5C7F6/5DDD73C9" Ref="J?"  Part="1" 
@@ -28,7 +28,7 @@ F 3 "~" H 3000 3000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Interface_USB:FT200XD U?
+L DDSFunctionGenerator-rescue:FT200XD-Interface_USB U?
 U 1 1 5DDD73CF
 P 4800 3700
 AR Path="/5DD5C7F6/5DDD73CF" Ref="U?"  Part="1" 
@@ -41,7 +41,7 @@ F 3 "http://www.ftdichip.com/Products/ICs/FT200XD.html" H 4800 3700 50  0001 C C
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:LED D?
+L DDSFunctionGenerator-rescue:LED-Device D?
 U 1 1 5DDD73D5
 P 3300 3650
 AR Path="/5DD5C7F6/5DDD73D5" Ref="D?"  Part="1" 
@@ -54,7 +54,7 @@ F 3 "~" H 3300 3650 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R?
+L DDSFunctionGenerator-rescue:R-Device R?
 U 1 1 5DDD73DB
 P 3300 4050
 AR Path="/5DD5C7F6/5DDD73DB" Ref="R?"  Part="1" 
@@ -67,7 +67,7 @@ F 3 "~" H 3300 4050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L DDSFunctionGenerator-rescue:C-Device C?
 U 1 1 5DDD73E1
 P 3700 3650
 AR Path="/5DDD73E1" Ref="C?"  Part="1" 
@@ -82,7 +82,7 @@ F 3 "~" H 3700 3650 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR?
+L DDSFunctionGenerator-rescue:GND-power #PWR?
 U 1 1 5DDD73E7
 P 2850 3600
 AR Path="/5DDD73E7" Ref="#PWR?"  Part="1" 
@@ -117,7 +117,7 @@ Connection ~ 3300 2850
 Wire Wire Line
 	3300 2850 3700 2850
 $Comp
-L power:GND #PWR?
+L DDSFunctionGenerator-rescue:GND-power #PWR?
 U 1 1 5DDD73F8
 P 3300 4250
 AR Path="/5DDD73F8" Ref="#PWR?"  Part="1" 
@@ -132,7 +132,7 @@ F 3 "" H 3300 4250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L DDSFunctionGenerator-rescue:GND-power #PWR?
 U 1 1 5DDD73FE
 P 3700 4250
 AR Path="/5DDD73FE" Ref="#PWR?"  Part="1" 

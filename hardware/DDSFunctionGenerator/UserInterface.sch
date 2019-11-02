@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:DDSFunctionGenerator-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Device:Rotary_Encoder_Switch SW1
+L DDSFunctionGenerator-rescue:Rotary_Encoder_Switch-Device SW1
 U 1 1 5DDD45B2
 P 3150 2950
 F 0 "SW1" H 3150 3317 50  0000 C CNN
