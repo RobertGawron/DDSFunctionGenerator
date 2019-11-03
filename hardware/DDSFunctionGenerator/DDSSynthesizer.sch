@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:DDSFunctionGenerator-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -330,7 +330,7 @@ AR Path="/5DB0720F" Ref="L?"  Part="1"
 AR Path="/5DAEEEF4/5DB0720F" Ref="L8"  Part="1" 
 F 0 "L8" H 9102 4846 50  0000 L CNN
 F 1 "150n" H 9102 4755 50  0000 L CNN
-F 2 "Inductor_THT:L_Axial_L5.3mm_D2.2mm_P7.62mm_Horizontal_Vishay_IM-1" H 9050 4800 50  0001 C CNN
+F 2 "Inductor_THT:L_Axial_L7.0mm_D3.3mm_P2.54mm_Vertical_Fastron_MICC" H 9050 4800 50  0001 C CNN
 F 3 "~" H 9050 4800 50  0001 C CNN
 	1    9050 4800
 	1    0    0    -1  
@@ -356,7 +356,7 @@ AR Path="/5DB0721B" Ref="L?"  Part="1"
 AR Path="/5DAEEEF4/5DB0721B" Ref="L7"  Part="1" 
 F 0 "L7" V 8990 4600 50  0000 C CNN
 F 1 "150n" V 8899 4600 50  0000 C CNN
-F 2 "Inductor_THT:L_Axial_L5.3mm_D2.2mm_P7.62mm_Horizontal_Vishay_IM-1" H 8800 4600 50  0001 C CNN
+F 2 "Inductor_THT:L_Axial_L7.0mm_D3.3mm_P2.54mm_Vertical_Fastron_MICC" H 8800 4600 50  0001 C CNN
 F 3 "~" H 8800 4600 50  0001 C CNN
 	1    8800 4600
 	0    -1   -1   0   
@@ -382,7 +382,7 @@ AR Path="/5DB07227" Ref="L?"  Part="1"
 AR Path="/5DAEEEF4/5DB07227" Ref="L6"  Part="1" 
 F 0 "L6" V 8590 4600 50  0000 C CNN
 F 1 "220n" V 8499 4600 50  0000 C CNN
-F 2 "Inductor_THT:L_Axial_L5.3mm_D2.2mm_P7.62mm_Horizontal_Vishay_IM-1" H 8400 4600 50  0001 C CNN
+F 2 "Inductor_THT:L_Axial_L7.0mm_D3.3mm_P2.54mm_Vertical_Fastron_MICC" H 8400 4600 50  0001 C CNN
 F 3 "~" H 8400 4600 50  0001 C CNN
 	1    8400 4600
 	0    -1   -1   0   
@@ -395,7 +395,7 @@ AR Path="/5DB07233" Ref="L?"  Part="1"
 AR Path="/5DAEEEF4/5DB07233" Ref="L5"  Part="1" 
 F 0 "L5" V 8190 4600 50  0000 C CNN
 F 1 "150n" V 8099 4600 50  0000 C CNN
-F 2 "Inductor_THT:L_Axial_L5.3mm_D2.2mm_P7.62mm_Horizontal_Vishay_IM-1" H 8000 4600 50  0001 C CNN
+F 2 "Inductor_THT:L_Axial_L7.0mm_D3.3mm_P2.54mm_Vertical_Fastron_MICC" H 8000 4600 50  0001 C CNN
 F 3 "~" H 8000 4600 50  0001 C CNN
 	1    8000 4600
 	0    -1   -1   0   
@@ -421,7 +421,7 @@ AR Path="/5DB0723F" Ref="L?"  Part="1"
 AR Path="/5DAEEEF4/5DB0723F" Ref="L4"  Part="1" 
 F 0 "L4" H 7802 4846 50  0000 L CNN
 F 1 "120n" H 7802 4755 50  0000 L CNN
-F 2 "Inductor_THT:L_Axial_L5.3mm_D2.2mm_P7.62mm_Horizontal_Vishay_IM-1" H 7750 4800 50  0001 C CNN
+F 2 "Inductor_THT:L_Axial_L7.0mm_D3.3mm_P2.54mm_Vertical_Fastron_MICC" H 7750 4800 50  0001 C CNN
 F 3 "~" H 7750 4800 50  0001 C CNN
 	1    7750 4800
 	1    0    0    -1  
