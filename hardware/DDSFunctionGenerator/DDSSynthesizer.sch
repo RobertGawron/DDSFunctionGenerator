@@ -42,8 +42,6 @@ $EndComp
 Wire Wire Line
 	4400 1800 4400 1750
 Wire Wire Line
-	4400 1350 4750 1350
-Wire Wire Line
 	4400 1350 4300 1350
 Connection ~ 4400 1350
 Wire Wire Line
@@ -1053,24 +1051,6 @@ F 3 "~" H 3250 5850 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3050 5950 3050 5850
-$Comp
-L Connector:TestPoint TP?
-U 1 1 5DBE41E7
-P 4750 1300
-AR Path="/5DD5C7F6/5DBE41E7" Ref="TP?"  Part="1" 
-AR Path="/5DAEEEF4/5DBE41E7" Ref="TP5"  Part="1" 
-F 0 "TP5" H 4808 1418 50  0000 L CNN
-F 1 "TestPoint" H 4808 1327 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 4950 1300 50  0001 C CNN
-F 3 "~" H 4950 1300 50  0001 C CNN
-	1    4750 1300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4750 1350 4750 1300
-Connection ~ 4750 1350
-Wire Wire Line
-	4750 1350 5250 1350
 Connection ~ 9900 3750
 Wire Wire Line
 	9900 3750 10000 3750
@@ -1439,4 +1419,6 @@ Wire Wire Line
 Connection ~ 2550 5950
 Wire Wire Line
 	2550 5950 3050 5950
+Wire Wire Line
+	4400 1350 5250 1350
 $EndSCHEMATC
