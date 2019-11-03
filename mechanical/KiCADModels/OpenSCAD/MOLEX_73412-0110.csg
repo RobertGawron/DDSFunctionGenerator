@@ -1,0 +1,35 @@
+group() {
+	linear_extrude(height = 0.12, center = false, convexity = 10, scale = [1, 1], $fn = 0, $fa = 12, $fs = 0.01) {
+		polygon(points = [[-0.3, 1.54], [0.3, 1.54], [0.3, -1.54], [-0.3, -1.54]], paths = undef, convexity = 1);
+		polygon(points = [[1.54, -0.6], [1.54, 0.6], [-1.54, 0.6], [-1.54, -0.6]], paths = undef, convexity = 1);
+	}
+}
+group() {
+	group() {
+		linear_extrude(height = 0.36, center = false, convexity = 10, scale = [1, 1], $fn = 0, $fa = 12, $fs = 0.01) {
+			square(size = [2.6, 2.6], center = true);
+		}
+	}
+	group() {
+		linear_extrude(height = 0.12, center = false, convexity = 10, scale = [1, 1], $fn = 0, $fa = 12, $fs = 0.01) {
+			polygon(points = [[-0.3, 1.54], [0.3, 1.54], [0.3, -1.54], [-0.3, -1.54]], paths = undef, convexity = 1);
+			polygon(points = [[1.54, -0.6], [1.54, 0.6], [-1.54, 0.6], [-1.54, -0.6]], paths = undef, convexity = 1);
+		}
+	}
+	multmatrix([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0.36], [0, 0, 0, 1]]) {
+		group() {
+			linear_extrude(height = 0.87, center = false, convexity = 10, scale = [1, 1], $fn = 0, $fa = 12, $fs = 0.01) {
+				difference() {
+					circle($fn = 0, $fa = 12, $fs = 0.01, r = 1);
+					circle($fn = 0, $fa = 12, $fs = 0.01, r = 0.9);
+				}
+			}
+		}
+		group() {
+			linear_extrude(height = 0.87, center = false, convexity = 10, scale = [1, 1], $fn = 0, $fa = 12, $fs = 0.01) {
+				circle($fn = 0, $fa = 12, $fs = 0.01, r = 0.25);
+			}
+		}
+	}
+}
+
