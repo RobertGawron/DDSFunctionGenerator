@@ -63,19 +63,6 @@ F 3 "~" H 4150 3200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector:Conn_Coaxial J?
-U 1 1 5DC50069
-P 6800 3900
-AR Path="/5DA34623/5DC50069" Ref="J?"  Part="1" 
-AR Path="/5DC4991C/5DC50069" Ref="J3"  Part="1" 
-F 0 "J3" H 6900 3875 50  0000 L CNN
-F 1 "Conn_Coaxial" H 6900 3784 50  0000 L CNN
-F 2 "Connector_Coaxial:BNC_Amphenol_B6252HB-NPP3G-50_Horizontal" H 6800 3900 50  0001 C CNN
-F 3 " ~" H 6800 3900 50  0001 C CNN
-	1    6800 3900
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:D_Schottky D5
 U 1 1 5DC51A29
 P 5450 3600
@@ -256,14 +243,6 @@ Wire Wire Line
 Wire Wire Line
 	6050 3900 6600 3900
 Connection ~ 6050 3900
-Wire Wire Line
-	6800 4100 6800 4150
-Wire Wire Line
-	6800 4150 6600 4150
-Wire Wire Line
-	6600 4150 6600 4100
-Wire Wire Line
-	6600 4100 5450 4100
 Connection ~ 5450 4100
 Wire Wire Line
 	5450 4100 5450 3750
@@ -319,4 +298,25 @@ Text GLabel 3200 3900 0    50   Input ~ 0
 SCL
 Text GLabel 3200 4000 0    50   Input ~ 0
 SDA
+$Comp
+L NumericallyControlledOscillator:DG128-5.0-02P-14-00A J?
+U 1 1 5DD9ECE1
+P 6750 3800
+F 0 "J?" H 6927 3651 50  0000 L CNN
+F 1 "DG128-5.0-02P-14-00A" H 6927 3560 50  0000 L CNN
+F 2 "" H 6750 3800 50  0001 C CNN
+F 3 "" H 6750 3800 50  0001 C CNN
+	1    6750 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 4100 5450 4100
+Wire Wire Line
+	6600 3900 6600 3950
+Wire Wire Line
+	6600 3950 6650 3950
+Wire Wire Line
+	6650 4050 6600 4050
+Wire Wire Line
+	6600 4050 6600 4100
 $EndSCHEMATC
