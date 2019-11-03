@@ -1,10 +1,10 @@
 EESchema Schematic File Version 4
 LIBS:DDSFunctionGenerator-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 10 9
+Sheet 9 9
 Title ""
 Date ""
 Rev ""
@@ -40,20 +40,6 @@ F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2288 2500 50  
 F 3 "~" H 2250 2650 50  0001 C CNN
 	1    2250 2650
 	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector:Conn_Coaxial J?
-U 1 1 5DBC1EEB
-P 3800 3150
-AR Path="/5DA34623/5DBC1EEB" Ref="J?"  Part="1" 
-AR Path="/5DC4991C/5DBC1EEB" Ref="J?"  Part="1" 
-AR Path="/5DBB489F/5DBC1EEB" Ref="J4"  Part="1" 
-F 0 "J4" H 3900 3125 50  0000 L CNN
-F 1 "Conn_Coaxial" H 3900 3034 50  0000 L CNN
-F 2 "Connector_Coaxial:BNC_Amphenol_B6252HB-NPP3G-50_Horizontal" H 3800 3150 50  0001 C CNN
-F 3 " ~" H 3800 3150 50  0001 C CNN
-	1    3800 3150
-	1    0    0    -1  
 $EndComp
 $Comp
 L Device:D_Schottky D?
@@ -186,21 +172,36 @@ Wire Wire Line
 	2400 2650 2450 2650
 Wire Wire Line
 	2450 2650 2450 2750
-Wire Wire Line
-	3000 3150 3600 3150
 $Comp
 L power:GND #PWR?
 U 1 1 5DBCDD05
-P 3800 3550
+P 3650 3550
 AR Path="/5DC4991C/5DBCDD05" Ref="#PWR?"  Part="1" 
 AR Path="/5DBB489F/5DBCDD05" Ref="#PWR059"  Part="1" 
-F 0 "#PWR059" H 3800 3300 50  0001 C CNN
-F 1 "GND" H 3805 3377 50  0000 C CNN
-F 2 "" H 3800 3550 50  0001 C CNN
-F 3 "" H 3800 3550 50  0001 C CNN
-	1    3800 3550
+F 0 "#PWR059" H 3650 3300 50  0001 C CNN
+F 1 "GND" H 3655 3377 50  0000 C CNN
+F 2 "" H 3650 3550 50  0001 C CNN
+F 3 "" H 3650 3550 50  0001 C CNN
+	1    3650 3550
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	3800 3350 3800 3550
+	3000 3150 3700 3150
+Wire Wire Line
+	3650 3250 3650 3550
+Wire Wire Line
+	3650 3250 3700 3250
+$Comp
+L NumericallyControlledOscillator:DG128-5.0-02P-14-00A J?
+U 1 1 5DBEE861
+P 3800 3400
+AR Path="/5DC4991C/5DBEE861" Ref="J?"  Part="1" 
+AR Path="/5DBB489F/5DBEE861" Ref="J4"  Part="1" 
+F 0 "J4" H 3977 3251 50  0000 L CNN
+F 1 "DG128-5.0-02P-14-00A" H 3977 3160 50  0000 L CNN
+F 2 "DDSFunctionGenerator:DG128-5.0-02P-14-00A" H 3800 3400 50  0001 C CNN
+F 3 "" H 3800 3400 50  0001 C CNN
+	1    3800 3400
+	1    0    0    1   
+$EndComp
 $EndSCHEMATC

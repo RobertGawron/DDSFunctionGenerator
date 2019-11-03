@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:DDSFunctionGenerator-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -299,15 +299,15 @@ SCL
 Text GLabel 3200 4000 0    50   Input ~ 0
 SDA
 $Comp
-L NumericallyControlledOscillator:DG128-5.0-02P-14-00A J?
+L NumericallyControlledOscillator:DG128-5.0-02P-14-00A J3
 U 1 1 5DD9ECE1
-P 6750 3800
-F 0 "J?" H 6927 3651 50  0000 L CNN
-F 1 "DG128-5.0-02P-14-00A" H 6927 3560 50  0000 L CNN
-F 2 "" H 6750 3800 50  0001 C CNN
-F 3 "" H 6750 3800 50  0001 C CNN
-	1    6750 3800
-	1    0    0    -1  
+P 6750 4200
+F 0 "J3" H 6927 4051 50  0000 L CNN
+F 1 "DG128-5.0-02P-14-00A" H 6927 3960 50  0000 L CNN
+F 2 "DDSFunctionGenerator:DG128-5.0-02P-14-00A" H 6750 4200 50  0001 C CNN
+F 3 "" H 6750 4200 50  0001 C CNN
+	1    6750 4200
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	6600 4100 5450 4100

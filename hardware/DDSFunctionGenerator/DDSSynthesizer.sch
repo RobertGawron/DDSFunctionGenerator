@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:DDSFunctionGenerator-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -1135,7 +1135,7 @@ U 1 1 5DC3D782
 P 4050 6300
 F 0 "X1" H 4400 6550 50  0000 L CNN
 F 1 "XO91" H 4350 6450 50  0000 L CNN
-F 2 "DDSFunctionGenerator:LF SPXO018035" H 4750 5950 50  0001 C CNN
+F 2 "DDSFunctionGenerator:LF_SPXO018035" H 4750 5950 50  0001 C CNN
 F 3 "http://cdn-reichelt.de/documents/datenblatt/B400/XO91.pdf" H 3950 6300 50  0001 C CNN
 	1    4050 6300
 	1    0    0    -1  

@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:DDSFunctionGenerator-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -929,8 +929,6 @@ $EndComp
 Wire Wire Line
 	8500 3300 8500 3050
 Wire Wire Line
-	8800 3750 8800 3300
-Wire Wire Line
 	8800 3300 8500 3300
 Wire Wire Line
 	8500 2750 8500 2550
@@ -1003,5 +1001,7 @@ F 3 "" H 5900 3450 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8800 3300 8800 3200
+Wire Wire Line
+	8800 3300 8800 3700
 Connection ~ 8800 3300
 $EndSCHEMATC
