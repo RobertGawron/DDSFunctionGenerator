@@ -145,7 +145,7 @@ Wire Wire Line
 Wire Wire Line
 	1700 3200 1700 3400
 Text GLabel 1400 3100 0    50   Input ~ 0
-DIGITAL_OUTT_1
+DIGITAL_OUT_1
 $Comp
 L power:GND #PWR?
 U 1 1 5DBC5578

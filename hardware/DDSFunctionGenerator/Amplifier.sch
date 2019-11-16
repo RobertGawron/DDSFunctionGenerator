@@ -534,4 +534,21 @@ Wire Wire Line
 	6150 6150 6000 6150
 Wire Wire Line
 	2450 2600 4200 2600
+Wire Wire Line
+	5050 4050 7900 4050
+$Comp
+L power:GND #PWR0108
+U 1 1 5DDB7D0F
+P 7900 4150
+F 0 "#PWR0108" H 7900 3900 50  0001 C CNN
+F 1 "GND" H 7905 3977 50  0000 C CNN
+F 2 "" H 7900 4150 50  0001 C CNN
+F 3 "" H 7900 4150 50  0001 C CNN
+	1    7900 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 4150 7900 4050
+Text Notes 8200 4050 2    50   ~ 10
+TODO: what to do with this pin?
 $EndSCHEMATC

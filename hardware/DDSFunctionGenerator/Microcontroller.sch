@@ -160,33 +160,31 @@ Wire Wire Line
 $Comp
 L Device:R R?
 U 1 1 5DC4CCFF
-P 3000 4700
+P 4400 4100
 AR Path="/5DC4CCFF" Ref="R?"  Part="1" 
 AR Path="/5DAEEEF4/5DC4CCFF" Ref="R?"  Part="1" 
 AR Path="/5DD5C7F6/5DC4CCFF" Ref="R32"  Part="1" 
-F 0 "R32" H 3070 4746 50  0000 L CNN
-F 1 "2k2" H 3070 4655 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2930 4700 50  0001 C CNN
-F 3 "~" H 3000 4700 50  0001 C CNN
-	1    3000 4700
+F 0 "R32" H 4470 4146 50  0000 L CNN
+F 1 "2k2" H 4470 4055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4330 4100 50  0001 C CNN
+F 3 "~" H 4400 4100 50  0001 C CNN
+	1    4400 4100
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R?
 U 1 1 5DC4D139
-P 3350 4700
+P 4750 4100
 AR Path="/5DC4D139" Ref="R?"  Part="1" 
 AR Path="/5DAEEEF4/5DC4D139" Ref="R?"  Part="1" 
 AR Path="/5DD5C7F6/5DC4D139" Ref="R33"  Part="1" 
-F 0 "R33" H 3420 4746 50  0000 L CNN
-F 1 "2k2" H 3420 4655 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3280 4700 50  0001 C CNN
-F 3 "~" H 3350 4700 50  0001 C CNN
-	1    3350 4700
+F 0 "R33" H 4820 4146 50  0000 L CNN
+F 1 "2k2" H 4820 4055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4680 4100 50  0001 C CNN
+F 3 "~" H 4750 4100 50  0001 C CNN
+	1    4750 4100
 	1    0    0    -1  
 $EndComp
-Text Notes 3100 5050 0    50   ~ 0
-for i2c
 Wire Wire Line
 	7300 2850 7300 3100
 Wire Wire Line
@@ -221,7 +219,7 @@ Text GLabel 8750 4300 2    50   Input ~ 0
 PSEL1
 Text GLabel 8750 4500 2    50   Input ~ 0
 FSELECT
-Text Notes 9250 4200 0    50   ~ 0
+Text Notes 6050 2500 0    50   ~ 10
 todo: connect to correct pins\n
 Wire Wire Line
 	7900 4300 8750 4300
@@ -296,4 +294,111 @@ Wire Wire Line
 Connection ~ 7500 3000
 Wire Wire Line
 	7500 3000 7500 3100
+Text GLabel 4200 4450 0    50   Input ~ 0
+SCL
+Text GLabel 4200 4350 0    50   Input ~ 0
+SDA
+Wire Wire Line
+	4200 4450 4750 4450
+Wire Wire Line
+	4750 4450 4750 4250
+Wire Wire Line
+	4200 4350 4400 4350
+Wire Wire Line
+	4400 4350 4400 4250
+$Comp
+L power:VCC #PWR?
+U 1 1 5DD51A03
+P 4400 3850
+AR Path="/5DD51A03" Ref="#PWR?"  Part="1" 
+AR Path="/5DAEEEF4/5DD51A03" Ref="#PWR?"  Part="1" 
+AR Path="/5DD5C7F6/5DD51A03" Ref="#PWR0104"  Part="1" 
+F 0 "#PWR0104" H 4400 3700 50  0001 C CNN
+F 1 "VCC" H 4417 4023 50  0000 C CNN
+F 2 "" H 4400 3850 50  0001 C CNN
+F 3 "" H 4400 3850 50  0001 C CNN
+	1    4400 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5DD51EA7
+P 4750 3850
+AR Path="/5DD51EA7" Ref="#PWR?"  Part="1" 
+AR Path="/5DAEEEF4/5DD51EA7" Ref="#PWR?"  Part="1" 
+AR Path="/5DD5C7F6/5DD51EA7" Ref="#PWR0105"  Part="1" 
+F 0 "#PWR0105" H 4750 3700 50  0001 C CNN
+F 1 "VCC" H 4767 4023 50  0000 C CNN
+F 2 "" H 4750 3850 50  0001 C CNN
+F 3 "" H 4750 3850 50  0001 C CNN
+	1    4750 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 3950 4400 3850
+Wire Wire Line
+	4750 3950 4750 3850
+Wire Wire Line
+	4750 4450 6300 4450
+Wire Wire Line
+	6300 4450 6300 4500
+Wire Wire Line
+	6300 4500 6800 4500
+Connection ~ 4750 4450
+Wire Wire Line
+	4400 4350 6650 4350
+Wire Wire Line
+	6650 4350 6650 4400
+Wire Wire Line
+	6650 4400 6800 4400
+Connection ~ 4400 4350
+Text GLabel 5800 3800 0    50   Output ~ 0
+ROT_S
+Text GLabel 5800 3650 0    50   Output ~ 0
+ROT_B
+Text GLabel 5800 3500 0    50   Output ~ 0
+ROT_A
+Wire Wire Line
+	5800 3500 6800 3500
+Wire Wire Line
+	6700 3650 6700 3900
+Wire Wire Line
+	6700 3900 6800 3900
+Wire Wire Line
+	5800 3650 6700 3650
+Wire Wire Line
+	6600 3800 6600 4000
+Wire Wire Line
+	6600 4000 6800 4000
+Wire Wire Line
+	5800 3800 6600 3800
+Wire Wire Line
+	7900 4100 8250 4100
+Text GLabel 8250 4100 2    50   Input ~ 0
+DIGITAL_OUT_1
+$Comp
+L power:GND #PWR?
+U 1 1 5DDA3F66
+P 7350 5100
+AR Path="/5DDA3F66" Ref="#PWR?"  Part="1" 
+AR Path="/5DAEEEF4/5DDA3F66" Ref="#PWR?"  Part="1" 
+AR Path="/5DD5C7F6/5DDA3F66" Ref="#PWR0107"  Part="1" 
+F 0 "#PWR0107" H 7350 4850 50  0001 C CNN
+F 1 "GND" H 7355 4927 50  0000 C CNN
+F 2 "" H 7350 5100 50  0001 C CNN
+F 3 "" H 7350 5100 50  0001 C CNN
+	1    7350 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 5000 7300 5050
+Wire Wire Line
+	7300 5050 7350 5050
+Wire Wire Line
+	7400 5050 7400 5000
+Wire Wire Line
+	7350 5100 7350 5050
+Connection ~ 7350 5050
+Wire Wire Line
+	7350 5050 7400 5050
 $EndSCHEMATC
