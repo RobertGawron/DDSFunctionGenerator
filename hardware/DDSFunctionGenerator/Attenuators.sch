@@ -834,8 +834,6 @@ F 3 "~" H 6150 4150 50  0001 C CNN
 	1    6150 4150
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5600 4400 5600 4300
 $Comp
 L power:GND #PWR027
 U 1 1 5DA65483
@@ -1004,7 +1002,6 @@ Wire Wire Line
 Wire Wire Line
 	8800 3300 8800 3700
 Connection ~ 8800 3300
-Connection ~ 5600 4300
 Wire Wire Line
-	5600 4300 5600 4100
+	5600 4100 5600 4400
 $EndSCHEMATC
