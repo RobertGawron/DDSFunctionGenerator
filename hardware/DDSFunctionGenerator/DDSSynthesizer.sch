@@ -711,9 +711,6 @@ Wire Wire Line
 	1550 6050 1500 6050
 Wire Wire Line
 	1550 6150 1500 6150
-NoConn ~ 1750 4600
-NoConn ~ 800  4600
-NoConn ~ 800  4500
 $Comp
 L Device:C C?
 U 1 1 5DCD63C6
@@ -1156,7 +1153,7 @@ U 1 1 5DC3E879
 P 3700 6500
 F 0 "JP1" H 3650 6250 50  0000 R CNN
 F 1 "SolderJumper_2_Open" H 4000 6350 50  0000 R CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 3700 6500 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 3700 6500 50  0001 C CNN
 F 3 "~" H 3700 6500 50  0001 C CNN
 	1    3700 6500
 	0    1    1    0   
@@ -1300,7 +1297,7 @@ U 1 1 5DC901D6
 P 4900 6300
 F 0 "JP3" H 4850 6050 50  0000 R CNN
 F 1 "SolderJumper_2_Open" H 5200 6150 50  0000 R CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 4900 6300 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 4900 6300 50  0001 C CNN
 F 3 "~" H 4900 6300 50  0001 C CNN
 	1    4900 6300
 	-1   0    0    1   
