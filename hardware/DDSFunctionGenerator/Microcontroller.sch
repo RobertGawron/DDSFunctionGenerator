@@ -16,20 +16,6 @@ Comment4 ""
 $EndDescr
 Wire Wire Line
 	3650 2850 3650 2700
-$Comp
-L power:VCC #PWR?
-U 1 1 5DAE2531
-P 3650 2700
-AR Path="/5DAE2531" Ref="#PWR?"  Part="1" 
-AR Path="/5DAEEEF4/5DAE2531" Ref="#PWR?"  Part="1" 
-AR Path="/5DD5C7F6/5DAE2531" Ref="#PWR0101"  Part="1" 
-F 0 "#PWR0101" H 3650 2550 50  0001 C CNN
-F 1 "VCC" H 3667 2873 50  0000 C CNN
-F 2 "" H 3650 2700 50  0001 C CNN
-F 3 "" H 3650 2700 50  0001 C CNN
-	1    3650 2700
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2200 4400 2200 4300
 Wire Wire Line
@@ -141,30 +127,30 @@ Wire Wire Line
 $Comp
 L Device:R R?
 U 1 1 5DC4CCFF
-P 1950 5550
+P 9200 4000
 AR Path="/5DC4CCFF" Ref="R?"  Part="1" 
 AR Path="/5DAEEEF4/5DC4CCFF" Ref="R?"  Part="1" 
 AR Path="/5DD5C7F6/5DC4CCFF" Ref="R32"  Part="1" 
-F 0 "R32" H 2020 5596 50  0000 L CNN
-F 1 "2k2" H 2020 5505 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1880 5550 50  0001 C CNN
-F 3 "~" H 1950 5550 50  0001 C CNN
-	1    1950 5550
-	1    0    0    -1  
+F 0 "R32" H 9270 4046 50  0000 L CNN
+F 1 "2k2" H 9270 3955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 9130 4000 50  0001 C CNN
+F 3 "~" H 9200 4000 50  0001 C CNN
+	1    9200 4000
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Device:R R?
 U 1 1 5DC4D139
-P 2300 5550
+P 8850 4000
 AR Path="/5DC4D139" Ref="R?"  Part="1" 
 AR Path="/5DAEEEF4/5DC4D139" Ref="R?"  Part="1" 
 AR Path="/5DD5C7F6/5DC4D139" Ref="R33"  Part="1" 
-F 0 "R33" H 2370 5596 50  0000 L CNN
-F 1 "2k2" H 2370 5505 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2230 5550 50  0001 C CNN
-F 3 "~" H 2300 5550 50  0001 C CNN
-	1    2300 5550
-	1    0    0    -1  
+F 0 "R33" H 8920 4046 50  0000 L CNN
+F 1 "2k2" H 8920 3955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8780 4000 50  0001 C CNN
+F 3 "~" H 8850 4000 50  0001 C CNN
+	1    8850 4000
+	-1   0    0    -1  
 $EndComp
 Wire Wire Line
 	7300 2850 7300 3100
@@ -179,51 +165,51 @@ Wire Wire Line
 	7500 2850 7500 3000
 Connection ~ 7400 2850
 Wire Wire Line
-	9450 4400 10300 4400
+	5850 7650 6700 7650
 Wire Wire Line
-	9450 4300 10300 4300
+	5850 7550 6700 7550
 Wire Wire Line
-	9450 4200 10300 4200
-Text GLabel 10300 4400 2    50   Input ~ 0
+	5850 7450 6700 7450
+Text GLabel 6700 7650 2    50   Input ~ 0
 FSYNC
-Text GLabel 10300 4300 2    50   Input ~ 0
+Text GLabel 6700 7550 2    50   Input ~ 0
 SCLK
-Text GLabel 10300 4200 2    50   Input ~ 0
+Text GLabel 6700 7450 2    50   Input ~ 0
 SDATA
-Text GLabel 10300 4000 2    50   Input ~ 0
+Text GLabel 6700 7250 2    50   Input ~ 0
 PSEL0
-Text GLabel 10300 3900 2    50   Input ~ 0
+Text GLabel 6700 7150 2    50   Input ~ 0
 PSEL1
-Text GLabel 10300 4100 2    50   Input ~ 0
+Text GLabel 6700 7350 2    50   Input ~ 0
 FSELECT
 Text Notes 6050 2500 0    50   ~ 10
 todo: connect to correct pins\n
 Wire Wire Line
-	9450 3900 10300 3900
+	5850 7150 6700 7150
 Wire Wire Line
-	9450 4000 10300 4000
+	5850 7250 6700 7250
 Wire Wire Line
-	9450 4100 10300 4100
-Text GLabel 10350 3400 2    50   Input ~ 0
+	5850 7350 6700 7350
+Text GLabel 6750 6650 2    50   Input ~ 0
 TXEN
-Text GLabel 10350 3100 2    50   Input ~ 0
+Text GLabel 6750 6350 2    50   Input ~ 0
 DATAEN
 Wire Wire Line
-	9450 3400 10350 3400
+	5850 6650 6750 6650
 Wire Wire Line
-	9450 3100 10350 3100
+	5850 6350 6750 6350
 Wire Wire Line
-	4350 6050 4150 6050
-Text GLabel 4150 6050 0    50   Input ~ 0
+	4300 6950 4100 6950
+Text GLabel 4100 6950 0    50   Input ~ 0
 REL_3
-Text GLabel 4150 6250 0    50   Input ~ 0
+Text GLabel 4100 7150 0    50   Input ~ 0
 REL_1
 Wire Wire Line
-	4350 6150 4150 6150
-Text GLabel 4150 6150 0    50   Input ~ 0
+	4300 7050 4100 7050
+Text GLabel 4100 7050 0    50   Input ~ 0
 REL_2
 Wire Wire Line
-	4150 6250 4350 6250
+	4100 7150 4300 7150
 Wire Wire Line
 	7950 3000 7900 3000
 $Comp
@@ -259,87 +245,35 @@ Wire Wire Line
 Connection ~ 7500 3000
 Wire Wire Line
 	7500 3000 7500 3100
-Text GLabel 1750 5900 0    50   Input ~ 0
-SCL
-Text GLabel 1750 5800 0    50   Input ~ 0
+Text GLabel 9350 4300 2    50   Input ~ 0
 SDA
 Wire Wire Line
-	1750 5900 2300 5900
+	9200 3850 9200 3750
 Wire Wire Line
-	2300 5900 2300 5700
-Wire Wire Line
-	1750 5800 1950 5800
-Wire Wire Line
-	1950 5800 1950 5700
-$Comp
-L power:VCC #PWR?
-U 1 1 5DD51A03
-P 1950 5300
-AR Path="/5DD51A03" Ref="#PWR?"  Part="1" 
-AR Path="/5DAEEEF4/5DD51A03" Ref="#PWR?"  Part="1" 
-AR Path="/5DD5C7F6/5DD51A03" Ref="#PWR0104"  Part="1" 
-F 0 "#PWR0104" H 1950 5150 50  0001 C CNN
-F 1 "VCC" H 1967 5473 50  0000 C CNN
-F 2 "" H 1950 5300 50  0001 C CNN
-F 3 "" H 1950 5300 50  0001 C CNN
-	1    1950 5300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VCC #PWR?
-U 1 1 5DD51EA7
-P 2300 5300
-AR Path="/5DD51EA7" Ref="#PWR?"  Part="1" 
-AR Path="/5DAEEEF4/5DD51EA7" Ref="#PWR?"  Part="1" 
-AR Path="/5DD5C7F6/5DD51EA7" Ref="#PWR0105"  Part="1" 
-F 0 "#PWR0105" H 2300 5150 50  0001 C CNN
-F 1 "VCC" H 2317 5473 50  0000 C CNN
-F 2 "" H 2300 5300 50  0001 C CNN
-F 3 "" H 2300 5300 50  0001 C CNN
-	1    2300 5300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1950 5400 1950 5300
-Wire Wire Line
-	2300 5400 2300 5300
-Wire Wire Line
-	2300 5900 3850 5900
-Wire Wire Line
-	3850 5900 3850 5950
-Wire Wire Line
-	3850 5950 4350 5950
-Connection ~ 2300 5900
-Wire Wire Line
-	1950 5800 4200 5800
-Wire Wire Line
-	4200 5800 4200 5850
-Wire Wire Line
-	4200 5850 4350 5850
-Connection ~ 1950 5800
-Text GLabel 3350 5250 0    50   Output ~ 0
+	8850 3850 8850 3750
+Text GLabel 1300 3350 0    50   Output ~ 0
 ROT_S
-Text GLabel 3350 5100 0    50   Output ~ 0
+Text GLabel 1300 3200 0    50   Output ~ 0
 ROT_B
-Text GLabel 3350 4950 0    50   Output ~ 0
+Text GLabel 1300 3050 0    50   Output ~ 0
 ROT_A
 Wire Wire Line
-	3350 4950 4350 4950
+	1300 3050 2300 3050
 Wire Wire Line
-	4250 5100 4250 5350
+	2200 3200 2200 3450
 Wire Wire Line
-	4250 5350 4350 5350
+	2200 3450 2300 3450
 Wire Wire Line
-	3350 5100 4250 5100
+	1300 3200 2200 3200
 Wire Wire Line
-	4150 5250 4150 5450
+	2100 3350 2100 3550
 Wire Wire Line
-	4150 5450 4350 5450
+	2100 3550 2300 3550
 Wire Wire Line
-	3350 5250 4150 5250
+	1300 3350 2100 3350
 Wire Wire Line
-	9450 3700 9800 3700
-Text GLabel 9800 3700 2    50   Input ~ 0
+	5850 6950 6200 6950
+Text GLabel 6200 6950 2    50   Input ~ 0
 DIGITAL_OUT_1
 $Comp
 L power:GND #PWR?
@@ -391,4 +325,26 @@ Wire Wire Line
 Connection ~ 4650 3950
 Wire Wire Line
 	4650 3950 4650 4200
+Text GLabel 9350 4200 2    50   Input ~ 0
+SCL
+Wire Wire Line
+	7900 4300 8850 4300
+Wire Wire Line
+	7900 4200 9200 4200
+Wire Wire Line
+	9200 4150 9200 4200
+Connection ~ 9200 4200
+Wire Wire Line
+	9200 4200 9350 4200
+Wire Wire Line
+	8850 4150 8850 4300
+Connection ~ 8850 4300
+Wire Wire Line
+	8850 4300 9350 4300
+Text GLabel 3650 2700 1    50   Input ~ 0
+5V_DIGITAL
+Text GLabel 8850 3750 1    50   Input ~ 0
+5V_DIGITAL
+Text GLabel 9200 3750 1    50   Input ~ 0
+5V_DIGITAL
 $EndSCHEMATC
