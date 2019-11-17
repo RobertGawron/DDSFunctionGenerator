@@ -58,23 +58,7 @@ F 3 "~" H 5250 2200 50  0001 C CNN
 	1    5250 2200
 	0    1    1    0   
 $EndComp
-$Comp
-L power:VCC #PWR?
-U 1 1 5DD58B24
-P 5300 4650
-AR Path="/5DD58B24" Ref="#PWR?"  Part="1" 
-AR Path="/5DAEEEF4/5DD58B24" Ref="#PWR?"  Part="1" 
-AR Path="/5DD5C7F6/5DD58B24" Ref="#PWR?"  Part="1" 
-AR Path="/5DD5CD1D/5DD58B24" Ref="#PWR?"  Part="1" 
-AR Path="/5DD5C870/5DD58B24" Ref="#PWR074"  Part="1" 
-F 0 "#PWR074" H 5300 4500 50  0001 C CNN
-F 1 "VCC" H 5317 4823 50  0000 C CNN
-F 2 "" H 5300 4650 50  0001 C CNN
-F 3 "" H 5300 4650 50  0001 C CNN
-	1    5300 4650
-	1    0    0    -1  
-$EndComp
-Text Notes 6000 4350 2    50   ~ 0
+Text Notes 4850 5250 2    50   ~ 0
 pull-upresistors are \non microcontroller sheet
 $Comp
 L power:GND #PWR?
@@ -301,4 +285,6 @@ Wire Wire Line
 Connection ~ 5900 2200
 Wire Wire Line
 	5900 2200 6150 2200
+Text GLabel 5300 4650 1    50   Input ~ 0
+5V_DIGITAL
 $EndSCHEMATC
