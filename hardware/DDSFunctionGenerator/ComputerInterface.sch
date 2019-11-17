@@ -349,21 +349,6 @@ Wire Wire Line
 	3600 3900 5400 3900
 Text Notes 8100 2950 2    50   ~ 0
 VCC in range 3.3-5.25V\n
-$Comp
-L power:VCC #PWR?
-U 1 1 5DD354E8
-P 6950 2500
-AR Path="/5DD354E8" Ref="#PWR?"  Part="1" 
-AR Path="/5DAEEEF4/5DD354E8" Ref="#PWR?"  Part="1" 
-AR Path="/5DD5C7F6/5DD354E8" Ref="#PWR?"  Part="1" 
-AR Path="/5DD5CD1D/5DD354E8" Ref="#PWR069"  Part="1" 
-F 0 "#PWR069" H 6950 2350 50  0001 C CNN
-F 1 "VCC" H 6967 2673 50  0000 C CNN
-F 2 "" H 6950 2500 50  0001 C CNN
-F 3 "" H 6950 2500 50  0001 C CNN
-	1    6950 2500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7150 3300 7150 3200
 Wire Wire Line
@@ -479,4 +464,6 @@ Wire Wire Line
 Connection ~ 5000 3800
 Wire Wire Line
 	5950 3800 6350 3800
+Text GLabel 6950 2500 1    50   Input ~ 0
+5V_DIGITAL
 $EndSCHEMATC
