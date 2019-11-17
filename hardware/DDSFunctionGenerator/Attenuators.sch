@@ -26,17 +26,6 @@ F 3 "~" H 2000 2850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:+9V #PWR023
-U 1 1 5DA36BA8
-P 2300 2150
-F 0 "#PWR023" H 2300 2000 50  0001 C CNN
-F 1 "+9V" H 2315 2323 50  0000 C CNN
-F 2 "" H 2300 2150 50  0001 C CNN
-F 3 "" H 2300 2150 50  0001 C CNN
-	1    2300 2150
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:Q_NPN_BEC Q1
 U 1 1 5DA379E5
 P 2200 3900
@@ -245,17 +234,6 @@ Wire Wire Line
 Wire Wire Line
 	3450 3900 3650 3900
 $Comp
-L power:+9V #PWR028
-U 1 1 5DA65471
-P 5600 2150
-F 0 "#PWR028" H 5600 2000 50  0001 C CNN
-F 1 "+9V" H 5615 2323 50  0000 C CNN
-F 2 "" H 5600 2150 50  0001 C CNN
-F 3 "" H 5600 2150 50  0001 C CNN
-	1    5600 2150
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R13
 U 1 1 5DA6547D
 P 5200 4150
@@ -295,17 +273,6 @@ Wire Wire Line
 Connection ~ 5200 3900
 Wire Wire Line
 	5200 4400 5200 4300
-$Comp
-L power:+9V #PWR033
-U 1 1 5DA6AABA
-P 8800 2200
-F 0 "#PWR033" H 8800 2050 50  0001 C CNN
-F 1 "+9V" H 8815 2373 50  0000 C CNN
-F 2 "" H 8800 2200 50  0001 C CNN
-F 3 "" H 8800 2200 50  0001 C CNN
-	1    8800 2200
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:Q_NPN_BEC Q3
 U 1 1 5DA6AAC0
@@ -1004,4 +971,10 @@ Wire Wire Line
 Connection ~ 8800 3300
 Wire Wire Line
 	5600 4100 5600 4400
+Text GLabel 8800 2200 1    50   Input ~ 0
+9V
+Text GLabel 5600 2150 1    50   Input ~ 0
+9V
+Text GLabel 2300 2150 1    50   Input ~ 0
+9V
 $EndSCHEMATC

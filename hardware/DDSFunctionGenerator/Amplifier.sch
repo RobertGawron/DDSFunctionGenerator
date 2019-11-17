@@ -495,9 +495,9 @@ Wire Wire Line
 Text GLabel 1950 4250 0    50   Input ~ 0
 TXEN
 Text GLabel 1950 4150 0    50   Input ~ 0
-SCLK
+SCL
 Text GLabel 1950 4050 0    50   Input ~ 0
-SDATA
+SDA
 Text GLabel 1950 3950 0    50   Input ~ 0
 DATAEN
 Connection ~ 2750 2600
