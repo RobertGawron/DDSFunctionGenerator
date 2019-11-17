@@ -16,38 +16,6 @@ Comment4 ""
 $EndDescr
 Wire Wire Line
 	3650 2850 3650 2700
-Wire Wire Line
-	2200 4400 2200 4300
-Wire Wire Line
-	2200 4750 2200 4700
-$Comp
-L power:GND #PWR?
-U 1 1 5DAE254C
-P 2200 4750
-AR Path="/5DAE254C" Ref="#PWR?"  Part="1" 
-AR Path="/5DAEEEF4/5DAE254C" Ref="#PWR?"  Part="1" 
-AR Path="/5DD5C7F6/5DAE254C" Ref="#PWR0106"  Part="1" 
-F 0 "#PWR0106" H 2200 4500 50  0001 C CNN
-F 1 "GND" H 2205 4577 50  0000 C CNN
-F 2 "" H 2200 4750 50  0001 C CNN
-F 3 "" H 2200 4750 50  0001 C CNN
-	1    2200 4750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 5DAE256A
-P 2200 4550
-AR Path="/5DAE256A" Ref="C?"  Part="1" 
-AR Path="/5DAEEEF4/5DAE256A" Ref="C?"  Part="1" 
-AR Path="/5DD5C7F6/5DAE256A" Ref="C6"  Part="1" 
-F 0 "C6" H 2315 4596 50  0000 L CNN
-F 1 "100n" H 2315 4505 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2238 4400 50  0001 C CNN
-F 3 "~" H 2200 4550 50  0001 C CNN
-	1    2200 4550
-	1    0    0    -1  
-$EndComp
 $Comp
 L MCU_ST_STM32F0:STM32F030K6Tx U5
 U 1 1 5DC98A9F
@@ -165,39 +133,39 @@ Wire Wire Line
 	7500 2850 7500 3000
 Connection ~ 7400 2850
 Wire Wire Line
-	5850 7650 6700 7650
+	5000 7200 5850 7200
 Wire Wire Line
-	5850 7550 6700 7550
+	5000 7100 5850 7100
 Wire Wire Line
-	5850 7450 6700 7450
-Text GLabel 6700 7650 2    50   Input ~ 0
+	5000 7000 5850 7000
+Text GLabel 5850 7200 2    50   Input ~ 0
 FSYNC
-Text GLabel 6700 7550 2    50   Input ~ 0
+Text GLabel 5850 7100 2    50   Input ~ 0
 SCLK
-Text GLabel 6700 7450 2    50   Input ~ 0
+Text GLabel 5850 7000 2    50   Input ~ 0
 SDATA
-Text GLabel 6700 7250 2    50   Input ~ 0
+Text GLabel 5850 6800 2    50   Input ~ 0
 PSEL0
-Text GLabel 6700 7150 2    50   Input ~ 0
+Text GLabel 5850 6700 2    50   Input ~ 0
 PSEL1
-Text GLabel 6700 7350 2    50   Input ~ 0
+Text GLabel 5850 6900 2    50   Input ~ 0
 FSELECT
 Text Notes 6050 2500 0    50   ~ 10
 todo: connect to correct pins\n
 Wire Wire Line
-	5850 7150 6700 7150
+	5000 6700 5850 6700
 Wire Wire Line
-	5850 7250 6700 7250
+	5000 6800 5850 6800
 Wire Wire Line
-	5850 7350 6700 7350
-Text GLabel 6750 6650 2    50   Input ~ 0
+	5000 6900 5850 6900
+Text GLabel 5900 6200 2    50   Input ~ 0
 TXEN
-Text GLabel 6750 6350 2    50   Input ~ 0
+Text GLabel 5900 5900 2    50   Input ~ 0
 DATAEN
 Wire Wire Line
-	5850 6650 6750 6650
+	5000 6200 5900 6200
 Wire Wire Line
-	5850 6350 6750 6350
+	5000 5900 5900 5900
 Wire Wire Line
 	4300 6950 4100 6950
 Text GLabel 4100 6950 0    50   Input ~ 0
@@ -272,8 +240,8 @@ Wire Wire Line
 Wire Wire Line
 	1300 3350 2100 3350
 Wire Wire Line
-	5850 6950 6200 6950
-Text GLabel 6200 6950 2    50   Input ~ 0
+	5000 6500 5350 6500
+Text GLabel 5350 6500 2    50   Input ~ 0
 DIGITAL_OUT_1
 $Comp
 L power:GND #PWR?

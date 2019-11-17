@@ -473,32 +473,32 @@ Wire Wire Line
 Wire Wire Line
 	4250 4350 4000 4350
 Wire Wire Line
-	4250 4250 1800 4250
+	4250 4250 1950 4250
 Wire Wire Line
 	4250 3950 2400 3950
 Wire Wire Line
 	2400 3950 2400 4150
 Wire Wire Line
-	2400 4150 1800 4150
+	2400 4150 1950 4150
 Wire Wire Line
 	4250 3850 2300 3850
 Wire Wire Line
 	2300 3850 2300 4050
 Wire Wire Line
-	2300 4050 1800 4050
+	2300 4050 1950 4050
 Wire Wire Line
 	4250 3750 2200 3750
 Wire Wire Line
 	2200 3750 2200 3950
 Wire Wire Line
-	2200 3950 1800 3950
-Text GLabel 1800 4250 0    50   Input ~ 0
+	2200 3950 1950 3950
+Text GLabel 1950 4250 0    50   Input ~ 0
 TXEN
-Text GLabel 1800 4150 0    50   Input ~ 0
+Text GLabel 1950 4150 0    50   Input ~ 0
 SCLK
-Text GLabel 1800 4050 0    50   Input ~ 0
+Text GLabel 1950 4050 0    50   Input ~ 0
 SDATA
-Text GLabel 1800 3950 0    50   Input ~ 0
+Text GLabel 1950 3950 0    50   Input ~ 0
 DATAEN
 Connection ~ 2750 2600
 Wire Wire Line
