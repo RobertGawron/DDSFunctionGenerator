@@ -458,7 +458,7 @@ $EndComp
 Wire Wire Line
 	4250 4050 4000 4050
 Wire Wire Line
-	4000 4050 4000 4450
+	4000 4050 4000 4350
 Connection ~ 4000 4750
 Wire Wire Line
 	4250 4450 4000 4450
@@ -471,7 +471,7 @@ Connection ~ 5300 4150
 Wire Wire Line
 	5300 4150 5300 4350
 Wire Wire Line
-	4250 4350 1800 4350
+	4250 4350 4000 4350
 Wire Wire Line
 	4250 4250 1800 4250
 Wire Wire Line
@@ -498,12 +498,10 @@ Wire Wire Line
 	6150 3400 6150 3950
 Wire Wire Line
 	6150 3950 5050 3950
-Text GLabel 1800 4350 0    50   Input ~ 0
-SLEEP
 Text GLabel 1800 4250 0    50   Input ~ 0
 TXEN
 Text GLabel 1800 4150 0    50   Input ~ 0
-CLK
+SCLK
 Text GLabel 1800 4050 0    50   Input ~ 0
 SDATA
 Text GLabel 1800 3950 0    50   Input ~ 0
@@ -551,4 +549,7 @@ Wire Wire Line
 	7900 4150 7900 4050
 Text Notes 8200 4050 2    50   ~ 10
 TODO: what to do with this pin?
+Connection ~ 4000 4350
+Wire Wire Line
+	4000 4350 4000 4450
 $EndSCHEMATC
