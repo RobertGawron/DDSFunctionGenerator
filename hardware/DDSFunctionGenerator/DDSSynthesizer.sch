@@ -309,7 +309,7 @@ AR Path="/5DB0720F" Ref="L?"  Part="1"
 AR Path="/5DAEEEF4/5DB0720F" Ref="L8"  Part="1" 
 F 0 "L8" H 6052 3896 50  0000 L CNN
 F 1 "150n" H 6052 3805 50  0000 L CNN
-F 2 "Inductor_THT:L_Axial_L7.0mm_D3.3mm_P2.54mm_Vertical_Fastron_MICC" H 6000 3850 50  0001 C CNN
+F 2 "Inductor_SMD:L_0805_2012Metric" H 6000 3850 50  0001 C CNN
 F 3 "~" H 6000 3850 50  0001 C CNN
 	1    6000 3850
 	1    0    0    -1  
@@ -335,7 +335,7 @@ AR Path="/5DB0721B" Ref="L?"  Part="1"
 AR Path="/5DAEEEF4/5DB0721B" Ref="L7"  Part="1" 
 F 0 "L7" V 5940 3650 50  0000 C CNN
 F 1 "150n" V 5849 3650 50  0000 C CNN
-F 2 "Inductor_THT:L_Axial_L7.0mm_D3.3mm_P2.54mm_Vertical_Fastron_MICC" H 5750 3650 50  0001 C CNN
+F 2 "Inductor_SMD:L_0805_2012Metric" H 5750 3650 50  0001 C CNN
 F 3 "~" H 5750 3650 50  0001 C CNN
 	1    5750 3650
 	0    -1   -1   0   
@@ -361,7 +361,7 @@ AR Path="/5DB07227" Ref="L?"  Part="1"
 AR Path="/5DAEEEF4/5DB07227" Ref="L6"  Part="1" 
 F 0 "L6" V 5540 3650 50  0000 C CNN
 F 1 "220n" V 5449 3650 50  0000 C CNN
-F 2 "Inductor_THT:L_Axial_L7.0mm_D3.3mm_P2.54mm_Vertical_Fastron_MICC" H 5350 3650 50  0001 C CNN
+F 2 "Inductor_SMD:L_0805_2012Metric" H 5350 3650 50  0001 C CNN
 F 3 "~" H 5350 3650 50  0001 C CNN
 	1    5350 3650
 	0    -1   -1   0   
@@ -374,7 +374,7 @@ AR Path="/5DB07233" Ref="L?"  Part="1"
 AR Path="/5DAEEEF4/5DB07233" Ref="L5"  Part="1" 
 F 0 "L5" V 5140 3650 50  0000 C CNN
 F 1 "150n" V 5049 3650 50  0000 C CNN
-F 2 "Inductor_THT:L_Axial_L7.0mm_D3.3mm_P2.54mm_Vertical_Fastron_MICC" H 4950 3650 50  0001 C CNN
+F 2 "Inductor_SMD:L_0805_2012Metric" H 4950 3650 50  0001 C CNN
 F 3 "~" H 4950 3650 50  0001 C CNN
 	1    4950 3650
 	0    -1   -1   0   
@@ -400,7 +400,7 @@ AR Path="/5DB0723F" Ref="L?"  Part="1"
 AR Path="/5DAEEEF4/5DB0723F" Ref="L4"  Part="1" 
 F 0 "L4" H 4752 3896 50  0000 L CNN
 F 1 "120n" H 4752 3805 50  0000 L CNN
-F 2 "Inductor_THT:L_Axial_L7.0mm_D3.3mm_P2.54mm_Vertical_Fastron_MICC" H 4700 3850 50  0001 C CNN
+F 2 "Inductor_SMD:L_0805_2012Metric" H 4700 3850 50  0001 C CNN
 F 3 "~" H 4700 3850 50  0001 C CNN
 	1    4700 3850
 	1    0    0    -1  
