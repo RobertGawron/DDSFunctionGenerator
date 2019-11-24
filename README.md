@@ -1,4 +1,4 @@
-# 25MHz DDS Function Generator
+# 6MHz DDS Function Generator
 
 **This project is unfinished.**
 
