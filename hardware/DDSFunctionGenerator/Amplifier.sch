@@ -550,20 +550,6 @@ F 3 "~" H 2750 2650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:L L?
-U 1 1 5DB7A4E1
-P 3000 2450
-AR Path="/5DB7A4E1" Ref="L?"  Part="1" 
-AR Path="/5DAEEEF4/5DB7A4E1" Ref="L?"  Part="1" 
-AR Path="/5DB2ED33/5DB7A4E1" Ref="L9"  Part="1" 
-F 0 "L9" V 3190 2450 50  0000 C CNN
-F 1 "4u7" V 3099 2450 50  0000 C CNN
-F 2 "Inductor_SMD:L_1812_4532Metric_Pad1.30x3.40mm_HandSolder" H 3000 2450 50  0001 C CNN
-F 3 "~" H 3000 2450 50  0001 C CNN
-	1    3000 2450
-	0    -1   -1   0   
-$EndComp
-$Comp
 L power:GND #PWR?
 U 1 1 5DB7A4DB
 P 2750 2850
@@ -610,7 +596,7 @@ AR Path="/5DB7A4C8" Ref="C?"  Part="1"
 AR Path="/5DAEEEF4/5DB7A4C8" Ref="C?"  Part="1" 
 AR Path="/5DB2ED33/5DB7A4C8" Ref="C34"  Part="1" 
 F 0 "C34" H 3365 2696 50  0000 L CNN
-F 1 "10u/25V" H 3365 2605 50  0000 L CNN
+F 1 "100n" H 3365 2605 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3288 2500 50  0001 C CNN
 F 3 "~" H 3250 2650 50  0001 C CNN
 	1    3250 2650
@@ -618,4 +604,18 @@ F 3 "~" H 3250 2650 50  0001 C CNN
 $EndComp
 Text GLabel 2500 3150 0    50   Input ~ 0
 RF_DDS
+$Comp
+L Device:L L?
+U 1 1 5DB7A4E1
+P 3000 2450
+AR Path="/5DB7A4E1" Ref="L?"  Part="1" 
+AR Path="/5DAEEEF4/5DB7A4E1" Ref="L?"  Part="1" 
+AR Path="/5DB2ED33/5DB7A4E1" Ref="L9"  Part="1" 
+F 0 "L9" V 3190 2450 50  0000 C CNN
+F 1 "4u7" V 3099 2450 50  0000 C CNN
+F 2 "Inductor_SMD:L_0805_2012Metric" H 3000 2450 50  0001 C CNN
+F 3 "~" H 3000 2450 50  0001 C CNN
+	1    3000 2450
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
