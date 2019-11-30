@@ -476,4 +476,39 @@ Wire Wire Line
 	5750 6950 5750 7000
 Text GLabel 4400 6400 1    50   Input ~ 0
 9V
+$Comp
+L Connector:Conn_01x02_Female J8
+U 1 1 5DE9FB4B
+P 1900 6650
+F 0 "J8" H 1792 6325 50  0000 C CNN
+F 1 "Conn_01x02_Female" H 1792 6416 50  0000 C CNN
+F 2 "DDSFunctionGenerator:DG128-5.0-02P-14-00A" H 1900 6650 50  0001 C CNN
+F 3 "~" H 1900 6650 50  0001 C CNN
+	1    1900 6650
+	-1   0    0    1   
+$EndComp
+Text GLabel 2500 6300 1    50   Input ~ 0
+9V
+$Comp
+L power:GND #PWR?
+U 1 1 5DEA0C5D
+P 2500 6700
+AR Path="/5DEA0C5D" Ref="#PWR?"  Part="1" 
+AR Path="/5DAEEEF4/5DEA0C5D" Ref="#PWR?"  Part="1" 
+AR Path="/5DD5C7F6/5DEA0C5D" Ref="#PWR076"  Part="1" 
+F 0 "#PWR076" H 2500 6450 50  0001 C CNN
+F 1 "GND" H 2505 6527 50  0000 C CNN
+F 2 "" H 2500 6700 50  0001 C CNN
+F 3 "" H 2500 6700 50  0001 C CNN
+	1    2500 6700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 6550 2500 6550
+Wire Wire Line
+	2500 6550 2500 6300
+Wire Wire Line
+	2100 6650 2500 6650
+Wire Wire Line
+	2500 6650 2500 6700
 $EndSCHEMATC
