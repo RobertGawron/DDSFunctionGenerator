@@ -45,7 +45,7 @@ AR Path="/5DAEEEF4/5DC9B5A5" Ref="C?"  Part="1"
 AR Path="/5DD5C7F6/5DC9B5A5" Ref="C25"  Part="1" 
 F 0 "C25" V 1248 4050 50  0000 C CNN
 F 1 "20p" V 1339 4050 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1538 3900 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1538 3900 50  0001 C CNN
 F 3 "~" H 1500 4050 50  0001 C CNN
 	1    1500 4050
 	0    -1   1    0   
@@ -73,7 +73,7 @@ AR Path="/5DAEEEF4/5DC9BE25" Ref="C?"  Part="1"
 AR Path="/5DD5C7F6/5DC9BE25" Ref="C24"  Part="1" 
 F 0 "C24" V 1248 3550 50  0000 C CNN
 F 1 "20p" V 1339 3550 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1538 3400 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1538 3400 50  0001 C CNN
 F 3 "~" H 1500 3550 50  0001 C CNN
 	1    1500 3550
 	0    -1   1    0   
@@ -99,7 +99,7 @@ AR Path="/5DAEEEF4/5DC4CCFF" Ref="R?"  Part="1"
 AR Path="/5DD5C7F6/5DC4CCFF" Ref="R32"  Part="1" 
 F 0 "R32" H 6220 3896 50  0000 L CNN
 F 1 "2k2" H 6220 3805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6080 3850 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6080 3850 50  0001 C CNN
 F 3 "~" H 6150 3850 50  0001 C CNN
 	1    6150 3850
 	-1   0    0    -1  
@@ -113,7 +113,7 @@ AR Path="/5DAEEEF4/5DC4D139" Ref="R?"  Part="1"
 AR Path="/5DD5C7F6/5DC4D139" Ref="R33"  Part="1" 
 F 0 "R33" H 5870 3896 50  0000 L CNN
 F 1 "2k2" H 5870 3805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5730 3850 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5730 3850 50  0001 C CNN
 F 3 "~" H 5800 3850 50  0001 C CNN
 	1    5800 3850
 	-1   0    0    -1  
@@ -181,7 +181,7 @@ AR Path="/5DAEEEF4/5DC51E4F" Ref="C?"  Part="1"
 AR Path="/5DD5C7F6/5DC51E4F" Ref="C3"  Part="1" 
 F 0 "C3" H 3965 2496 50  0000 L CNN
 F 1 "100n" H 3965 2405 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3888 2300 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3888 2300 50  0001 C CNN
 F 3 "~" H 3850 2450 50  0001 C CNN
 	1    3850 2450
 	0    -1   -1   0   
@@ -363,7 +363,7 @@ AR Path="/5DAEEEF4/5DF41DBF" Ref="C?"  Part="1"
 AR Path="/5DD5C7F6/5DF41DBF" Ref="C54"  Part="1" 
 F 0 "C54" H 4835 6846 50  0000 R CNN
 F 1 "100n" H 4835 6755 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4988 6650 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4988 6650 50  0001 C CNN
 F 3 "~" H 4950 6800 50  0001 C CNN
 	1    4950 6800
 	1    0    0    -1  
@@ -377,7 +377,7 @@ AR Path="/5DAEEEF4/5DF41DC5" Ref="U?"  Part="1"
 AR Path="/5DD5C7F6/5DF41DC5" Ref="U3"  Part="1" 
 F 0 "U3" H 5350 6792 50  0000 C CNN
 F 1 "L7805" H 5350 6701 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:TO-252-2" H 5375 6400 50  0001 L CIN
+F 2 "Package_TO_SOT_SMD:SOT-89-3" H 5375 6400 50  0001 L CIN
 F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 5350 6500 50  0001 C CNN
 	1    5350 6550
 	1    0    0    -1  
@@ -397,46 +397,9 @@ F 3 "~" H 4700 6400 50  0001 C CNN
 $EndComp
 Text GLabel 5850 6550 2    50   Input ~ 0
 5V_DIGITAL
-$Comp
-L Device:CP C?
-U 1 1 5DF41DD2
-P 4500 6800
-AR Path="/5DF41DD2" Ref="C?"  Part="1" 
-AR Path="/5DAEEEF4/5DF41DD2" Ref="C?"  Part="1" 
-AR Path="/5DD5C7F6/5DF41DD2" Ref="C53"  Part="1" 
-F 0 "C53" H 4383 6846 50  0000 R CNN
-F 1 "22u/10V" H 4383 6755 50  0000 R CNN
-F 2 "Capacitor_SMD:CP_Elec_6.3x5.4" H 4538 6650 50  0001 C CNN
-F 3 "~" H 4500 6800 50  0001 C CNN
-	1    4500 6800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4500 6650 4500 6550
-Connection ~ 4500 6550
-Wire Wire Line
-	4500 6550 4400 6550
-$Comp
-L power:GND #PWR?
-U 1 1 5DF41DDB
-P 4500 7000
-AR Path="/5DF41DDB" Ref="#PWR?"  Part="1" 
-AR Path="/5DAEEEF4/5DF41DDB" Ref="#PWR?"  Part="1" 
-AR Path="/5DD5C7F6/5DF41DDB" Ref="#PWR02"  Part="1" 
-F 0 "#PWR02" H 4500 6750 50  0001 C CNN
-F 1 "GND" H 4505 6827 50  0000 C CNN
-F 2 "" H 4500 7000 50  0001 C CNN
-F 3 "" H 4500 7000 50  0001 C CNN
-	1    4500 7000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4500 7000 4500 6950
 Wire Wire Line
 	4700 6400 4700 6550
 Connection ~ 4700 6550
-Wire Wire Line
-	4700 6550 4500 6550
 Wire Wire Line
 	5650 6550 5750 6550
 $Comp
@@ -448,7 +411,7 @@ AR Path="/5DAEEEF4/5DF41DE6" Ref="C?"  Part="1"
 AR Path="/5DD5C7F6/5DF41DE6" Ref="C55"  Part="1" 
 F 0 "C55" H 5865 6846 50  0000 L CNN
 F 1 "100n" H 5865 6755 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5788 6650 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5788 6650 50  0001 C CNN
 F 3 "~" H 5750 6800 50  0001 C CNN
 	1    5750 6800
 	1    0    0    -1  
@@ -489,6 +452,14 @@ F 3 "~" H 1900 6650 50  0001 C CNN
 $EndComp
 Text GLabel 2500 6300 1    50   Input ~ 0
 9V
+Wire Wire Line
+	2100 6550 2500 6550
+Wire Wire Line
+	2100 6650 2500 6650
+Wire Wire Line
+	2500 6550 2500 6300
+Wire Wire Line
+	2500 6650 2500 6700
 $Comp
 L power:GND #PWR?
 U 1 1 5DEA0C5D
@@ -504,11 +475,40 @@ F 3 "" H 2500 6700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2100 6550 2500 6550
+	4500 7000 4500 6950
+$Comp
+L power:GND #PWR?
+U 1 1 5DF41DDB
+P 4500 7000
+AR Path="/5DF41DDB" Ref="#PWR?"  Part="1" 
+AR Path="/5DAEEEF4/5DF41DDB" Ref="#PWR?"  Part="1" 
+AR Path="/5DD5C7F6/5DF41DDB" Ref="#PWR02"  Part="1" 
+F 0 "#PWR02" H 4500 6750 50  0001 C CNN
+F 1 "GND" H 4505 6827 50  0000 C CNN
+F 2 "" H 4500 7000 50  0001 C CNN
+F 3 "" H 4500 7000 50  0001 C CNN
+	1    4500 7000
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	2500 6550 2500 6300
+	4700 6550 4500 6550
 Wire Wire Line
-	2100 6650 2500 6650
+	4500 6550 4400 6550
+Connection ~ 4500 6550
 Wire Wire Line
-	2500 6650 2500 6700
+	4500 6650 4500 6550
+$Comp
+L Device:CP C?
+U 1 1 5DF41DD2
+P 4500 6800
+AR Path="/5DF41DD2" Ref="C?"  Part="1" 
+AR Path="/5DAEEEF4/5DF41DD2" Ref="C?"  Part="1" 
+AR Path="/5DD5C7F6/5DF41DD2" Ref="C53"  Part="1" 
+F 0 "C53" H 4383 6846 50  0000 R CNN
+F 1 "47u/10V" H 4383 6755 50  0000 R CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B" H 4538 6650 50  0001 C CNN
+F 3 "~" H 4500 6800 50  0001 C CNN
+	1    4500 6800
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
