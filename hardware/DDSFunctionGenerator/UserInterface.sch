@@ -14,17 +14,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L Device:Rotary_Encoder_Switch SW1
-U 1 1 5DDD45B2
-P 2000 2500
-F 0 "SW1" H 2000 2867 50  0000 C CNN
-F 1 "Rotary_Encoder_Switch" H 2000 2776 50  0000 C CNN
-F 2 "DDSFunctionGenerator:EN11-VNB1BQ15" H 1850 2660 50  0001 C CNN
-F 3 "~" H 2000 2760 50  0001 C CNN
-	1    2000 2500
-	1    0    0    -1  
-$EndComp
 Text Notes 5650 2650 0    50   ~ 10
 I2C LCD driver
 $Comp
@@ -280,4 +269,33 @@ Wire Wire Line
 	2900 3900 3300 3900
 Wire Wire Line
 	2900 3750 2900 4000
+$Comp
+L NumericallyControlledOscillator:EN11-VSB1AQ15 SW1
+U 1 1 5DED4320
+P 2000 2200
+F 0 "SW1" H 2000 2267 50  0000 C CNN
+F 1 "EN11-VSB1AQ15" H 2000 2176 50  0000 C CNN
+F 2 "DDSFunctionGenerator:EN11-VNB1BQ15" H 2000 2200 50  0001 C CNN
+F 3 "" H 2000 2200 50  0001 C CNN
+	1    2000 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DED6F04
+P 2000 3100
+AR Path="/5DED6F04" Ref="#PWR?"  Part="1" 
+AR Path="/5DAEEEF4/5DED6F04" Ref="#PWR?"  Part="1" 
+AR Path="/5DD5C7F6/5DED6F04" Ref="#PWR?"  Part="1" 
+AR Path="/5DD5CD1D/5DED6F04" Ref="#PWR?"  Part="1" 
+AR Path="/5DD5C870/5DED6F04" Ref="#PWR055"  Part="1" 
+F 0 "#PWR055" H 2000 2850 50  0001 C CNN
+F 1 "GND" H 2005 2927 50  0000 C CNN
+F 2 "" H 2000 3100 50  0001 C CNN
+F 3 "" H 2000 3100 50  0001 C CNN
+	1    2000 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 3100 2000 2850
 $EndSCHEMATC
