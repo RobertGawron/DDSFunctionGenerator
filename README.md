@@ -10,7 +10,7 @@
 
 Function generator is a laboratory device to generate various electric waveforms. [DDS (direct digital synthesis)](https://en.wikipedia.org/wiki/Direct_digital_synthesis) is a method to create arbitrary waveforms from one base frequency.
 
-![render of the device](https://raw.githubusercontent.com/RobertGawron/DDSFunctionGenerator/master/documentation/pictures/render_03_11_2019.png)
+![render of the device](https://raw.githubusercontent.com/RobertGawron/DDSFunctionGenerator/master/documentation/pictures/render_08_12_2019.png)
 
 ## System architecture
 
