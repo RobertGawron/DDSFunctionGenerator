@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 8
+Sheet 3 9
 Title ""
 Date ""
 Rev ""
@@ -22,21 +22,12 @@ Connection ~ 1950 1350
 Wire Wire Line
 	1950 1450 1950 1350
 Wire Wire Line
-	8950 1650 8950 1750
-Connection ~ 8950 1650
-Wire Wire Line
-	9050 1650 8950 1650
-Wire Wire Line
 	1450 1350 1550 1350
 Wire Wire Line
 	1450 1450 1450 1350
 Connection ~ 1450 1350
 Wire Wire Line
 	1450 1800 1450 1750
-Wire Wire Line
-	9350 2100 9350 1950
-Wire Wire Line
-	8950 2100 8950 2050
 $Comp
 L power:GND #PWR?
 U 1 1 5DB0718A
@@ -61,32 +52,6 @@ F 1 "GND" H 1455 1627 50  0000 C CNN
 F 2 "" H 1450 1800 50  0001 C CNN
 F 3 "" H 1450 1800 50  0001 C CNN
 	1    1450 1800
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5DB07196
-P 9350 2100
-AR Path="/5DB07196" Ref="#PWR?"  Part="1" 
-AR Path="/5DAEEEF4/5DB07196" Ref="#PWR09"  Part="1" 
-F 0 "#PWR09" H 9350 1850 50  0001 C CNN
-F 1 "GND" H 9355 1927 50  0000 C CNN
-F 2 "" H 9350 2100 50  0001 C CNN
-F 3 "" H 9350 2100 50  0001 C CNN
-	1    9350 2100
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5DB0719C
-P 8950 2100
-AR Path="/5DB0719C" Ref="#PWR?"  Part="1" 
-AR Path="/5DAEEEF4/5DB0719C" Ref="#PWR06"  Part="1" 
-F 0 "#PWR06" H 8950 1850 50  0001 C CNN
-F 1 "GND" H 8955 1927 50  0000 C CNN
-F 2 "" H 8950 2100 50  0001 C CNN
-F 3 "" H 8950 2100 50  0001 C CNN
-	1    8950 2100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -126,32 +91,6 @@ F 1 "100n" H 1565 1555 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 1488 1450 50  0001 C CNN
 F 3 "~" H 1450 1600 50  0001 C CNN
 	1    1450 1600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 5DB071B4
-P 8950 1900
-AR Path="/5DB071B4" Ref="C?"  Part="1" 
-AR Path="/5DAEEEF4/5DB071B4" Ref="C2"  Part="1" 
-F 0 "C2" H 8835 1946 50  0000 R CNN
-F 1 "100n" H 8835 1855 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 8988 1750 50  0001 C CNN
-F 3 "~" H 8950 1900 50  0001 C CNN
-	1    8950 1900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Regulator_Linear:L7805 U?
-U 1 1 5DB071BA
-P 9350 1650
-AR Path="/5DB071BA" Ref="U?"  Part="1" 
-AR Path="/5DAEEEF4/5DB071BA" Ref="U2"  Part="1" 
-F 0 "U2" H 9350 1892 50  0000 C CNN
-F 1 "L7805" H 9350 1801 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-89-3" H 9375 1500 50  0001 L CIN
-F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 9350 1600 50  0001 C CNN
-	1    9350 1650
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -551,8 +490,6 @@ F 3 "~" H 7900 3550 50  0001 C CNN
 	1    7700 3550
 	1    0    0    -1  
 $EndComp
-Text GLabel 9850 1650 2    50   Input ~ 0
-5V_ANALOG
 Wire Wire Line
 	3100 2900 3100 1650
 $Comp
@@ -642,41 +579,6 @@ Text GLabel 1100 6200 0    50   Input ~ 0
 5V_ANALOG
 Wire Wire Line
 	1300 1350 1450 1350
-Wire Wire Line
-	9650 1650 9750 1650
-$Comp
-L Device:C C?
-U 1 1 5DECDDEB
-P 9750 1900
-AR Path="/5DECDDEB" Ref="C?"  Part="1" 
-AR Path="/5DAEEEF4/5DECDDEB" Ref="C6"  Part="1" 
-F 0 "C6" H 9865 1946 50  0000 L CNN
-F 1 "100n" H 9865 1855 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 9788 1750 50  0001 C CNN
-F 3 "~" H 9750 1900 50  0001 C CNN
-	1    9750 1900
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5DECE0AA
-P 9750 2100
-AR Path="/5DECE0AA" Ref="#PWR?"  Part="1" 
-AR Path="/5DAEEEF4/5DECE0AA" Ref="#PWR073"  Part="1" 
-F 0 "#PWR073" H 9750 1850 50  0001 C CNN
-F 1 "GND" H 9755 1927 50  0000 C CNN
-F 2 "" H 9750 2100 50  0001 C CNN
-F 3 "" H 9750 2100 50  0001 C CNN
-	1    9750 2100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9750 1750 9750 1650
-Connection ~ 9750 1650
-Wire Wire Line
-	9750 1650 9850 1650
-Wire Wire Line
-	9750 2050 9750 2100
 $Comp
 L Device:C C?
 U 1 1 5DDAD3DE
@@ -1386,45 +1288,6 @@ F 2 "Resistor_SMD:R_0402_1005Metric" V 3430 4650 50  0001 C CNN
 F 3 "~" H 3500 4650 50  0001 C CNN
 	1    3500 4650
 	0    1    1    0   
-$EndComp
-Text GLabel 8400 1500 1    50   Input ~ 0
-9V
-Wire Wire Line
-	8400 1650 8400 1500
-Wire Wire Line
-	8500 2100 8500 2050
-$Comp
-L power:GND #PWR?
-U 1 1 5DC316E6
-P 8500 2100
-AR Path="/5DC316E6" Ref="#PWR?"  Part="1" 
-AR Path="/5DAEEEF4/5DC316E6" Ref="#PWR0124"  Part="1" 
-F 0 "#PWR0124" H 8500 1850 50  0001 C CNN
-F 1 "GND" H 8505 1927 50  0000 C CNN
-F 2 "" H 8500 2100 50  0001 C CNN
-F 3 "" H 8500 2100 50  0001 C CNN
-	1    8500 2100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8500 1650 8950 1650
-Wire Wire Line
-	8500 1650 8400 1650
-Connection ~ 8500 1650
-Wire Wire Line
-	8500 1750 8500 1650
-$Comp
-L Device:CP C?
-U 1 1 5DC18F51
-P 8500 1900
-AR Path="/5DC18F51" Ref="C?"  Part="1" 
-AR Path="/5DAEEEF4/5DC18F51" Ref="C46"  Part="1" 
-F 0 "C46" H 8383 1946 50  0000 R CNN
-F 1 "47u/10V" H 8383 1855 50  0000 R CNN
-F 2 "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B" H 8538 1750 50  0001 C CNN
-F 3 "~" H 8500 1900 50  0001 C CNN
-	1    8500 1900
-	1    0    0    -1  
 $EndComp
 Text GLabel 2450 4800 3    50   Input ~ 0
 SPI1_SCK
