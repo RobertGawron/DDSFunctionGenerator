@@ -1064,17 +1064,6 @@ F 3 "" H 4350 6950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Jumper:SolderJumper_2_Open JP1
-U 1 1 5DC3E879
-P 4350 6750
-F 0 "JP1" H 4300 6500 50  0000 R CNN
-F 1 "SolderJumper_2_Open" H 4650 6600 50  0000 R CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 4350 6750 50  0001 C CNN
-F 3 "~" H 4350 6750 50  0001 C CNN
-	1    4350 6750
-	0    1    1    0   
-$EndComp
-$Comp
 L power:GND #PWR?
 U 1 1 5DC53FBE
 P 5150 6950
@@ -1293,4 +1282,15 @@ Text GLabel 2450 4800 3    50   Input ~ 0
 SPI1_SCK
 Text GLabel 2550 4800 3    50   Input ~ 0
 SPI1_MOSI
+$Comp
+L Jumper:SolderJumper_2_Open JP1
+U 1 1 5DC3E879
+P 4350 6750
+F 0 "JP1" H 4300 6500 50  0000 R CNN
+F 1 "SolderJumper_2_Open" H 4650 6600 50  0000 R CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 4350 6750 50  0001 C CNN
+F 3 "~" H 4350 6750 50  0001 C CNN
+	1    4350 6750
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
