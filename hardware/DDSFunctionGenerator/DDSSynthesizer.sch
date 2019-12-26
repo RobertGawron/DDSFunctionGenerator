@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 9
+Sheet 3 8
 Title ""
 Date ""
 Rev ""
@@ -677,10 +677,6 @@ Wire Wire Line
 	9750 1650 9850 1650
 Wire Wire Line
 	9750 2050 9750 2100
-Text GLabel 2550 4800 3    50   Input ~ 0
-SDATA
-Text GLabel 2450 4800 3    50   Input ~ 0
-SCLK
 $Comp
 L Device:C C?
 U 1 1 5DDAD3DE
@@ -1430,4 +1426,8 @@ F 3 "~" H 8500 1900 50  0001 C CNN
 	1    8500 1900
 	1    0    0    -1  
 $EndComp
+Text GLabel 2450 4800 3    50   Input ~ 0
+SPI1_SCK
+Text GLabel 2550 4800 3    50   Input ~ 0
+SPI1_MOSI
 $EndSCHEMATC
