@@ -511,4 +511,6 @@ F 3 "~" H 1900 6550 50  0001 C CNN
 	1    1900 6550
 	-1   0    0    -1  
 $EndComp
+Text Notes 900  5900 0    50   ~ 0
+miejsce na zasilanie
 $EndSCHEMATC

@@ -30,7 +30,7 @@ L Device:CP C37
 U 1 1 5DC4A1A1
 P 4150 2950
 F 0 "C37" V 4405 2950 50  0000 C CNN
-F 1 "47u" V 4314 2950 50  0000 C CNN
+F 1 "47u/6V3" V 4314 2950 50  0000 C CNN
 F 2 "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B" H 4188 2800 50  0001 C CNN
 F 3 "~" H 4150 2950 50  0001 C CNN
 	1    4150 2950
@@ -63,17 +63,6 @@ F 3 "~" H 4150 3200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:D_Schottky D5
-U 1 1 5DC51A29
-P 5550 3600
-F 0 "D5" V 5504 3679 50  0000 L CNN
-F 1 "D_Schottky" V 5595 3679 50  0000 L CNN
-F 2 "Diode_SMD:D_MiniMELF" H 5550 3600 50  0001 C CNN
-F 3 "~" H 5550 3600 50  0001 C CNN
-	1    5550 3600
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:R R?
 U 1 1 5DC54AF6
 P 5200 3900
@@ -100,39 +89,6 @@ F 2 "Resistor_SMD:R_0402_1005Metric" V 4880 4450 50  0001 C CNN
 F 3 "~" H 4950 4450 50  0001 C CNN
 	1    4950 4450
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Schottky D6
-U 1 1 5DC551EC
-P 5550 4400
-F 0 "D6" V 5504 4479 50  0000 L CNN
-F 1 "D_Schottky" V 5595 4479 50  0000 L CNN
-F 2 "Diode_SMD:D_MiniMELF" H 5550 4400 50  0001 C CNN
-F 3 "~" H 5550 4400 50  0001 C CNN
-	1    5550 4400
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:D_Schottky D8
-U 1 1 5DC5575B
-P 6150 4400
-F 0 "D8" V 6104 4479 50  0000 L CNN
-F 1 "D_Schottky" V 6195 4479 50  0000 L CNN
-F 2 "Diode_SMD:D_MiniMELF" H 6150 4400 50  0001 C CNN
-F 3 "~" H 6150 4400 50  0001 C CNN
-	1    6150 4400
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:D_Schottky D7
-U 1 1 5DC55C02
-P 6150 3600
-F 0 "D7" V 6104 3679 50  0000 L CNN
-F 1 "D_Schottky" V 6195 3679 50  0000 L CNN
-F 2 "Diode_SMD:D_MiniMELF" H 6150 3600 50  0001 C CNN
-F 3 "~" H 6150 3600 50  0001 C CNN
-	1    6150 3600
-	0    1    1    0   
 $EndComp
 $Comp
 L Device:C C?
@@ -309,4 +265,56 @@ Wire Wire Line
 	6150 3900 5350 3900
 Text Notes 1800 3950 0    50   ~ 10
 I2C pull-up resistors are on\nmicrocontroler sheet
+$Comp
+L Device:D D?
+U 1 1 5E0594BE
+P 5550 3600
+AR Path="/5DA34623/5E0594BE" Ref="D?"  Part="1" 
+AR Path="/5DC4991C/5E0594BE" Ref="D5"  Part="1" 
+F 0 "D5" V 5504 3679 50  0000 L CNN
+F 1 "D" V 5595 3679 50  0000 L CNN
+F 2 "Diode_SMD:D_MiniMELF" H 5550 3600 50  0001 C CNN
+F 3 "~" H 5550 3600 50  0001 C CNN
+	1    5550 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D?
+U 1 1 5E05A454
+P 6150 3600
+AR Path="/5DA34623/5E05A454" Ref="D?"  Part="1" 
+AR Path="/5DC4991C/5E05A454" Ref="D6"  Part="1" 
+F 0 "D6" V 6104 3679 50  0000 L CNN
+F 1 "D" V 6195 3679 50  0000 L CNN
+F 2 "Diode_SMD:D_MiniMELF" H 6150 3600 50  0001 C CNN
+F 3 "~" H 6150 3600 50  0001 C CNN
+	1    6150 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D?
+U 1 1 5E05A7D4
+P 5550 4400
+AR Path="/5DA34623/5E05A7D4" Ref="D?"  Part="1" 
+AR Path="/5DC4991C/5E05A7D4" Ref="D7"  Part="1" 
+F 0 "D7" V 5504 4479 50  0000 L CNN
+F 1 "D" V 5595 4479 50  0000 L CNN
+F 2 "Diode_SMD:D_MiniMELF" H 5550 4400 50  0001 C CNN
+F 3 "~" H 5550 4400 50  0001 C CNN
+	1    5550 4400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D?
+U 1 1 5E05AAB9
+P 6150 4400
+AR Path="/5DA34623/5E05AAB9" Ref="D?"  Part="1" 
+AR Path="/5DC4991C/5E05AAB9" Ref="D8"  Part="1" 
+F 0 "D8" V 6104 4479 50  0000 L CNN
+F 1 "D" V 6195 4479 50  0000 L CNN
+F 2 "Diode_SMD:D_MiniMELF" H 6150 4400 50  0001 C CNN
+F 3 "~" H 6150 4400 50  0001 C CNN
+	1    6150 4400
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
