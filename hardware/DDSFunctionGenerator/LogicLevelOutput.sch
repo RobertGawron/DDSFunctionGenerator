@@ -15,19 +15,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Device:D_Schottky D?
-U 1 1 5DBC1EF1
-P 3000 2950
-AR Path="/5DC4991C/5DBC1EF1" Ref="D?"  Part="1" 
-AR Path="/5DBB489F/5DBC1EF1" Ref="D10"  Part="1" 
-F 0 "D10" V 2954 3029 50  0000 L CNN
-F 1 "D_Schottky" V 3045 3029 50  0000 L CNN
-F 2 "Diode_SMD:D_MiniMELF" H 3000 2950 50  0001 C CNN
-F 3 "~" H 3000 2950 50  0001 C CNN
-	1    3000 2950
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:R R?
 U 1 1 5DBC1EFD
 P 2700 3150
@@ -41,19 +28,6 @@ F 2 "Resistor_SMD:R_0402_1005Metric" V 2630 3150 50  0001 C CNN
 F 3 "~" H 2700 3150 50  0001 C CNN
 	1    2700 3150
 	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:D_Schottky D?
-U 1 1 5DBC1F03
-P 3000 3350
-AR Path="/5DC4991C/5DBC1F03" Ref="D?"  Part="1" 
-AR Path="/5DBB489F/5DBC1F03" Ref="D11"  Part="1" 
-F 0 "D11" V 2954 3429 50  0000 L CNN
-F 1 "D_Schottky" V 3045 3429 50  0000 L CNN
-F 2 "Diode_SMD:D_MiniMELF" H 3000 3350 50  0001 C CNN
-F 3 "~" H 3000 3350 50  0001 C CNN
-	1    3000 3350
-	0    1    1    0   
 $EndComp
 $Comp
 L power:GND #PWR?
@@ -116,5 +90,31 @@ F 2 "DDSFunctionGenerator:DG128-5.0-02P-14-00A" H 3800 3400 50  0001 C CNN
 F 3 "" H 3800 3400 50  0001 C CNN
 	1    3800 3400
 	1    0    0    1   
+$EndComp
+$Comp
+L Device:D D?
+U 1 1 5E05B864
+P 3000 2950
+AR Path="/5DA34623/5E05B864" Ref="D?"  Part="1" 
+AR Path="/5DBB489F/5E05B864" Ref="D9"  Part="1" 
+F 0 "D9" V 2954 3029 50  0000 L CNN
+F 1 "D" V 3045 3029 50  0000 L CNN
+F 2 "Diode_SMD:D_MiniMELF" H 3000 2950 50  0001 C CNN
+F 3 "~" H 3000 2950 50  0001 C CNN
+	1    3000 2950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D?
+U 1 1 5E05BC03
+P 3000 3350
+AR Path="/5DA34623/5E05BC03" Ref="D?"  Part="1" 
+AR Path="/5DBB489F/5E05BC03" Ref="D10"  Part="1" 
+F 0 "D10" V 2954 3429 50  0000 L CNN
+F 1 "D" V 3045 3429 50  0000 L CNN
+F 2 "Diode_SMD:D_MiniMELF" H 3000 3350 50  0001 C CNN
+F 3 "~" H 3000 3350 50  0001 C CNN
+	1    3000 3350
+	0    1    1    0   
 $EndComp
 $EndSCHEMATC
