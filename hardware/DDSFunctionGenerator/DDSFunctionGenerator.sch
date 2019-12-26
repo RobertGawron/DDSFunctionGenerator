@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 8
+Sheet 1 9
 Title ""
 Date ""
 Rev ""
@@ -84,4 +84,10 @@ Wire Notes Line
 	3950 3950 5150 3950
 Wire Notes Line
 	5150 3950 5150 3600
+$Sheet
+S 5250 4300 600  150 
+U 5E09F41D
+F0 "PowerSupply" 50
+F1 "PowerSupply.sch" 50
+$EndSheet
 $EndSCHEMATC
