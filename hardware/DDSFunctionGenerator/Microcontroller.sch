@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 9
+Sheet 5 8
 Title ""
 Date ""
 Rev ""
@@ -93,29 +93,29 @@ Wire Wire Line
 $Comp
 L Device:R R?
 U 1 1 5DC4CCFF
-P 6150 3850
+P 5950 3850
 AR Path="/5DC4CCFF" Ref="R?"  Part="1" 
 AR Path="/5DAEEEF4/5DC4CCFF" Ref="R?"  Part="1" 
 AR Path="/5DD5C7F6/5DC4CCFF" Ref="R32"  Part="1" 
-F 0 "R32" H 6220 3896 50  0000 L CNN
-F 1 "2k2" H 6220 3805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 6080 3850 50  0001 C CNN
-F 3 "~" H 6150 3850 50  0001 C CNN
-	1    6150 3850
+F 0 "R32" H 6020 3896 50  0000 L CNN
+F 1 "2k2" H 6020 3805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 5880 3850 50  0001 C CNN
+F 3 "~" H 5950 3850 50  0001 C CNN
+	1    5950 3850
 	-1   0    0    -1  
 $EndComp
 $Comp
 L Device:R R?
 U 1 1 5DC4D139
-P 5800 3850
+P 5600 3850
 AR Path="/5DC4D139" Ref="R?"  Part="1" 
 AR Path="/5DAEEEF4/5DC4D139" Ref="R?"  Part="1" 
 AR Path="/5DD5C7F6/5DC4D139" Ref="R33"  Part="1" 
-F 0 "R33" H 5870 3896 50  0000 L CNN
-F 1 "2k2" H 5870 3805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 5730 3850 50  0001 C CNN
-F 3 "~" H 5800 3850 50  0001 C CNN
-	1    5800 3850
+F 0 "R33" H 5670 3896 50  0000 L CNN
+F 1 "2k2" H 5670 3805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 5530 3850 50  0001 C CNN
+F 3 "~" H 5600 3850 50  0001 C CNN
+	1    5600 3850
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
@@ -132,11 +132,11 @@ Wire Wire Line
 	3100 4150 2750 4150
 Text GLabel 2750 4150 0    50   Output ~ 0
 FSYNC
-Text GLabel 2750 4650 0    50   Output ~ 0
+Text GLabel 4400 3450 2    50   Output ~ 0
 PSEL0
-Text GLabel 2750 4550 0    50   Output ~ 0
+Text GLabel 4400 3550 2    50   Output ~ 0
 PSEL1
-Text GLabel 4400 4450 2    50   Output ~ 0
+Text GLabel 4400 3950 2    50   Output ~ 0
 FSELECT
 Wire Wire Line
 	3100 4550 2750 4550
@@ -144,15 +144,13 @@ Wire Wire Line
 	3100 4650 2750 4650
 Wire Wire Line
 	4200 4450 4400 4450
-Text GLabel 2750 4250 0    50   Output ~ 0
-DATAEN
 Wire Wire Line
 	3100 4250 2750 4250
 Text GLabel 4400 3150 2    50   Output ~ 0
 REL_1
 Wire Wire Line
 	4200 3350 4400 3350
-Text GLabel 4400 3350 2    50   Output ~ 0
+Text GLabel 4400 3250 2    50   Output ~ 0
 REL_2
 Wire Wire Line
 	4400 3150 4200 3150
@@ -188,17 +186,17 @@ F 3 "~" H 3850 2450 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3600 2450 3700 2450
-Text GLabel 6300 4150 2    50   BiDi ~ 0
+Text GLabel 6100 4150 2    50   BiDi ~ 0
 SDA
 Wire Wire Line
-	6150 3700 6150 3600
+	5950 3700 5950 3600
 Wire Wire Line
-	5800 3700 5800 3600
-Text GLabel 4400 4350 2    50   Output ~ 0
+	5600 3700 5600 3600
+Text GLabel 4400 4450 2    50   Input ~ 0
 ROT_S
-Text GLabel 4400 4250 2    50   Output ~ 0
+Text GLabel 4400 4350 2    50   Input ~ 0
 ROT_B
-Text GLabel 4400 3950 2    50   Output ~ 0
+Text GLabel 4400 4250 2    50   Input ~ 0
 ROT_A
 Wire Wire Line
 	4400 3950 4200 3950
@@ -208,8 +206,6 @@ Wire Wire Line
 	4400 4350 4200 4350
 Wire Wire Line
 	3100 4450 2750 4450
-Text GLabel 2750 4450 0    50   Output ~ 0
-DIGITAL_OUT_1
 $Comp
 L power:GND #PWR?
 U 1 1 5DDA3F66
@@ -258,50 +254,39 @@ Wire Wire Line
 Connection ~ 1300 3800
 Wire Wire Line
 	1300 3800 1300 4050
-Text GLabel 6300 4050 2    50   Input ~ 0
+Text GLabel 6100 4050 2    50   Input ~ 0
 SCL
 Wire Wire Line
-	4200 4150 5800 4150
+	4200 4150 5600 4150
 Wire Wire Line
-	4200 4050 6150 4050
+	4200 4050 5950 4050
 Wire Wire Line
-	6150 4000 6150 4050
-Connection ~ 6150 4050
+	5950 4000 5950 4050
+Connection ~ 5950 4050
 Wire Wire Line
-	6150 4050 6300 4050
+	5950 4050 6100 4050
 Wire Wire Line
-	5800 4000 5800 4150
-Connection ~ 5800 4150
+	5600 4000 5600 4150
+Connection ~ 5600 4150
 Wire Wire Line
-	5800 4150 6300 4150
+	5600 4150 6100 4150
 Text GLabel 3600 2300 1    50   Input ~ 0
 5V_DIGITAL
-Text GLabel 5800 3600 1    50   Input ~ 0
+Text GLabel 5600 3600 1    50   Input ~ 0
 5V_DIGITAL
-Text GLabel 6150 3600 1    50   Input ~ 0
+Text GLabel 5950 3600 1    50   Input ~ 0
 5V_DIGITAL
 Wire Wire Line
 	4200 4550 4400 4550
 Wire Wire Line
 	3100 4050 2750 4050
-Text GLabel 4400 4550 2    50   Output ~ 0
-SDATA
-Text GLabel 2750 4050 0    50   Output ~ 0
-SCLK
-Text GLabel 4400 3250 2    50   Output ~ 0
+Text GLabel 4400 3350 2    50   Output ~ 0
 REL_3
 Wire Wire Line
 	4200 3250 4400 3250
 Wire Wire Line
 	3100 4350 2750 4350
-Text GLabel 2750 4350 0    50   Output ~ 0
-TXEN
 NoConn ~ 4200 4650
-NoConn ~ 4200 3850
-NoConn ~ 4200 3750
-NoConn ~ 4200 3650
-NoConn ~ 4200 3550
-NoConn ~ 4200 3450
 NoConn ~ 3100 3350
 NoConn ~ 3100 3150
 Wire Wire Line
@@ -311,7 +296,7 @@ Wire Wire Line
 	3600 2450 3600 2700
 Wire Wire Line
 	3800 2700 3800 2950
-Text Notes 1800 2600 0    50   ~ 0
+Text Notes 1050 2950 0    59   ~ 12
 todo nrst, boot, jtag, test points
 Wire Wire Line
 	4400 6550 4400 6400
@@ -513,4 +498,27 @@ F 3 "~" H 1900 6550 50  0001 C CNN
 $EndComp
 Text Notes 900  5900 0    50   ~ 0
 miejsce na zasilanie
+Text GLabel 4400 3850 2    50   Output ~ 0
+SPI1_MOSI
+Text GLabel 4400 3750 2    50   Output ~ 0
+SPI1_CS_AMPLIFIER
+Text GLabel 4400 3650 2    50   Output ~ 0
+SPI1_SCK
+Wire Wire Line
+	4200 3650 4400 3650
+Wire Wire Line
+	4200 3750 4400 3750
+Wire Wire Line
+	4200 3850 4400 3850
+Wire Wire Line
+	4400 3450 4200 3450
+Wire Wire Line
+	4400 3550 4200 3550
+NoConn ~ 4400 4550
+NoConn ~ 2750 4050
+NoConn ~ 2750 4250
+NoConn ~ 2750 4350
+NoConn ~ 2750 4450
+NoConn ~ 2750 4550
+NoConn ~ 2750 4650
 $EndSCHEMATC
