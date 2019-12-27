@@ -519,7 +519,7 @@ Wire Wire Line
 Wire Wire Line
 	2750 2550 3450 2550
 Wire Wire Line
-	2300 2500 2300 2150
+	2300 2500 2300 1550
 Connection ~ 2300 2500
 $Comp
 L Device:R R15
@@ -644,7 +644,7 @@ Wire Wire Line
 Wire Wire Line
 	6050 2550 6750 2550
 Wire Wire Line
-	5600 2500 5600 2150
+	5600 2500 5600 1550
 Connection ~ 5600 2500
 Wire Wire Line
 	3650 2350 5900 2350
@@ -700,8 +700,6 @@ Wire Wire Line
 	9250 2650 9250 2600
 Wire Wire Line
 	9250 2600 9950 2600
-Wire Wire Line
-	8800 2550 8800 2200
 Connection ~ 8800 2550
 Wire Wire Line
 	9100 2350 9100 2650
@@ -731,11 +729,7 @@ Wire Wire Line
 Connection ~ 8800 3300
 Wire Wire Line
 	5600 4100 5600 4400
-Text GLabel 8800 2200 1    50   Input ~ 0
-9V
-Text GLabel 5600 2150 1    50   Input ~ 0
-9V
-Text GLabel 2300 2150 1    50   Input ~ 0
+Text GLabel 10000 1400 1    50   Input ~ 0
 9V
 Wire Wire Line
 	9950 2600 9950 3900
@@ -772,4 +766,74 @@ Wire Wire Line
 	9950 4300 9950 4400
 Wire Wire Line
 	9550 4300 9550 4400
+Wire Wire Line
+	2300 1550 5600 1550
+Wire Wire Line
+	5600 1550 8800 1550
+Wire Wire Line
+	8800 1550 8800 2550
+Connection ~ 5600 1550
+$Comp
+L Device:C C64
+U 1 1 5E0F8AB7
+P 9200 1750
+F 0 "C64" H 9086 1796 50  0000 R CNN
+F 1 "2u2" H 9086 1705 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 9238 1600 50  0001 C CNN
+F 3 "~" H 9200 1750 50  0001 C CNN
+	1    9200 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C65
+U 1 1 5E0F959F
+P 9650 1750
+F 0 "C65" H 9536 1796 50  0000 R CNN
+F 1 "2u2" H 9536 1705 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 9688 1600 50  0001 C CNN
+F 3 "~" H 9650 1750 50  0001 C CNN
+	1    9650 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR082
+U 1 1 5E0F98BB
+P 9200 1950
+F 0 "#PWR082" H 9200 1700 50  0001 C CNN
+F 1 "GND" H 9205 1777 50  0000 C CNN
+F 2 "" H 9200 1950 50  0001 C CNN
+F 3 "" H 9200 1950 50  0001 C CNN
+	1    9200 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR083
+U 1 1 5E0FA1D9
+P 9650 1950
+F 0 "#PWR083" H 9650 1700 50  0001 C CNN
+F 1 "GND" H 9655 1777 50  0000 C CNN
+F 2 "" H 9650 1950 50  0001 C CNN
+F 3 "" H 9650 1950 50  0001 C CNN
+	1    9650 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 1550 9200 1550
+Wire Wire Line
+	10000 1550 10000 1400
+Connection ~ 8800 1550
+Wire Wire Line
+	9200 1600 9200 1550
+Connection ~ 9200 1550
+Wire Wire Line
+	9200 1550 9650 1550
+Wire Wire Line
+	9650 1600 9650 1550
+Connection ~ 9650 1550
+Wire Wire Line
+	9650 1550 10000 1550
+Wire Wire Line
+	9200 1950 9200 1900
+Wire Wire Line
+	9650 1950 9650 1900
 $EndSCHEMATC

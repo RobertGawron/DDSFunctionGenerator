@@ -19,19 +19,19 @@ I2C LCD driver
 $Comp
 L Connector:Conn_01x04_Male J?
 U 1 1 5DC2E42E
-P 7250 3350
+P 7400 3250
 AR Path="/5DD5C7F6/5DC2E42E" Ref="J?"  Part="1" 
 AR Path="/5DD5C870/5DC2E42E" Ref="J7"  Part="1" 
-F 0 "J7" H 7050 3100 50  0000 C CNN
-F 1 "Conn_01x04_Male" H 7050 3000 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 7250 3350 50  0001 C CNN
-F 3 "~" H 7250 3350 50  0001 C CNN
-	1    7250 3350
+F 0 "J7" H 7200 3000 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 7200 2900 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 7400 3250 50  0001 C CNN
+F 3 "~" H 7400 3250 50  0001 C CNN
+	1    7400 3250
 	-1   0    0    -1  
 $EndComp
-Text GLabel 6800 3350 0    50   Input ~ 0
+Text GLabel 6500 3250 0    50   Input ~ 0
 SCL
-Text GLabel 6800 3450 0    50   Input ~ 0
+Text GLabel 6500 3350 0    50   Input ~ 0
 SDA
 $Comp
 L Device:R R?
@@ -47,44 +47,44 @@ F 3 "~" H 2650 2600 50  0001 C CNN
 	1    2650 2600
 	0    1    1    0   
 $EndComp
-Text Notes 6500 3700 2    50   ~ 10
+Text Notes 6550 3900 2    50   ~ 10
 pull-upresistors are \non microcontroller sheet
 $Comp
 L power:GND #PWR?
 U 1 1 5DD5A1A3
-P 6950 3600
+P 7100 3750
 AR Path="/5DD5A1A3" Ref="#PWR?"  Part="1" 
 AR Path="/5DAEEEF4/5DD5A1A3" Ref="#PWR?"  Part="1" 
 AR Path="/5DD5C7F6/5DD5A1A3" Ref="#PWR?"  Part="1" 
 AR Path="/5DD5CD1D/5DD5A1A3" Ref="#PWR?"  Part="1" 
 AR Path="/5DD5C870/5DD5A1A3" Ref="#PWR075"  Part="1" 
-F 0 "#PWR075" H 6950 3350 50  0001 C CNN
-F 1 "GND" H 6955 3427 50  0000 C CNN
-F 2 "" H 6950 3600 50  0001 C CNN
-F 3 "" H 6950 3600 50  0001 C CNN
-	1    6950 3600
+F 0 "#PWR075" H 7100 3500 50  0001 C CNN
+F 1 "GND" H 7105 3577 50  0000 C CNN
+F 2 "" H 7100 3750 50  0001 C CNN
+F 3 "" H 7100 3750 50  0001 C CNN
+	1    7100 3750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7050 3250 6950 3250
+	7200 3150 6700 3150
 Wire Wire Line
-	6950 3250 6950 3100
+	6700 3150 6700 3000
 Wire Wire Line
-	6800 3350 7050 3350
+	6500 3250 7200 3250
 Wire Wire Line
-	6800 3450 7050 3450
+	6500 3350 7200 3350
 Wire Wire Line
-	7050 3550 6950 3550
+	7200 3450 7100 3450
 Wire Wire Line
-	6950 3550 6950 3600
+	7100 3450 7100 3750
 Wire Notes Line
-	5500 3850 8000 3850
+	5500 4050 8000 4050
 Wire Notes Line
-	8000 3850 8000 2500
+	8000 4050 8000 2500
 Wire Notes Line
 	8000 2500 5500 2500
 Wire Notes Line
-	5500 2500 5500 3850
+	5500 2500 5500 4050
 Wire Wire Line
 	1700 2500 1400 2500
 Wire Wire Line
@@ -147,7 +147,7 @@ Text GLabel 2500 2150 1    50   Input ~ 0
 5V_DIGITAL
 Text GLabel 1400 2150 1    50   Input ~ 0
 5V_DIGITAL
-Text GLabel 6950 3100 1    50   Input ~ 0
+Text GLabel 6700 3000 1    50   Input ~ 0
 5V_DIGITAL
 Wire Wire Line
 	2900 2600 3550 2600
@@ -298,4 +298,40 @@ F 3 "" H 2000 3100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2000 3100 2000 2850
+$Comp
+L Device:C C?
+U 1 1 5E0E04B5
+P 6700 3550
+AR Path="/5E0E04B5" Ref="C?"  Part="1" 
+AR Path="/5DAEEEF4/5E0E04B5" Ref="C?"  Part="1" 
+AR Path="/5DD5C7F6/5E0E04B5" Ref="C?"  Part="1" 
+AR Path="/5DD5C870/5E0E04B5" Ref="C63"  Part="1" 
+F 0 "C63" H 6815 3596 50  0000 L CNN
+F 1 "100n" H 6815 3505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 6738 3400 50  0001 C CNN
+F 3 "~" H 6700 3550 50  0001 C CNN
+	1    6700 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E0E04BB
+P 6700 3750
+AR Path="/5E0E04BB" Ref="#PWR?"  Part="1" 
+AR Path="/5DAEEEF4/5E0E04BB" Ref="#PWR?"  Part="1" 
+AR Path="/5DD5C7F6/5E0E04BB" Ref="#PWR?"  Part="1" 
+AR Path="/5DD5CD1D/5E0E04BB" Ref="#PWR?"  Part="1" 
+AR Path="/5DD5C870/5E0E04BB" Ref="#PWR081"  Part="1" 
+F 0 "#PWR081" H 6700 3500 50  0001 C CNN
+F 1 "GND" H 6705 3577 50  0000 C CNN
+F 2 "" H 6700 3750 50  0001 C CNN
+F 3 "" H 6700 3750 50  0001 C CNN
+	1    6700 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 3750 6700 3700
+Wire Wire Line
+	6700 3400 6700 3150
+Connection ~ 6700 3150
 $EndSCHEMATC

@@ -283,17 +283,6 @@ Wire Wire Line
 Wire Wire Line
 	6250 2350 6250 2300
 Connection ~ 6250 2300
-$Comp
-L NumericallyControlledOscillator:GD25D10BOIGR U9
-U 1 1 5E145285
-P 5100 5400
-F 0 "U9" H 5075 5475 50  0000 C CNN
-F 1 "GD25D10BOIGR" H 5075 5384 50  0000 C CNN
-F 2 "Package_SO:TSSOP-8_4.4x3mm_P0.65mm" H 5100 5400 50  0001 C CNN
-F 3 "" H 5100 5400 50  0001 C CNN
-	1    5100 5400
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1450 3800 1450 4100
 Wire Wire Line
@@ -418,24 +407,12 @@ F 3 "~" H 1200 4050 50  0001 C CNN
 	1    1200 4050
 	0    -1   1    0   
 $EndComp
-NoConn ~ 2750 4650
-NoConn ~ 2750 4550
-NoConn ~ 2750 4450
-NoConn ~ 2750 4350
-NoConn ~ 2750 4250
-NoConn ~ 2750 4050
 Wire Wire Line
 	3100 4350 2750 4350
 Wire Wire Line
 	3100 4050 2750 4050
 Wire Wire Line
-	3100 4450 2750 4450
-Wire Wire Line
 	3100 4250 2750 4250
-Wire Wire Line
-	3100 4650 2750 4650
-Wire Wire Line
-	3100 4550 2750 4550
 Text GLabel 2750 4150 0    50   Output ~ 0
 FSYNC
 Wire Wire Line
@@ -446,7 +423,7 @@ Text GLabel 4900 3750 2    50   Output ~ 0
 SPI1_CS_AMPLIFIER
 Text GLabel 4900 3850 2    50   Output ~ 0
 SPI1_MOSI
-Text GLabel 4900 3350 2    50   Output ~ 0
+Text GLabel 4900 3150 2    50   Output ~ 0
 REL_3
 Text GLabel 6450 3600 1    50   Input ~ 0
 5V_DIGITAL
@@ -462,11 +439,11 @@ Wire Wire Line
 	6450 4000 6450 4050
 Text GLabel 6600 4050 2    50   Input ~ 0
 SCL
-Text GLabel 4900 4250 2    50   Input ~ 0
+Text GLabel 2750 4350 0    50   Input ~ 0
 ROT_A
-Text GLabel 4900 4350 2    50   Input ~ 0
+Text GLabel 2750 4250 0    50   Input ~ 0
 ROT_B
-Text GLabel 4900 4450 2    50   Input ~ 0
+Text GLabel 2750 4450 0    50   Input ~ 0
 ROT_S
 Wire Wire Line
 	6100 3700 6100 3600
@@ -476,13 +453,13 @@ Text GLabel 6600 4150 2    50   BiDi ~ 0
 SDA
 Text GLabel 4900 3250 2    50   Output ~ 0
 REL_2
-Text GLabel 4900 3150 2    50   Output ~ 0
+Text GLabel 4900 3350 2    50   Output ~ 0
 REL_1
-Text GLabel 4900 3950 2    50   Output ~ 0
+Text GLabel 2750 4050 0    50   Output ~ 0
 FSELECT
-Text GLabel 4900 3550 2    50   Output ~ 0
-PSEL1
 Text GLabel 4900 3450 2    50   Output ~ 0
+PSEL1
+Text GLabel 4900 3550 2    50   Output ~ 0
 PSEL0
 $Comp
 L Device:R R?
@@ -493,7 +470,7 @@ AR Path="/5DAEEEF4/5DC4D139" Ref="R?"  Part="1"
 AR Path="/5DD5C7F6/5DC4D139" Ref="R33"  Part="1" 
 F 0 "R33" H 6170 3896 50  0000 L CNN
 F 1 "2k2" H 6170 3805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 6030 3850 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6030 3850 50  0001 C CNN
 F 3 "~" H 6100 3850 50  0001 C CNN
 	1    6100 3850
 	-1   0    0    -1  
@@ -540,4 +517,63 @@ Wire Wire Line
 	4200 3350 4900 3350
 Wire Wire Line
 	4200 4450 4900 4450
+Wire Wire Line
+	4900 3150 4200 3150
+Wire Wire Line
+	4900 3250 4200 3250
+Text Notes 1600 2700 0    50   ~ 0
+5v -> 3v3
+Wire Wire Line
+	3100 4550 2800 4550
+Wire Wire Line
+	3100 4650 2800 4650
+$Comp
+L Connector:Conn_01x04_Female J8
+U 1 1 5E096F60
+P 1450 5900
+F 0 "J8" H 1478 5784 50  0000 L CNN
+F 1 "Conn_01x04_Female" H 1478 5875 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1450 5900 50  0001 C CNN
+F 3 "~" H 1450 5900 50  0001 C CNN
+	1    1450 5900
+	-1   0    0    1   
+$EndComp
+Text Label 2800 4550 2    50   ~ 0
+USART_TX
+Text Label 2800 4650 2    50   ~ 0
+USART_RX
+$Comp
+L power:GND #PWR?
+U 1 1 5E09BA01
+P 1750 6050
+AR Path="/5E09BA01" Ref="#PWR?"  Part="1" 
+AR Path="/5DAEEEF4/5E09BA01" Ref="#PWR?"  Part="1" 
+AR Path="/5DD5C7F6/5E09BA01" Ref="#PWR080"  Part="1" 
+F 0 "#PWR080" H 1750 5800 50  0001 C CNN
+F 1 "GND" H 1755 5877 50  0000 C CNN
+F 2 "" H 1750 6050 50  0001 C CNN
+F 3 "" H 1750 6050 50  0001 C CNN
+	1    1750 6050
+	-1   0    0    -1  
+$EndComp
+Text GLabel 1750 5600 1    50   Input ~ 0
+5V_DIGITAL
+Wire Wire Line
+	1650 5700 1750 5700
+Wire Wire Line
+	1750 5700 1750 5600
+Wire Wire Line
+	1750 6000 1750 6050
+Wire Wire Line
+	1650 6000 1750 6000
+Wire Wire Line
+	1650 5800 1750 5800
+Wire Wire Line
+	1650 5900 1750 5900
+Text Label 1750 5900 0    50   ~ 0
+USART_TX
+Text Label 1750 5800 0    50   ~ 0
+USART_RX
+Wire Wire Line
+	2750 4450 3100 4450
 $EndSCHEMATC
