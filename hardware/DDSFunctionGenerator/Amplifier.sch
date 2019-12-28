@@ -602,25 +602,7 @@ F 3 "~" H 3350 2450 50  0001 C CNN
 	1    3350 2450
 	0    -1   -1   0   
 $EndComp
-$Comp
-L Device:R R?
-U 1 1 5DFBB034
-P 2700 2450
-AR Path="/5DFBB034" Ref="R?"  Part="1" 
-AR Path="/5DAEEEF4/5DFBB034" Ref="R?"  Part="1" 
-AR Path="/5DB2ED33/5DFBB034" Ref="R11"  Part="1" 
-F 0 "R11" V 2850 2500 50  0000 C CNN
-F 1 "0R" V 2950 2500 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric" V 2630 2450 50  0001 C CNN
-F 3 "~" H 2700 2450 50  0001 C CNN
-	1    2700 2450
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	3100 2450 2850 2450
 Connection ~ 3100 2450
-Wire Wire Line
-	2550 2450 2300 2450
 Wire Wire Line
 	4100 4250 4100 2450
 Connection ~ 4100 2450
@@ -635,4 +617,6 @@ Wire Wire Line
 Connection ~ 4000 2450
 Wire Wire Line
 	4000 2450 4100 2450
+Wire Wire Line
+	2300 2450 3100 2450
 $EndSCHEMATC
