@@ -504,4 +504,12 @@ F 3 "~" H 5700 4450 50  0001 C CNN
 	1    5700 4450
 	1    0    0    -1  
 $EndComp
+Text Label 3650 3800 0    50   ~ 0
+D+
+Text Label 3650 3900 0    50   ~ 0
+D-
+Text Label 6200 3800 0    50   ~ 0
+DU+
+Text Label 6200 3900 0    50   ~ 0
+DU-
 $EndSCHEMATC
