@@ -39,7 +39,13 @@ CREATE SCPI_TOKEN   16 CHARS ALLOT
 : SCPI_*TST?_EXECUTE ( ) ;
 : SCPI_*WAI_EXECUTE ( ) ;
 
-: SCPI_REQUEST_PARSE (  ) 
+( All of mandatory IEEE commands are one token, they start from * character)
+: IS_ONE_TOKEN_COMMAND? ( n -- n status )
+    SCPI_COMMAND 1 chars + c@
+    '*' =
+;
+
+: PARSE_ONE_TOKEN_COMMAND ( )
     S" *CLS" SCPI_TOKEN PLACE 
     SCPI_TOKEN COUNT SCPI_COMMAND COUNT COMPARE
     IF
@@ -50,13 +56,26 @@ CREATE SCPI_TOKEN   16 CHARS ALLOT
     SCPI_TOKEN COUNT SCPI_COMMAND COUNT COMPARE
     IF
        SCPI_*IDN?_EXECUTE
-    THEN      
+    THEN   
+;
+
+: ERROR_STATE ( ) ." ERROR" CR ;
+
+: SCPI_REQUEST_PARSE (  ) 
+    IS_ONE_TOKEN_COMMAND?
+    if PARSE_ONE_TOKEN_COMMAND else then
+
+   
 ;
 
 ( Dummy tests. Commands are send and it's possible to see if apropriate callbacks are executed)
+error_state
 
  S" *CLS" SCPI_COMMAND PLACE 
 SCPI_REQUEST_PARSE 
 
 S" *IDN?" SCPI_COMMAND PLACE 
 SCPI_REQUEST_PARSE 
+
+S" :SYSTem" SCPI_COMMAND PLACE 
+SCPI_REQUEST_PARSE
