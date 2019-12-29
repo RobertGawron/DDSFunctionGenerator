@@ -1,100 +1,62 @@
-\ mocks of C callbacks
-: SCPI_RESPONSE_SEND ( )
-    TYPE
-    CR
-;
+( Words below are mockups of C callbacks.
+  Usage:
+  1. On hardware add inside implementation to call reall C functions.
+  2. For unit tests add some flags and stuff to check if mocks well called correctly and with a good stack. )
+ 
+: SCPI_RESPONSE_SEND ( ) TYPE CR ;
+: GET_IDN ( ) S" 12345" .S ;
+: RESET_DDS ( ) ;
+: RESET_PGA ( ) ;
+: RESET_ATTENUATORS ( ) ;
 
-: GET_IDN ( )
-    s" 12345" .s
-;
+( State machine to parse SCPI commands comming from PC and execute those commands )
 
-\ state machine to parse SCPI commands and execute
-\ C callbacks based on provided data via SCPI
+CREATE SCPI_COMMAND 16 CHARS ALLOT
+CREATE SCPI_TOKEN   16 CHARS ALLOT
 
-: SCPI_*CLS_EXECUTE ( )
-    \  empty
-;
-
-: SCPI_*ESE_EXECUTE ( )
-    \  empty
-;
-
-: SCPI_*ESE?_EXECUTE ( )
-    \  empty
-;
-
-: SCPI_*ESR?_EXECUTE ( )
-    \  empty
-;
+: SCPI_*CLS_EXECUTE ( ) ;
+: SCPI_*ESE_EXECUTE ( ) ;
+: SCPI_*ESE?_EXECUTE ( ) ;
+: SCPI_*ESR?_EXECUTE ( ) ;
 
 : SCPI_*IDN?_EXECUTE ( )
- \   GET_IDN 
-\    SCPI_RESPONSE_SEND
-123
-CR
+    GET_IDN 
+    SCPI_RESPONSE_SEND 
 ;
 
-: SCPI_*OPC_EXECUTE ( )
-    \  empty
-;
-
-: SCPI_OPC?_EXECUTE ( )
-    \  empty
-;
+: SCPI_*OPC_EXECUTE ( ) ;
+: SCPI_OPC?_EXECUTE ( ) ;
 
 : SCPI_*RST_EXECUTE ( )
-    \  empty
+    RESET_DDS 
+    RESET_PGA 
+    RESET_ATTENUATORS
 ;
 
-: SCPI_*SRE_EXECUTE ( )
-    \  empty
-;
+: SCPI_*SRE_EXECUTE ( ) ;
+: SCPI_*SRE?_EXECUTE ( ) ;
+: SCPI_*STB?_EXECUTE ( ) ;
+: SCPI_*TST?_EXECUTE ( ) ;
+: SCPI_*WAI_EXECUTE ( ) ;
 
-: SCPI_*SRE?_EXECUTE
- ( )
-    \  empty
-;
-
-: SCPI_*STB?_EXECUTE ( )
-    \  empty
-;
-
-: SCPI_*TST?_EXECUTE ( )
-    \  empty
-;
-
-: SCPI_*WAI_EXECUTE ( )
-    \  empty
-;
-
-: aa 
-  \  s" ok"
-  \  type
- \   cr
-    cr
-
-;
 : SCPI_REQUEST_PARSE (  ) 
- 
-    s" *CLS" 
-    pad 20
+    S" *CLS" SCPI_TOKEN PLACE 
+    SCPI_TOKEN COUNT SCPI_COMMAND COUNT COMPARE
+    IF
+       SCPI_*CLS_EXECUTE
+    THEN
 
-    COMPARE IF  aa  ENDIF
-
-    s" *CLS"
-
-    COMPARE IF  aa  ENDIF
-    
-    \    s" *xCLS"
-
-  \  COMPARE IF  aa  ENDIF
-.s
+    S" *IDN?" SCPI_TOKEN PLACE 
+    SCPI_TOKEN COUNT SCPI_COMMAND COUNT COMPARE
+    IF
+       SCPI_*IDN?_EXECUTE
+    THEN      
 ;
 
+( Dummy tests. Commands are send and it's possible to see if apropriate callbacks are executed)
 
-\ dummy tests
-s" *CLS"   SCPI_REQUEST_PARSE 
-\ s" RST" SCPI_REQUEST_PARSE 
+ S" *CLS" SCPI_COMMAND PLACE 
+SCPI_REQUEST_PARSE 
 
-
-bye
+S" *IDN?" SCPI_COMMAND PLACE 
+SCPI_REQUEST_PARSE 
