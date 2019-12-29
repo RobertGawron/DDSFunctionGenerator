@@ -39,8 +39,35 @@ CREATE SCPI_TOKEN   16 CHARS ALLOT
 : SCPI_*TST?_EXECUTE ( ) ;
 : SCPI_*WAI_EXECUTE ( ) ;
 
-: SCPI_REQUEST_PARSE (  ) 
-    S" *CLS" SCPI_TOKEN PLACE 
+( A command can only start from : or * character )
+: STATE_CHECK_INIT_TOKEN? ( n -- n' status )
+    SCPI_COMMAND 1 chars + c@
+    '*' = if 
+        true 
+     else  
+        SCPI_COMMAND 1 chars + c@ 
+        ':' = 
+    then 
+;
+
+: STATE_GET_FIRST_ARGUMENT_OFFSET ( n -- n' offset )
+    SCPI_COMMAND count
+    
+    (
+    dup 2 do \ 2 to ommit the first : in one token commands
+        
+        i dup 
+        SCPI_COMMAND i chars + c@
+        ':' = if . i then  
+    loop
+    )
+    
+    begin
+     .s
+;
+
+: PARSE_ONE_TOKEN_COMMAND ( )
+    ( S" *CLS" SCPI_TOKEN PLACE 
     SCPI_TOKEN COUNT SCPI_COMMAND COUNT COMPARE
     IF
        SCPI_*CLS_EXECUTE
@@ -50,13 +77,33 @@ CREATE SCPI_TOKEN   16 CHARS ALLOT
     SCPI_TOKEN COUNT SCPI_COMMAND COUNT COMPARE
     IF
        SCPI_*IDN?_EXECUTE
-    THEN      
+    THEN )   
+;
+
+: ERROR_STATE ( ) ." ERROR" CR ;
+
+: SCPI_REQUEST_PARSE (  ) 
+    STATE_CHECK_INIT_TOKEN?
+    if 
+        STATE_GET_FIRST_ARGUMENT_OFFSET 
+    else 
+        ERROR_STATE
+    then  
 ;
 
 ( Dummy tests. Commands are send and it's possible to see if apropriate callbacks are executed)
 
- S" *CLS" SCPI_COMMAND PLACE 
+S" *CLS" SCPI_COMMAND PLACE 
 SCPI_REQUEST_PARSE 
 
 S" *IDN?" SCPI_COMMAND PLACE 
+SCPI_REQUEST_PARSE 
+
+S" :SYSTem" SCPI_COMMAND PLACE 
+SCPI_REQUEST_PARSE
+
+S" :SYSTem:ERRor" SCPI_COMMAND PLACE 
+SCPI_REQUEST_PARSE
+
+S" wrong_msg" SCPI_COMMAND PLACE 
 SCPI_REQUEST_PARSE 
