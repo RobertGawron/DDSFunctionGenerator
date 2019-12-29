@@ -50,8 +50,22 @@ CREATE SCPI_TOKEN   16 CHARS ALLOT
     then 
 ;
 
-: GET_FIRST_ARGUMENT_OFFSET ( n -- n' offset)
+: STATE_GET_FIRST_ARGUMENT_OFFSET ( n -- n' offset )
+    SCPI_COMMAND count
+    
+    (
+    dup 2 do \ 2 to ommit the first : in one token commands
+        
+        i dup 
+        SCPI_COMMAND i chars + c@
+        ':' = if . i then  
+    loop
+    )
+    
+    begin
+     .s
 ;
+
 : PARSE_ONE_TOKEN_COMMAND ( )
     ( S" *CLS" SCPI_TOKEN PLACE 
     SCPI_TOKEN COUNT SCPI_COMMAND COUNT COMPARE
@@ -71,7 +85,7 @@ CREATE SCPI_TOKEN   16 CHARS ALLOT
 : SCPI_REQUEST_PARSE (  ) 
     STATE_CHECK_INIT_TOKEN?
     if 
-        GET_FIRST_ARGUMENT_OFFSET 
+        STATE_GET_FIRST_ARGUMENT_OFFSET 
     else 
         ERROR_STATE
     then  
@@ -86,6 +100,9 @@ S" *IDN?" SCPI_COMMAND PLACE
 SCPI_REQUEST_PARSE 
 
 S" :SYSTem" SCPI_COMMAND PLACE 
+SCPI_REQUEST_PARSE
+
+S" :SYSTem:ERRor" SCPI_COMMAND PLACE 
 SCPI_REQUEST_PARSE
 
 S" wrong_msg" SCPI_COMMAND PLACE 
