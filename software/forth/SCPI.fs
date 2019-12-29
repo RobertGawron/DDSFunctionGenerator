@@ -49,21 +49,25 @@ CREATE SCPI_TOKEN   16 CHARS ALLOT
         ':' = 
     then 
 ;
-
+variable var
 : STATE_GET_FIRST_ARGUMENT_OFFSET ( n -- n' offset )
     SCPI_COMMAND count
     
-    (
-    dup 2 do \ 2 to ommit the first : in one token commands
+    
+     0 var !
+     
+    
+    
+    dup .  2 do \ 2 to ommit the first : commands that doesn'y have arguments
         
         i dup 
         SCPI_COMMAND i chars + c@
-        ':' = if . i then  
+        ':' = if i var ! then
     loop
-    )
     
-    begin
-     .s
+   . var @  cr
+    
+     .s cr
 ;
 
 : PARSE_ONE_TOKEN_COMMAND ( )
