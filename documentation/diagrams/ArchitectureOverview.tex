@@ -27,11 +27,11 @@
 \node (ControllingInterface) [system, left=of Microcontroller] {Controlling Interface\\SCPI};
 \node (UserInterface) [system, below=of ControllingInterface] {User Interface};
 cage clamp
-\node (LogicLevelOutput) [system, below=of Attenuators] {Logic Level Output};
-\node (ADC) [system, below=of LogicLevelOutput] {ADC\\ (MCP3425A0T-ECH)};
+
+\node (ADC) [system, right=of Microcontroller] {ADC\\ (MCP3425A0T-ECH)};
 
 \node (Output50Ohm) [circle, interface, right=of Attenuators] {OUT};
-\node (OutputLogicLevelOutput) [circle, interface, right=of LogicLevelOutput] {OUT};
+
 \node (OutputADC) [circle, interface, right=of ADC] {IN};
 \node (OutputControllingInterface) [circle, interface, left=of ControllingInterface] {IN/OUT};
 \node (OutputUserInterface) [circle, interface, left=of UserInterface] {IN/OUT};
@@ -50,7 +50,7 @@ cage clamp
 \draw [-{Latex[scale=3.0]}] (Microcontroller) -- node[anchor=west, minimum width=.25cm, draw=none] {SPI/GPIO} (RFAmplifier);
 \draw [-{Latex[scale=3.0]}] (Microcontroller) -- node[anchor=west, minimum width=.25cm, draw=none] {GPIO} (Attenuators);
 
-\draw [-{Latex[scale=3.0]}] (Microcontroller) -- node[anchor=south, minimum width=.25cm, draw=none] {GPIO} (LogicLevelOutput);
+
 \draw [-{Latex[scale=3.0]}] (Microcontroller) -- node[anchor=west, minimum width=.25cm, draw=none] {} (Attenuators);
 \draw [-{Latex[scale=3.0]}] (ADC) -- node[anchor=south, minimum width=.25cm, draw=none] {I2C} (Microcontroller);
 
@@ -62,7 +62,6 @@ cage clamp
 \end{scope}
 
 \draw [-{Latex[scale=3.0]}] (Attenuators) -- node[anchor=west, minimum width=.25cm, draw=none] {} (Output50Ohm);
-\draw [-{Latex[scale=3.0]}] (LogicLevelOutput) -- node[anchor=west, minimum width=.25cm, draw=none] {} (OutputLogicLevelOutput);
 \draw [-{Latex[scale=3.0]}] (OutputADC) -- node[anchor=west, minimum width=.25cm, draw=none] {} (ADC);
 
 
