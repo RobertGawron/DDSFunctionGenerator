@@ -41,33 +41,35 @@ CREATE SCPI_TOKEN   16 CHARS ALLOT
 
 ( A command can only start from : or * character )
 : STATE_CHECK_INIT_TOKEN? ( n -- n' status )
-    SCPI_COMMAND 1 chars + c@
-    '*' = if 
-        true 
-     else  
-        SCPI_COMMAND 1 chars + c@ 
+    SCPI_COMMAND 1 CHARS + C@
+
+    '*' = IF 
+        TRUE 
+     ELSE  
+        SCPI_COMMAND 1 CHARS + C@ 
         ':' = 
-    then 
+    THEN 
 ;
-variable var
+
 : STATE_GET_FIRST_ARGUMENT_OFFSET ( n -- n' offset )
-    SCPI_COMMAND count
+    \ offset of the first argument 
+    0
     
-    
-     0 var !
-     
-    
-    
-    dup .  2 do \ 2 to ommit the first : commands that doesn'y have arguments
-        
-        i dup 
-        SCPI_COMMAND i chars + c@
-        ':' = if i var ! then
-    loop
-    
-   . var @  cr
-    
-     .s cr
+    \ get SCPI command but don't keep the string on stack
+    SCPI_COMMAND COUNT
+    SWAP DROP
+       
+    \ search for first ":" that is not starting SCPI command
+    1 + 2 DO
+        SCPI_COMMAND I CHARS + C@
+
+        ':' = IF  
+            0 = IF 
+                DROP I
+            THEN
+        THEN
+
+    LOOP
 ;
 
 : PARSE_ONE_TOKEN_COMMAND ( )
@@ -86,13 +88,19 @@ variable var
 
 : ERROR_STATE ( ) ." ERROR" CR ;
 
-: SCPI_REQUEST_PARSE (  ) 
+: SCPI_REQUEST_PARSE (  )    
     STATE_CHECK_INIT_TOKEN?
-    if 
-        STATE_GET_FIRST_ARGUMENT_OFFSET 
-    else 
+    IF 
+        STATE_GET_FIRST_ARGUMENT_OFFSET
+        ( IF
+            ." command without arguments"
+        ELSE
+            ." command arguments are present" 
+        THEN )
+        .S CR
+    ELSE 
         ERROR_STATE
-    then  
+    THEN
 ;
 
 ( Dummy tests. Commands are send and it's possible to see if apropriate callbacks are executed)
@@ -100,14 +108,14 @@ variable var
 S" *CLS" SCPI_COMMAND PLACE 
 SCPI_REQUEST_PARSE 
 
-S" *IDN?" SCPI_COMMAND PLACE 
+( S" *IDN?" SCPI_COMMAND PLACE 
 SCPI_REQUEST_PARSE 
 
 S" :SYSTem" SCPI_COMMAND PLACE 
 SCPI_REQUEST_PARSE
-
+)
 S" :SYSTem:ERRor" SCPI_COMMAND PLACE 
 SCPI_REQUEST_PARSE
-
+( 
 S" wrong_msg" SCPI_COMMAND PLACE 
-SCPI_REQUEST_PARSE 
+SCPI_REQUEST_PARSE )
