@@ -14,100 +14,114 @@
 CREATE SCPI_COMMAND 16 CHARS ALLOT
 CREATE SCPI_TOKEN   16 CHARS ALLOT
 
-: SCPI_*CLS_EXECUTE ( ) ;
-: SCPI_*ESE_EXECUTE ( ) ;
-: SCPI_*ESE?_EXECUTE ( ) ;
-: SCPI_*ESR?_EXECUTE ( ) ;
+: EXECUTE_*CLS_CMD ( ) 
+    ." execute *CLS" CR
+;
 
-: SCPI_*IDN?_EXECUTE ( )
+: EXECUTE_*ESE_CMD ( ) ;
+: EXECUTE_*ESE?_CMD ( ) ;
+: EXECUTE_*ESR?_CMD ( ) ;
+
+: EXECUTE_*IDN?_CMD ( )
     GET_IDN 
     SCPI_RESPONSE_SEND 
 ;
 
-: SCPI_*OPC_EXECUTE ( ) ;
-: SCPI_OPC?_EXECUTE ( ) ;
+: EXECUTE_*OPC_CMD ( ) ;
+: EXECUTE_OPC?_CMD ( ) ;
 
-: SCPI_*RST_EXECUTE ( )
+: EXECUTE_*RST_CMD ( )
     RESET_DDS 
     RESET_PGA 
     RESET_ATTENUATORS
 ;
 
-: SCPI_*SRE_EXECUTE ( ) ;
-: SCPI_*SRE?_EXECUTE ( ) ;
-: SCPI_*STB?_EXECUTE ( ) ;
-: SCPI_*TST?_EXECUTE ( ) ;
-: SCPI_*WAI_EXECUTE ( ) ;
+: EXECUTE_*SRE_CMD ( ) ;
+: EXECUTE_*SRE?_CMD ( ) ;
+: EXECUTE_*STB?_CMD ( ) ;
+: EXECUTE_*TST?_CMD ( ) ;
+: EXECUTE_*WAI_CMD ( ) ;
+
+: EXECUTE_:SYSTem_CMD ( )
+    ." execute :SYSTem" CR
+;
 
 ( A command can only start from : or * character )
-: STATE_CHECK_INIT_TOKEN? ( n -- n' status )
-    SCPI_COMMAND 1 chars + c@
-    '*' = if 
-        true 
-     else  
-        SCPI_COMMAND 1 chars + c@ 
-        ':' = 
-    then 
+: STATE_IS_SYNTAX_OK? ( n -- n' status )
+    \ returned value
+    FALSE
+
+    SCPI_COMMAND 1 CHARS + C@
+    DUP
+    
+    '*' = IF SWAP DROP TRUE SWAP THEN
+    ':' = IF DROP TRUE THEN
 ;
-variable var
+
 : STATE_GET_FIRST_ARGUMENT_OFFSET ( n -- n' offset )
-    SCPI_COMMAND count
+    \ returned value 
+    0
     
-    
-     0 var !
-     
-    
-    
-    dup .  2 do \ 2 to ommit the first : commands that doesn'y have arguments
-        
-        i dup 
-        SCPI_COMMAND i chars + c@
-        ':' = if i var ! then
-    loop
-    
-   . var @  cr
-    
-     .s cr
+    \ get SCPI command but don't keep the string on stack
+    SCPI_COMMAND COUNT
+    SWAP DROP
+       
+    \ search for first ":" that is not starting SCPI command
+    1 + 2 DO
+        SCPI_COMMAND I CHARS + C@
+
+        ':' = IF  
+            0 = IF 
+                DROP I
+            THEN
+        THEN
+    LOOP
 ;
 
-: PARSE_ONE_TOKEN_COMMAND ( )
-    ( S" *CLS" SCPI_TOKEN PLACE 
+: STATE_ERROR ( )
+    ." ERROR" CR 
+;
+
+: STATE_EXECUTE_COMMAND ( )
+    S" *CLS" SCPI_TOKEN PLACE 
     SCPI_TOKEN COUNT SCPI_COMMAND COUNT COMPARE
+    0= IF
+       EXECUTE_*CLS_CMD
+    THEN  
+
+    S" :SYSTem" SCPI_TOKEN PLACE 
+    SCPI_TOKEN COUNT SCPI_COMMAND COUNT COMPARE
+    0= IF
+       EXECUTE_:SYSTem_CMD
+    THEN 
+
+    \ use this later for complex commands
+    \ STATE_GET_FIRST_ARGUMENT_OFFSET 
+    \ .
+    .S CR   
+    \ temporary hardcoded return value
+    TRUE
+;
+
+: SCPI_STATE_MACHINE (  )
+    SCPI_COMMAND PLACE
+    
+    STATE_IS_SYNTAX_OK?
     IF
-       SCPI_*CLS_EXECUTE
+        STATE_EXECUTE_COMMAND
+        IF 
+        ELSE
+            STATE_ERROR
+        THEN
+    ELSE 
+        STATE_ERROR
     THEN
-
-    S" *IDN?" SCPI_TOKEN PLACE 
-    SCPI_TOKEN COUNT SCPI_COMMAND COUNT COMPARE
-    IF
-       SCPI_*IDN?_EXECUTE
-    THEN )   
-;
-
-: ERROR_STATE ( ) ." ERROR" CR ;
-
-: SCPI_REQUEST_PARSE (  ) 
-    STATE_CHECK_INIT_TOKEN?
-    if 
-        STATE_GET_FIRST_ARGUMENT_OFFSET 
-    else 
-        ERROR_STATE
-    then  
 ;
 
 ( Dummy tests. Commands are send and it's possible to see if apropriate callbacks are executed)
 
-S" *CLS" SCPI_COMMAND PLACE 
-SCPI_REQUEST_PARSE 
-
-S" *IDN?" SCPI_COMMAND PLACE 
-SCPI_REQUEST_PARSE 
-
-S" :SYSTem" SCPI_COMMAND PLACE 
-SCPI_REQUEST_PARSE
-
-S" :SYSTem:ERRor" SCPI_COMMAND PLACE 
-SCPI_REQUEST_PARSE
-
-S" wrong_msg" SCPI_COMMAND PLACE 
-SCPI_REQUEST_PARSE 
+S" *CLS" SCPI_STATE_MACHINE 
+S" *IDN?" SCPI_STATE_MACHINE 
+S" :SYSTem" SCPI_STATE_MACHINE
+S" :SYSTem:ERRor" SCPI_STATE_MACHINE
+S" wrong_msg" SCPI_STATE_MACHINE
