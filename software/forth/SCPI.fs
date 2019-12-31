@@ -1,4 +1,4 @@
-( Words below are mockups of C callbacks.
+( Words in this scection are mockups of C callbacks.
   Usage:
   1. On hardware add inside implementation to call reall C functions.
   2. For unit tests add some flags and stuff to check if mocks well called correctly and with a good stack. )
@@ -52,10 +52,8 @@ CREATE SCPI_TOKEN   16 CHARS ALLOT
     FALSE
 
     SCPI_COMMAND 1 CHARS + C@
-    DUP
     
-    '*' = IF SWAP DROP TRUE SWAP THEN
-    ':' = IF DROP TRUE THEN
+    DUP ':' = SWAP '*' = OR IF DROP TRUE THEN
 ;
 
 : STATE_GET_FIRST_ARGUMENT_OFFSET ( n -- n' offset )
@@ -96,8 +94,8 @@ CREATE SCPI_TOKEN   16 CHARS ALLOT
     THEN 
 
     \ use this later for complex commands
-    \ STATE_GET_FIRST_ARGUMENT_OFFSET 
-    \ .
+     STATE_GET_FIRST_ARGUMENT_OFFSET 
+     
     .S CR   
     \ temporary hardcoded return value
     TRUE
