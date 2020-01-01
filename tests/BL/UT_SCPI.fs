@@ -1,4 +1,4 @@
-S" TESTFRAMEWORK.FS" REQUIRED
+S" TestFramework.fs" REQUIRED
 
 
 ( Mocks )
@@ -10,7 +10,7 @@ S" TESTFRAMEWORK.FS" REQUIRED
 
 
 ( Tested functionality )
-S" ../../SOFTWARE/BL/SCPI.FS" REQUIRED
+S" ../../software/BL/SCPI.fs" REQUIRED
 
 
 ( Test definitions )
