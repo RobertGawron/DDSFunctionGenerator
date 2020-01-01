@@ -1,15 +1,4 @@
-( Words in this scection are mockups of C callbacks.
-  Usage:
-  1. On hardware add inside implementation to call reall C functions.
-  2. For unit tests add some flags and stuff to check if mocks well called correctly and with a good stack. )
- 
-: SCPI_RESPONSE_SEND ( ) TYPE CR ;
-: GET_IDN ( ) S" 12345" .S ;
-: RESET_DDS ( ) ;
-: RESET_PGA ( ) ;
-: RESET_ATTENUATORS ( ) ;
-
-( State machine to parse SCPI commands comming from PC and execute those commands )
+( State machine to parse and execute SCPI commands )
 
 CREATE SCPI_COMMAND 16 CHARS ALLOT
 CREATE SCPI_TOKEN   16 CHARS ALLOT
@@ -115,11 +104,3 @@ CREATE SCPI_TOKEN   16 CHARS ALLOT
         STATE_ERROR
     THEN
 ;
-
-( Dummy tests. Commands are send and it's possible to see if apropriate callbacks are executed)
-
-S" *CLS" SCPI_STATE_MACHINE 
-S" *IDN?" SCPI_STATE_MACHINE 
-S" :SYSTem" SCPI_STATE_MACHINE
-S" :SYSTem:ERRor" SCPI_STATE_MACHINE
-S" wrong_msg" SCPI_STATE_MACHINE
