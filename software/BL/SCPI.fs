@@ -36,16 +36,15 @@ CREATE SCPI_TOKEN   16 CHARS ALLOT
 ;
 
 ( A command can only start from : or * character )
-: STATE_IS_SYNTAX_OK? ( n -- n' status )
+: STATE_IS_COMMAND_LEXICALLY_OK? ( n -- n' status )
     \ returned value
     FALSE
 
     SCPI_COMMAND 1 CHARS + C@
-    
     DUP ':' = SWAP '*' = OR IF DROP TRUE THEN
 ;
 
-: STATE_GET_FIRST_ARGUMENT_OFFSET ( n -- n' offset )
+: STATE_GET_FIRST_ARGUMENT_OFFSET (  -- offset )
     \ returned value 
     0
     
@@ -55,8 +54,8 @@ CREATE SCPI_TOKEN   16 CHARS ALLOT
        
     \ search for first ":" that is not starting SCPI command
     1 + 2 DO
-        SCPI_COMMAND I CHARS + C@
-
+        SCPI_COMMAND 1 CHARS + C@
+        
         ':' = IF  
             0 = IF 
                 DROP I
@@ -66,7 +65,7 @@ CREATE SCPI_TOKEN   16 CHARS ALLOT
 ;
 
 : STATE_ERROR ( )
-    ." ERROR" CR 
+    ." Command is incorrect" CR 
 ;
 
 : STATE_EXECUTE_COMMAND ( )
@@ -93,7 +92,7 @@ CREATE SCPI_TOKEN   16 CHARS ALLOT
 : SCPI_STATE_MACHINE (  )
     SCPI_COMMAND PLACE
     
-    STATE_IS_SYNTAX_OK?
+    STATE_IS_COMMAND_LEXICALLY_OK?
     IF
         STATE_EXECUTE_COMMAND
         IF 
