@@ -1,0 +1,17 @@
+name: Build Documentation
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: install latex
+      run: sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-extra-utils poppler-utils
+    - name: build documentation
+      run: cd ./documentation/diagrams && chmod +x ./creatediagrams.sh && ./creatediagrams.sh 
+      
+

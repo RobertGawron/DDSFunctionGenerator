@@ -1,0 +1,16 @@
+name: Forth Tests
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: install gforth and run tests
+      run: |
+        sudo apt-get install gforth
+        cd ./tests/BL
+        gforth UT_SCPI.fs -e bye
