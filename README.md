@@ -2,10 +2,6 @@
 
 **This project is unfinished.**
 
-[![Build Status](https://travis-ci.com/RobertGawron/DDSFunctionGenerator.svg?branch=master)](https://travis-ci.com/RobertGawron/DDSFunctionGenerator)
-
-(CI is checking only documentation)
-
 ## Summary
 
 Function generator is a laboratory device to generate various electric waveforms. [DDS (direct digital synthesis)](https://en.wikipedia.org/wiki/Direct_digital_synthesis) is a method to create arbitrary waveforms from one base frequency.
@@ -22,4 +18,4 @@ Hardware was done using KiCAD.
 
 ## Software
 
-Configuration of the function generator is handled by [STM32F030K6Tx](http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00088500.pdf). Peripheral configuration will be done using CubeMX.
+Buisness logic is implemented in Forth. HAL is done in C using CubeMX.
