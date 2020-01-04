@@ -1,9 +1,0 @@
-group() {
-	linear_extrude(height = 3, center = false, convexity = 10, scale = [1, 1], $fn = 0, $fa = 12, $fs = 0.01) {
-		difference() {
-			circle($fn = 0, $fa = 12, $fs = 0.01, r = 4.5);
-			circle($fn = 0, $fa = 12, $fs = 0.01, r = 2.5);
-		}
-	}
-}
-

@@ -35,17 +35,13 @@ CREATE SCPI_TOKEN   16 CHARS ALLOT
     ." execute :SYSTem" CR
 ;
 
-( A command can only start from : or * character )
-: STATE_IS_COMMAND_LEXICALLY_OK? ( n -- n' status )
-    \ returned value
-    FALSE
-
-    SCPI_COMMAND 1 CHARS + C@
-    DUP ':' = SWAP '*' = OR IF DROP TRUE THEN
+( Compare only first n characters in two strings )
+: COMPARE_STRING ( n -- )
+    \ TODO: move logic from IS_IT_COMMAND_TO_EXECUTE? here
 ;
 
-: STATE_GET_FIRST_ARGUMENT_OFFSET (  -- offset )
-    \ returned value 
+: GET_OFFSET_OF_FIRST_ARG_IN_COMMAND (  -- offset )
+    \ return value 
     0
     
     \ get SCPI command but don't keep the string on stack
@@ -53,40 +49,55 @@ CREATE SCPI_TOKEN   16 CHARS ALLOT
     SWAP DROP
        
     \ search for first ":" that is not starting SCPI command
-    1 + 2 DO
-        SCPI_COMMAND 1 CHARS + C@
-        
-        ':' = IF  
-            0 = IF 
-                DROP I
-            THEN
-        THEN
-    LOOP
+    2 SWAP DO
+        SCPI_COMMAND I CHARS + C@
+        ':' = IF DROP I THEN
+    -1 +LOOP
 ;
 
+: IS_IT_COMMAND_TO_EXECUTE? ( cmdToCheck -- cmdToCheck status)
+     TRUE
+
+    \ TODO: should it be here?
+    \ SCPI_TOKEN PLACE 
+ 
+    GET_OFFSET_OF_FIRST_ARG_IN_COMMAND 1 -
+    DUP 
+    -1 = IF SCPI_TOKEN COUNT THEN
+        2 SWAP DO
+            SCPI_COMMAND I CHARS + C@
+            SCPI_TOKEN I CHARS + C@
+            = IF ELSE DROP FALSE THEN
+        -1 +LOOP
+;
+
+( A command can only start from : or * character )
+: STATE_IS_COMMAND_LEXICALLY_OK? ( -- status )
+    \ return value
+    FALSE
+
+    SCPI_COMMAND 1 CHARS + C@
+    DUP ':' = SWAP '*' = OR IF DROP TRUE THEN
+;
+
+
 : STATE_ERROR ( )
-    ." Command is incorrect" CR 
+    ." Command is incorrect" .S CR 
 ;
 
 : STATE_EXECUTE_COMMAND ( )
-    S" *CLS" SCPI_TOKEN PLACE 
-    SCPI_TOKEN COUNT SCPI_COMMAND COUNT COMPARE
-    0= IF
+    \ temporary hardcoded return value
+    TRUE
+    
+    S" *CLS"  SCPI_TOKEN PLACE IS_IT_COMMAND_TO_EXECUTE?
+    IF
        EXECUTE_*CLS_CMD
     THEN  
 
-    S" :SYSTem" SCPI_TOKEN PLACE 
-    SCPI_TOKEN COUNT SCPI_COMMAND COUNT COMPARE
-    0= IF
+    S" :SYSTem"  SCPI_TOKEN PLACE IS_IT_COMMAND_TO_EXECUTE?
+    IF
        EXECUTE_:SYSTem_CMD
     THEN 
-
-    \ use this later for complex commands
-     STATE_GET_FIRST_ARGUMENT_OFFSET 
-     
-    .S CR   
-    \ temporary hardcoded return value
-    TRUE
 ;
 
 : SCPI_STATE_MACHINE (  )
