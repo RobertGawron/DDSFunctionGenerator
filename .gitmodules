@@ -1,0 +1,3 @@
+[submodule "software/LIB/embed"]
+	path = software/LIB/embed
+	url = https://github.com/howerj/embed.git
