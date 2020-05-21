@@ -1,5 +1,7 @@
 # 6MHz DDS Function Generator
 
+![Build Documentation](https://github.com/RobertGawron/DDSFunctionGenerator/workflows/Build%20Documentation/badge.svg) ![Forth Tests](https://github.com/RobertGawron/DDSFunctionGenerator/workflows/Forth%20Tests/badge.svg)
+
 **This project is unfinished.**
 
 ## Summary
