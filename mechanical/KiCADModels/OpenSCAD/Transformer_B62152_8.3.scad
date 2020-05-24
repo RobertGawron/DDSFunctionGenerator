@@ -22,19 +22,34 @@ module BasicShape(){
     }
 }
 
-module CompleteShape(){
-    difference() {
-        BasicShape();
+module InnerHoles(){
 
         translate([FERRITE_C/2, 0, 0])
             circle($fn = 0, $fa = 12, $fs = 0.01, r = FERRITE_D/2);
 
         translate([-FERRITE_C/2, 0, 0])
             circle($fn = 0, $fa = 12, $fs = 0.01, r = FERRITE_D/2);
-    }
-}
-translate([0, 0, FERRITE_H/2])
 
-rotate([90, 0, 0])
-linear_extrude(height = FERRITE_H, convexity = 10, twist = 0)
-    CompleteShape();
+        
+}
+module CompleteModel() {
+translate([0, 0, FERRITE_H/2])
+    rotate([90, 0, 0])
+        union(){
+            linear_extrude(height = FERRITE_H, convexity = 10, twist = 0)
+                difference() {
+                    BasicShape();
+                    InnerHoles();
+                }
+
+            // workaround for error Stepup error "not fused ('union')",
+            // also I have to note here that FreeCAD the seccond 
+            // bigest abomination in IT (obviously after Yocto)
+            translate([0, 0, FERRITE_H/2])
+                linear_extrude(height = 1, convexity = 10, twist = 0)
+                    BasicShape();
+        }
+
+}
+
+CompleteModel();
