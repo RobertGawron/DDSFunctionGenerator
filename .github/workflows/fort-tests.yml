@@ -12,5 +12,5 @@ jobs:
     - name: install gforth and run tests
       run: |
         sudo apt-get install gforth
-        cd ./tests/BL
+        cd ./Test/UnitTest
         gforth UT_SCPI.fs -e bye
