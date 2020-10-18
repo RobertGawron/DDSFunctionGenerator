@@ -3,7 +3,10 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
-#include "zforth.h"
+extern "C" {
+	#include "zforth.h"
+}
+
 static char buf[32];
 
 int main()
@@ -34,7 +37,7 @@ int main()
 	}
 }
 
-
+extern "C" {
 zf_input_state zf_host_sys(zf_syscall_id id, const char *input)
 {
 	char buf[16];
@@ -52,11 +55,11 @@ zf_input_state zf_host_sys(zf_syscall_id id, const char *input)
 			break;
 	}
 
-	return 0;
+	return ZF_INPUT_PASS_WORD;
 }
 
 
-zf_cell zf_host_parse_num(const char *buf)
+ zf_cell zf_host_parse_num(const char *buf)
 {
 	char *end;
         zf_cell v = strtol(buf, &end, 0);
@@ -64,4 +67,5 @@ zf_cell zf_host_parse_num(const char *buf)
                 zf_abort(ZF_ABORT_NOT_A_WORD);
         }
         return v;
+}
 }
