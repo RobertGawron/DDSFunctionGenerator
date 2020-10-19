@@ -1,67 +1,36 @@
 #include <stdint.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdarg.h>
+#include "dds_buisness_logic_wrapper.h"
 
-#include "zforth.h"
-static char buf[32];
+uint8_t dummy;
 
-int main()
+__declspec(dllexport) void Lib_Simulation_Init()
 {
-	/* Initialize zforth */
-
-	zf_init(1);
-	zf_bootstrap();
-	zf_eval(": . 1 sys ;");
-
-
-	/* Main loop: read words and eval */
-
-	uint8_t l = 0;
-
-	for(;;) {
-		int c = getchar();
-		putchar(c);
-		if(c == 10 || c == 13 || c == 32) {
-			zf_result r = zf_eval(buf);
-			if(r != ZF_OK) puts("A");
-			l = 0;
-		} else if(l < sizeof(buf)-1) {
-			buf[l++] = c;
-		}
-
-		buf[l] = '\0';
-	}
 }
 
-
-zf_input_state zf_host_sys(zf_syscall_id id, const char *input)
+__declspec(dllexport) char *Lib_Simulation_OnReceiveSCPICommand(char *request)
 {
-	char buf[16];
-
-	switch((int)id) {
-
-		case ZF_SYSCALL_EMIT:
-			putchar((char)zf_pop());
-			fflush(stdout);
-			break;
-
-		case ZF_SYSCALL_PRINT:
-			itoa(zf_pop(), buf, 10);
-			puts(buf);
-			break;
-	}
-
-	return 0;
+	return DDSBuisnessLogicWrapper_OnReceiveSCPICommand(request);
 }
 
-
-zf_cell zf_host_parse_num(const char *buf)
+__declspec(dllexport) void Lib_Simulation_GetLoggedData(uint8_t **buffer, uint16_t *size)
 {
-	char *end;
-        zf_cell v = strtol(buf, &end, 0);
-	if(*end != '\0') {
-                zf_abort(ZF_ABORT_NOT_A_WORD);
-        }
-        return v;
+}
+
+__declspec(dllexport) void Lib_Simulation_KeyPress()
+{
+}
+
+__declspec(dllexport) uint8_t Lib_Simulation_GetDisplayLength()
+{
+	return 120;
+}
+
+__declspec(dllexport) uint8_t Lib_Simulation_GetDisplayHeight()
+{
+	return 64;
+}
+
+__declspec(dllexport) uint8_t *Lib_Simulation_GetDisplayContent()
+{
+	return &dummy;
 }
