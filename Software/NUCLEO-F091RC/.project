@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>NUCLEO-F091RC</name>
-	<comment />
+	<comment></comment>
 	<projects>
 	</projects>
 	<buildSpec>
@@ -25,6 +25,15 @@
 		<nature>fr.ac6.mcu.ide.core.MCUProjectNature</nature>
 	</natures>
 	<linkedResources>
-		
+		<link>
+			<name>BusinessLogic</name>
+			<type>2</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/Common/BusinessLogic</locationURI>
+		</link>
+		<link>
+			<name>Libraries/zforth</name>
+			<type>2</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/Common/Libraries/zForth/src/zforth</locationURI>
+		</link>
 	</linkedResources>
 </projectDescription>
