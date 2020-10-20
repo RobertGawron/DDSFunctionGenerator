@@ -8,7 +8,7 @@ from device_under_test import DeviceUnderTest
 class MainWindow(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
-
+        
         self.dut = DeviceUnderTest()
         self.setupWidgets()
         self.onHWDisplayUpdate()
@@ -20,13 +20,26 @@ class MainWindow(QMainWindow):
         self.WidgetGenerateGMPulse = self.findChild(QPushButton, "WidgetGenerateGMPulse")
         self.WidgetLogger = self.findChild(QTextBrowser, "WidgetLogger")
         self.WidgetHWDisplay= self.findChild(QLabel, "WidgetHWDisplay")
-                
+        self.WidgetSendSCPI= self.findChild(QPushButton, "WidgetSendSCPI")
+        self.WidgetSCPIToSend= self.findChild(QLineEdit, "WidgetSCPIToSend")
+
         self.WidgetPushHWKey.clicked.connect(self.onPressHWKey)
+        self.WidgetSendSCPI.clicked.connect(self.onSendSCPI)
 
+        #self.WidgetSCPIToSend.text = "12 1 + . ;"
+        #self.onSendSCPI()
 
+    def onSendSCPI(self):
+        self.dut.sendSCPI(self.WidgetSCPIToSend.text())
 
-    def onNewLoggedData(self):
-        logged_data = self.dut.getLoggedData()
+        # todo
+        import time
+        time.sleep(1)
+
+        self.onReceiveSCPI()
+
+    def onReceiveSCPI(self):
+        logged_data = self.dut.receiveSCPI()
         local_timestamp = datetime.now()
         data_with_timestamp = "{}: {}".format(local_timestamp, logged_data)
         self.WidgetLogger.append (data_with_timestamp)
