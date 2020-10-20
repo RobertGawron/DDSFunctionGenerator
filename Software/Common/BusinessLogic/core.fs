@@ -90,4 +90,8 @@
 ." Welcome to zForth, " here . ." bytes used" cr ;
 
 
+(
+vi: ts=3 sw=3 ft=forth
+)
+
 
