@@ -1,8 +1,10 @@
 #include "dds_buisness_logic_wrapper.h"
+
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "dds_forth_scripts_loader.h"
 #include "zforth.h"
 
 #define RESPONSE_MAX 16u
@@ -12,7 +14,10 @@ void DDSBuisnessLogicWrapper_Init()
 {
     zf_init(1);
     zf_bootstrap();
+
     zf_eval(": . 1 sys ;");
+
+    DDSForthScriptsLoader_Load(); 
 }
 
 char* DDSBuisnessLogicWrapper_OnReceiveSCPICommand(char* request)
@@ -29,7 +34,9 @@ zf_input_state zf_host_sys(zf_syscall_id id, const char *input)
         case ZF_SYSCALL_EMIT:
         {
             // TODO
-            zf_pop();
+            //response[0] = zf_pop();
+            printf("ZF_SYSCALL_EMIT: %s\n", zf_pop());
+            ;
         } break;
 
         case ZF_SYSCALL_PRINT:
@@ -37,6 +44,9 @@ zf_input_state zf_host_sys(zf_syscall_id id, const char *input)
             itoa(zf_pop(), response, 10);
         } break;
     }
+
+    // TODO
+    printf("zf_host_sys: %s resp %s\n", input, response);
 
     return ZF_INPUT_PASS_WORD;
 }
