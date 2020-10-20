@@ -10,6 +10,7 @@
 
 #define SCRIPT_PATH_NAME_MAX_LENGTH 128
 #define SCRIPT_CONTENT_MAX 3000
+
 char buffer[SCRIPT_CONTENT_MAX];
 
 typedef struct DDSForthScriptsLoader_Scripts_t
