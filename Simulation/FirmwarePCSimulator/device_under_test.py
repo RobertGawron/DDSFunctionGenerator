@@ -9,25 +9,23 @@ class DeviceUnderTest:
             "..\\..\\Software" + os.path.sep + "Common" + os.path.sep + "BusinessLogic" + os.path.sep + dll_name
         
         self.dut = ctypes.CDLL(dllabspath)
-        self.dut.Lib_Simulation_Init()
+
+        self.dut.Lib_Simulation_SendSCPIRequest.argtypes = [POINTER(c_char)]
+        self.dut.Lib_Simulation_Init("../../Software/Common/BusinessLogic/".encode()) # TODO
  
-    
-    def getLoggedData(self):
-        self.dut.Lib_GMLoggerSIM_GetLoggedData.argtypes = [POINTER(POINTER(c_uint8)),  POINTER(c_uint8)]
+
+
+    def sendSCPI(self, command):
+        self.dut.Lib_Simulation_SendSCPIRequest.argtypes = [POINTER(c_char)]
         data = POINTER(c_uint8)()
         size = c_uint8()
+        return self.dut.Lib_Simulation_SendSCPIRequest(command.encode())
 
-        self.dut.Lib_Simulation_GetLoggedData(byref(data), byref(size))
 
-        """logged_data = ""
-        for i in range(size.value):
-            logged_data += chr(data[i])
-
-        # it is expected that log  end with new line, 
-        # this should be stripped application
-        return logged_data[:-3]"""
-
-        return "xxxx"
+    def receiveSCPI(self):
+        self.dut.Lib_Simulation_ReceiveSCPIResponse.restype = c_char_p
+        print ( self.dut.Lib_Simulation_ReceiveSCPIResponse() )
+        return self.dut.Lib_Simulation_ReceiveSCPIResponse()
 
 
     def pressKey(self):
