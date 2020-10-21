@@ -31,7 +31,7 @@
  * type. This adds a few hundred bytes of .text. Check the memaccess.zf file for
  * examples how to use these operations */
 
-#define ZF_ENABLE_TYPED_MEM_ACCESS 0
+#define ZF_ENABLE_TYPED_MEM_ACCESS 1
 
 
 /* Type to use for the basic cell, data stack and return stack. Choose a signed
@@ -52,8 +52,8 @@ typedef unsigned int zf_addr;
 /* Memory region sizes: dictionary size is given in bytes, stack sizes are
  * number of elements of type zf_cell */
 
-#define ZF_DICT_SIZE 512 
-#define ZF_DSTACK_SIZE 8
-#define ZF_RSTACK_SIZE 8
+#define ZF_DICT_SIZE 4096
+#define ZF_DSTACK_SIZE 32
+#define ZF_RSTACK_SIZE 32
 
 #endif
