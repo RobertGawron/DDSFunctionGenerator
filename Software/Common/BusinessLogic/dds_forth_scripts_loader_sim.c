@@ -23,7 +23,8 @@ typedef struct DDSForthScriptsLoader_Scripts_t
 char* scripts[] =
 {
     "core.fs"
-    , "scpi.fs"
+    , 
+    "scpi.fs"
 };
 
 
@@ -60,19 +61,18 @@ void DDSForthScriptsLoader_Load()
             DDSForthScriptsLoader_Scripts.scriptName[i]);
      
         FILE * f = fopen(scriptPathName, "r");
-
-        fseek(f, 0, SEEK_END);
-        long fsize = ftell(f);
-        fseek(f, 0, SEEK_SET);  /* same as rewind(f); */
-
-
-        fread(buffer, 1, fsize, f);
-        fclose(f);
-
-        buffer[fsize] = 0;
-
-        //printf("file: %s buff _%s_\n", scriptPathName, buffer);             
-
-        zf_eval(buffer);
+        if(f)
+        {
+            while(fgets(buffer, sizeof(buffer), f)) 
+            {
+                zf_eval(buffer);
+                //printf("file: %s buff _%s_\n", scriptPathName, buffer); 
+            }
+            fclose(f);
+        }
+        else
+        {
+            printf("unable to load file %s\n", scriptPathName);
+        }
     }
 }
