@@ -85,13 +85,3 @@
 
 : ." compiling @ if postpone s" ' tell , else begin key dup 34 = if drop exit else emit fi again
      fi ; immediate
-
-
-." Welcome to zForth, " here . ." bytes used" cr ;
-
-
-(
-vi: ts=3 sw=3 ft=forth
-)
-
-
