@@ -55,7 +55,6 @@ char* DDSBuisnessLogicWrapper_OnReceiveSCPICommand(char* request)
 
 zf_input_state zf_host_sys(zf_syscall_id id, const char *input)
 {
-
 	/* The core system callbacks */
     /* ATENTION!! calling zf_pop() more than once in this function will corupt interpreter stack */ 
     switch((int)id) 

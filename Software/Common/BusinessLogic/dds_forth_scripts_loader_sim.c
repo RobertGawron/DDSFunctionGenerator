@@ -23,8 +23,7 @@ typedef struct DDSForthScriptsLoader_Scripts_t
 char* scripts[] =
 {
     "core.fs"
-    , 
-    "scpi.fs"
+    , "scpi.fs"
 };
 
 

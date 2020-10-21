@@ -14,7 +14,6 @@ class DeviceUnderTest:
         self.dut.Lib_Simulation_Init("../../Software/Common/BusinessLogic/".encode()) # TODO
  
 
-
     def sendSCPI(self, command):
         self.dut.Lib_Simulation_SendSCPIRequest.argtypes = [POINTER(c_char)]
         data = POINTER(c_uint8)()

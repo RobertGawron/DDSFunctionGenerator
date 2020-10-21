@@ -24,3 +24,14 @@ def test_check_strings():
     dut.sendSCPI(".\" world\" . @ . ;")
     logged_data = dut.receiveSCPI()
     assert logged_data == "world"
+
+def test_check_words():
+    dut = DeviceUnderTest()
+
+    dut.sendSCPI("s\" xorld\" state_is_cmd_lexically_ok? . ;")
+    logged_data = dut.receiveSCPI()
+    assert logged_data == "5 0 "
+
+    dut.sendSCPI("s\" *orld\" state_is_cmd_lexically_ok? . ;")
+    logged_data = dut.receiveSCPI()
+    assert logged_data == "5 1 "
