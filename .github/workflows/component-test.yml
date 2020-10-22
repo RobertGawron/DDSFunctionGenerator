@@ -17,6 +17,7 @@ jobs:
     
     - name: Archive code coverage results
       uses: actions/upload-artifact@v2
+      if: always()
       with:
         name: Report for BuisnessLogic
-        path: Test/ComponentTest/BuisnessLogic_Report.html
+        path: Test/ComponentTest/BuisnessLogic_Test_Report.html
