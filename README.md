@@ -2,6 +2,8 @@
 
 ![Documentation](https://github.com/RobertGawron/DDSFunctionGenerator/workflows/Documentation/badge.svg) ![Forth Tests](https://github.com/RobertGawron/DDSFunctionGenerator/workflows/Forth%20Tests/badge.svg)
 
+![Component Tests](https://github.com/RobertGawron/DDSFunctionGenerator/workflows/Component%20Tests/badge.svg)
+
 **This project is unfinished.**
 
 ## Summary

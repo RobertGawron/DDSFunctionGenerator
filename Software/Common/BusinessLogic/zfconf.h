@@ -1,7 +1,8 @@
 #ifndef zfconf
 #define zfconf
-
+#include <stddef.h>
 #include <stdint.h>
+#include <stdarg.h>
 
 /* Set to 1 to add tracing support for debugging and inspection. Requires the
  * zf_host_trace() function to be implemented. Adds about one kB to .text and
