@@ -17,7 +17,8 @@ void DDSBuisnessLogicWrapper_Init()
 {
     zf_init(1);
     zf_bootstrap();
-   
+
+    DDSForthScriptsLoader_Init();
     DDSForthScriptsLoader_Load(); 
 }
 
@@ -52,7 +53,7 @@ char* DDSBuisnessLogicWrapper_OnReceiveSCPICommand(char* request)
     return &response[0];
 }
 
-
+// cppcheck-suppress unusedFunction - eused by zforth lib 
 zf_input_state zf_host_sys(zf_syscall_id id, const char *input)
 {
 	/* The core system callbacks */
@@ -104,7 +105,7 @@ zf_input_state zf_host_sys(zf_syscall_id id, const char *input)
     return ZF_INPUT_INTERPRET;
 }
 
-
+// cppcheck-suppress unusedFunction - eused by zforth lib 
 zf_cell zf_host_parse_num(const char *buf)
 {
     char *end;
