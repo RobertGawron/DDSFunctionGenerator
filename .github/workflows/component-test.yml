@@ -1,0 +1,22 @@
+name: Component Tests
+
+on: [push]
+
+jobs:
+  build_and_test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: install pytest and run tests
+      run: |
+        sudo pip install pytest pytest-html &&
+        cd ./ContinousIntegration &&
+        chmod +x ./run_component_tests.sh && ./run_component_tests.sh
+    
+    - name: Archive code coverage results
+      uses: actions/upload-artifact@v2
+      with:
+        name: Report for BuisnessLogic
+        path: Test/ComponentTest/BuisnessLogic_Report.html
