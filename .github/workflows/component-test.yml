@@ -15,7 +15,7 @@ jobs:
         cd ./ContinousIntegration &&
         chmod +x ./run_component_tests.sh && ./run_component_tests.sh
     
-    - name: Archive code coverage results
+    - name: Archive component test results
       uses: actions/upload-artifact@v2
       if: always()
       with:
