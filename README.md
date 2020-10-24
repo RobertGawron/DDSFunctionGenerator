@@ -13,7 +13,7 @@ Function generator is a laboratory device to generate various electric waveforms
 
 ## System architecture
 
-![architecture](https://raw.githubusercontent.com/RobertGawron/DDSFunctionGenerator/master/Documentation/Diagrams/ArchitectureOverview-1.png)
+<img src="./Documentation/Diagrams/ArchitectureOverview.svg"  width="100%">
 
 ## Hardware
 
