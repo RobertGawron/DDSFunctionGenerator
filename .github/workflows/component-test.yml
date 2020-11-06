@@ -12,12 +12,12 @@ jobs:
     - name: install pytest and run tests
       run: |
         sudo pip install pytest pytest-html &&
-        cd ./ContinousIntegration &&
+        cd ./ContinuousIntegration &&
         chmod +x ./run_component_tests.sh && ./run_component_tests.sh
     
     - name: Archive component test results
       uses: actions/upload-artifact@v2
       if: always()
       with:
-        name: Report for BuisnessLogic
-        path: Test/ComponentTest/BuisnessLogic_Test_Report.html
+        name: Report for BusinessLogic
+        path: Test/ComponentTest/BusinessLogic_Test_Report.html

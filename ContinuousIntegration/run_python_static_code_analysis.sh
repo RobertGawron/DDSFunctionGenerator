@@ -1,1 +1,1 @@
-flake8 --format=html --htmldir=python_lint_repport ../Test/ComponentTest/ ../Simulation/FirmwarePCSimulator 
+flake8 --format=html --htmldir=python_lint_report ../Test/ComponentTest/ ../Simulation/FirmwarePCSimulator 
