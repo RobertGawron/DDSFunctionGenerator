@@ -21,4 +21,4 @@ Hardware was done using KiCAD.
 
 ## Software
 
-Buisness logic is implemented in Forth. HAL is done in C using CubeMX.
+Business logic will be implemented in Forth. HAL was generated in C using CubeMX.
