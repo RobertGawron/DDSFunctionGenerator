@@ -1,7 +1,5 @@
 # Software
 
----
-
 ## Summary
 
 Firmware is located in TargetFirmware directory, all files not related to microcontroller are located in Common.
