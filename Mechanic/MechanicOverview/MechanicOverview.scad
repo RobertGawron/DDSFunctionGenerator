@@ -4,9 +4,11 @@ PCB_THICKNESS = 2;
 PCB_X = 80;
 PCB_Y =  65;
 
+BOTTOM_CHASSIS_HEIGHT = 5;
+TOP_CHASSIS_HEIGHT=20;
+
 CHASSIS_THICKNESS = 3;
-BOTTOM_CHASSIS_HEIGHT = 10;
-TOP_CHASSIS_HEIGHT=15;
+
 PCB_Z_OFFSET = 3+CHASSIS_THICKNESS; // 3mm for Pclearance between PCB and chassis
 
 INSERT_NUT_DIAMETER=3.5;
@@ -60,44 +62,43 @@ module Chassis2DFull(Thickness)
     }
 }
 
-module InsertNutSocket()
+module InsertNutSocket(isFull)
 {
     difference()
     {
         circle(r=INSERT_NUT_RADIUS + CHASSIS_THICKNESS);
+        if(!isFull)
         circle(r=INSERT_NUT_RADIUS);
     }
 }
-module InsertNutSockets(Height)
-{
 
+module InsertNutSockets(Height, isFull)
+{
     Thickness=CHASSIS_THICKNESS;
     CHASSIS_X = PCB_X/2 + COMPONENT_TOLERANCE + Thickness;
     CHASSIS_Y = PCB_Y/2 + COMPONENT_TOLERANCE + Thickness;
 
     linear_extrude(height = Height, convexity = 10, twist = 0)
     {
-        translate([CHASSIS_X -Thickness-INSERT_NUT_RADIUS, 
-                CHASSIS_Y + INSERT_NUT_RADIUS, 
+        translate([CHASSIS_X -Thickness-INSERT_NUT_RADIUS,
+                CHASSIS_Y + INSERT_NUT_RADIUS,
                 0])
-        InsertNutSocket();
+            InsertNutSocket(isFull);
 
-        translate([CHASSIS_X -Thickness-INSERT_NUT_RADIUS, 
-                -CHASSIS_Y - INSERT_NUT_RADIUS, 
+        translate([CHASSIS_X -Thickness-INSERT_NUT_RADIUS,
+                -CHASSIS_Y - INSERT_NUT_RADIUS,
                 0])
-        InsertNutSocket();
+            InsertNutSocket(isFull);
 
-
-       translate([-CHASSIS_X +Thickness+INSERT_NUT_RADIUS, 
-                CHASSIS_Y + INSERT_NUT_RADIUS, 
+        translate([-CHASSIS_X +Thickness+INSERT_NUT_RADIUS,
+                CHASSIS_Y + INSERT_NUT_RADIUS,
                 0])
-        InsertNutSocket();
+            InsertNutSocket(isFull);
 
-        translate([-CHASSIS_X +Thickness+INSERT_NUT_RADIUS, 
-                -CHASSIS_Y - INSERT_NUT_RADIUS, 
+        translate([-CHASSIS_X +Thickness+INSERT_NUT_RADIUS,
+                -CHASSIS_Y - INSERT_NUT_RADIUS,
                 0])
-        InsertNutSocket();
-
+            InsertNutSocket(isFull);
     }
 }
 
@@ -117,9 +118,26 @@ module Chassis3DBasic(Height)
                 Chassis2DFull(0);
             }
         }
+        InsertNutSockets(Height, true);
     }
 
-    InsertNutSockets(Height);
+    InsertNutSockets(Height, false);
+}
+
+module Chassis3DTop(Height)
+{  
+    SCREW_CONNECTOR_Y = 1;
+    SCREW_CONNECTOR_DX = 10;
+    SCREW_CONNECTOR_DY = 20.668;
+
+    difference()
+    {
+        Chassis3DBasic(Height);
+
+        translate([PCB_Y/2,-SCREW_CONNECTOR_DY-SCREW_CONNECTOR_Y,0])
+            linear_extrude(height = Height, convexity = 10, twist = 0)
+                square([SCREW_CONNECTOR_DX+CHASSIS_THICKNESS, SCREW_CONNECTOR_DY]);
+    }
 }
 
 
@@ -131,17 +149,30 @@ module Render_PCB()
 
 module Render_BottomChassis()
 {
-    Chassis3DBasic(BOTTOM_CHASSIS_HEIGHT);
+    color("red")
+    {
+        Chassis3DBasic(BOTTOM_CHASSIS_HEIGHT);
+    }
 }
 
 module Render_TopChassis()
 {
-    translate([0,0,2*(BOTTOM_CHASSIS_HEIGHT)+CHASSIS_THICKNESS])
-    rotate([180,0,0])
-    Chassis3DBasic(TOP_CHASSIS_HEIGHT);
+    color("yellow")
+    {
+        translate([0,0,BOTTOM_CHASSIS_HEIGHT+TOP_CHASSIS_HEIGHT])
+        rotate([180,0,0])
+        Chassis3DTop(TOP_CHASSIS_HEIGHT);
+    }
 }
 
-
+test1=true;
+if (test1)
+{
 Render_PCB();
 Render_BottomChassis();
 Render_TopChassis();
+}
+else{
+Render_PCB();
+Chassis3DTop(TOP_CHASSIS_HEIGHT);
+}
