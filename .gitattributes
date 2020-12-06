@@ -1,3 +1,5 @@
 Software/TargetFirmware/Drivers/* linguist-vendored
 Software/NUCLEO-F091RC/Drivers/* linguist-vendored
 Software/Common/Libraries/* linguist-vendored
+# GitHub's language statistics module can't recognize LTSpice files, so just ignore them.
+Simulation/LTSPice/* linguist-vendored
