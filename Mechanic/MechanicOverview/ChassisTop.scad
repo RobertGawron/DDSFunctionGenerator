@@ -90,7 +90,12 @@ module Chassis3DTop(Height)
     {
         union()
         {
-            GenericChassis(Height);
+            difference()
+            {
+                GenericChassis(Height);
+                GenericDebugPanel(Height);
+            }
+
             ChassisTop_DebugPanelMountingScrewSupport();
         }
 
@@ -104,9 +109,6 @@ module Chassis3DTop(Height)
                 square([SCREW_CONNECTOR_DX + CHASSIS_THICKNESS, SCREW_CONNECTOR_DY]);
             }
         }
-
-        // add hole for flashing and UART sockets
-        DebugPanel(Height);
 
         // add hole for front pannel
         translate([-PCB_X/2 - CHASSIS_THICKNESS-COMPONENT_TOLERANCE,

@@ -27,8 +27,11 @@ DEBUG_CONNECTOR_DY = /*18*/20 + CHASSIS_CORNER_DIAMETER - COMPONENT_TOLERANCE;
 
 include <GenericChassis.scad>;
 include <GenericFrontPanel.scad>;
+include <DebugPanel.scad>;
 include <ChassisBottom.scad>;
 include <ChassisTop.scad>;
+
+
 
 // Increase steps in render to have quality circles
 //$fs=0.1;
@@ -38,37 +41,6 @@ include <ChassisTop.scad>;
 module PCB()
 {
    import("PCB.stl");
-}
-
-module DebugPanelBasic(Height)
-{
-    translate([-PCB_X/2+DEBUG_CONNECTOR_X,
-                ,-PCB_Y/2
-                    + COMPONENT_TOLERANCE
-                    - 2*CHASSIS_THICKNESS // TODO this is wrong
-                    - DEBUG_CONNECTOR_DY/2
-                    + CHASSIS_CORNER_DIAMETER,
-                0])
-    {
-        linear_extrude(height = Height, convexity = 10, twist = 0)
-        {
-            square([DEBUG_CONNECTOR_DX, DEBUG_CONNECTOR_DY]);
-        }
-    }
-}
-
-module DebugPanel(Height)
-{
-    difference()
-    {
-        GenericChassis(Height);
-
-        difference()
-        {
-            GenericChassis(Height);
-            DebugPanelBasic(Height);
-        }
-    }
 }
 
 
@@ -116,16 +88,19 @@ module Render_TopChassis()
     }
 }
 
+
+// below is a dirty code to fast switch betwen different module instances
 test1=true;
 //test1=false;
 if (test1)
 {
-//Render_PCB();
-Render_BottomChassis();
-Render_TopChassis();
-Render_DebugPanel();
+    //Render_PCB();
+   // Render_BottomChassis();
+    Render_TopChassis();
+    Render_DebugPanel();
 }
-else{
-//Render_PCB();
-ChassisTop(TOP_CHASSIS_HEIGHT);
+else
+{
+    //Render_PCB();
+    ChassisTop(TOP_CHASSIS_HEIGHT);
 }
