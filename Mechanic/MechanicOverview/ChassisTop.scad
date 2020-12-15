@@ -117,6 +117,18 @@ module Chassis3DTop(Height)
         {
             GenericFrontPanel();
         }
+
+        // add hole for USB socket
+        TopHassisUsbYOffset = -0.85; // TODO parametrize it
+        translate([PCB_X/2 + COMPONENT_TOLERANCE,
+                    -USB_Y-USB_LENGTH,
+                    Height + TopHassisUsbYOffset])
+        {
+            rotate([90,0,90])
+            {
+                USBConnector();
+            }
+        }
     }
 
     ChassisTop_WallsAroundADCAndPowerSupplySocket(Height);
@@ -124,4 +136,9 @@ module Chassis3DTop(Height)
 
     // add nounting screws
     InsertNutSockets(Height, false);
+
+
+
+
+    
 }

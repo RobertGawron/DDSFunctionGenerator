@@ -30,7 +30,7 @@ include <GenericFrontPanel.scad>;
 include <DebugPanel.scad>;
 include <ChassisBottom.scad>;
 include <ChassisTop.scad>;
-
+include <USBConnector.scad>;
 
 
 // Increase steps in render to have quality circles
@@ -94,13 +94,13 @@ test1=true;
 //test1=false;
 if (test1)
 {
-    //Render_PCB();
-   // Render_BottomChassis();
+    Render_PCB();
+    Render_BottomChassis();
     Render_TopChassis();
     Render_DebugPanel();
 }
 else
 {
     //Render_PCB();
-    ChassisTop(TOP_CHASSIS_HEIGHT);
+    Chassis3DTop(TOP_CHASSIS_HEIGHT);
 }
