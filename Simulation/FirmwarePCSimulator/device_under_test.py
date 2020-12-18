@@ -9,7 +9,8 @@ class DeviceUnderTest:
             os.path.dirname(os.path.abspath(os.path.abspath(__file__))) \
             + os.path.sep + ".." + os.path.sep + ".." \
             + os.path.sep + "Software" + os.path.sep + "Common" \
-            + os.path.sep + "BusinessLogic" + os.path.sep + dll_name
+            + os.path.sep + "BusinessLogic" + os.path.sep \
+            + "build" + os.path.sep + dll_name
 
         self.dut = ctypes.CDLL(dllabspath)
 

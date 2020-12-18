@@ -7,6 +7,7 @@
 
 #include "dds_forth_scripts_loader.h"
 #include "zforth.h"
+#include "u8g2.h"
 
 #define RESPONSE_MAX 16u
 char response[RESPONSE_MAX];
@@ -20,6 +21,13 @@ void DDSBuisnessLogicWrapper_Init()
 
     DDSForthScriptsLoader_Init();
     DDSForthScriptsLoader_Load();
+
+    // TODO this is here just for tests
+    u8g2_t u8g2; // a structure which will contain all the data for one display
+
+    u8g2_Setup_ssd1306_i2c_128x64_noname_2(&u8g2, U8G2_R0, u8x8_byte_sw_i2c, 0);  // init u8g2 structure
+    //u8g2_InitDisplay(&u8g2); // send init sequence to the display, display is in sleep mode after this,
+    //u8g2_SetPowerSave(&u8g2, 0); // wake up display
 }
 
 
