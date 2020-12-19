@@ -1,19 +1,9 @@
 #include <stdint.h>
 
-#include "dds_buisness_logic_wrapper.h"
+#include "dds_business_logic_wrapper.h"
 #include "dds_scpi_gate.h"
-
 #include "dds_forth_scripts_loader_sim.h"
-
-
-#ifdef _WIN32
-
-#    define MODULE_API __declspec(dllexport)
-
-
-#else
-#  define MODULE_API
-#endif
+#include "dds_lib_export_defs.h"
 
 uint8_t dummy;
 
@@ -21,7 +11,7 @@ uint8_t dummy;
 MODULE_API void Lib_Simulation_Init(char* simulation_path)
 {
     DDSForthScriptsLoaderSIM_SetForthScriptsPath(simulation_path);
-    DDSBuisnessLogicWrapper_Init();
+    DDSBusinessLogicWrapper_Init();
     DDSSCPIGate_Init();
 }
 
@@ -29,7 +19,7 @@ MODULE_API void Lib_Simulation_Init(char* simulation_path)
 // cppcheck-suppress unusedFunction - exported function used by python apps
 MODULE_API char* Lib_Simulation_OnReceiveSCPICommand(char* request)
 {
-    return DDSBuisnessLogicWrapper_OnReceiveSCPICommand(request);
+    return DDSBusinessLogicWrapper_OnReceiveSCPICommand(request);
 }
 
 // cppcheck-suppress unusedFunction - exported function used by python apps

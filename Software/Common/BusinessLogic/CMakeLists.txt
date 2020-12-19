@@ -28,7 +28,8 @@ include_directories(${U8G2_LIB_PATH})
 
 
 add_library(forth_lib STATIC
-        ${FORTH_LIB_PATH}/zforth.c)
+        ${FORTH_LIB_PATH}/zforth.c
+        dds_zforth_callbacks.c)
 
 
 add_library(u8g2_lib STATIC
@@ -132,9 +133,11 @@ add_library(u8g2_lib STATIC
 
 add_executable(simulation
         simulation.c
-        dds_buisness_logic_wrapper.c
+        dds_business_logic_wrapper.c
         dds_scpi_gate.c
-        dds_forth_scripts_loader_sim.c)
+        dds_forth_scripts_loader_sim.c
+        dds_user_interface.c
+        dds_u8g2_callbacks_sim.c)
 
 
 target_link_libraries(simulation

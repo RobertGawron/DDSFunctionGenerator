@@ -166,7 +166,7 @@ void EXTI4_15_IRQHandler(void)
 {
   /* USER CODE BEGIN EXTI4_15_IRQn 0 */
   // dummy test
-  char * response = DDSBuisnessLogicWrapper_OnReceiveSCPICommand("1 15 + .");
+  char * response = DDSBusinessLogicWrapper_OnReceiveSCPICommand("1 15 + .");
   HAL_UART_Transmit(&huart2, (uint8_t*)response, strlen(response), 0xFFFF);
   response ="\r\n\0";
   HAL_UART_Transmit(&huart2, (uint8_t*)response, strlen(response), 0xFFFF);
