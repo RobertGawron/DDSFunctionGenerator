@@ -9,10 +9,8 @@
 char response[RESPONSE_MAX];
 uint8_t responseLength = 0u;
 
-
 // Below methods are declared by zforth itself.
 
-// cppcheck-suppress unusedFunction - used by zforth lib
 zf_input_state zf_host_sys(zf_syscall_id id, const char *input)
 {
     /* The core system callbacks */
@@ -65,7 +63,6 @@ zf_input_state zf_host_sys(zf_syscall_id id, const char *input)
 }
 
 
-// cppcheck-suppress unusedFunction - used by zforth lib
 zf_cell zf_host_parse_num(const char *buf)
 {
     char *end;

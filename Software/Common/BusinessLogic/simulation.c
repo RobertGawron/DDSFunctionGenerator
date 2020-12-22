@@ -7,8 +7,6 @@
 #include "dds_user_interface_sim.h"
 
 
-
-// cppcheck-suppress unusedFunction - exported function used by python apps
 MODULE_API void Lib_Simulation_Init(char* simulation_path)
 {
     DDSForthScriptsLoaderSIM_SetForthScriptsPath(simulation_path);
@@ -17,48 +15,41 @@ MODULE_API void Lib_Simulation_Init(char* simulation_path)
 }
 
 
-// cppcheck-suppress unusedFunction - exported function used by python apps
 MODULE_API char* Lib_Simulation_OnReceiveSCPICommand(char* request)
 {
     return DDSBusinessLogicWrapper_OnReceiveSCPICommand(request);
 }
 
 
-// cppcheck-suppress unusedFunction - exported function used by python apps
 MODULE_API void Lib_Simulation_SendSCPIRequest(char* request)
 {
     DDSSCPIGate_OnRequest(request);
 }
 
 
-// cppcheck-suppress unusedFunction - exported function used by python apps
 MODULE_API char* Lib_Simulation_ReceiveSCPIResponse()
 {
     return DDSSCPIGate_OnResponse();
 }
 
 
-// cppcheck-suppress unusedFunction - exported function used by python apps
 MODULE_API void Lib_Simulation_KeyPress()
 {
 }
 
 
-// cppcheck-suppress unusedFunction - exported function used by python apps
 MODULE_API uint8_t Lib_Simulation_GetDisplayLength()
 {
     return DDSUserInterface_DisplayWidth;
 }
 
 
-// cppcheck-suppress unusedFunction - exported function used by python apps
 MODULE_API uint8_t Lib_Simulation_GetDisplayHeight()
 {
     return DDSUserInterface_DisplayHeight;
 }
 
 
-// cppcheck-suppress unusedFunction - exported function used by python apps
 MODULE_API uint8_t* Lib_Simulation_GetDisplayContent()
 {
     return &DDSUserInterface_DisplayBuffer[0][0];

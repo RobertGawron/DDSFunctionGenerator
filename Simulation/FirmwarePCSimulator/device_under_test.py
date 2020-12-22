@@ -48,7 +48,8 @@ class DeviceUnderTest:
     def getDisplayPixelValue(self, x, y):
         # Note: this is not efficient but it works ok for now
         display_length = self.getDisplayLength()
-        self.dut.Lib_Simulation_GetDisplayContent.restype = ctypes.POINTER(ctypes.c_uint8 * display_length)
+        self.dut.Lib_Simulation_GetDisplayContent.restype = \
+            ctypes.POINTER(ctypes.c_uint8 * display_length)
         display_data = self.dut.Lib_Simulation_GetDisplayContent()
 
         return display_data[y][x]

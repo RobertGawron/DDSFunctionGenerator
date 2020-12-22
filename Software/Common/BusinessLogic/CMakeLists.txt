@@ -137,7 +137,9 @@ add_executable(simulation
         dds_scpi_gate.c
         dds_forth_scripts_loader_sim.c
         dds_user_interface.c
-        dds_u8g2_callbacks_sim.c)
+        dds_u8g2_callbacks_sim.c
+        dds_view_main.c
+        dds_view_settings.c)
 
 
 target_link_libraries(simulation
