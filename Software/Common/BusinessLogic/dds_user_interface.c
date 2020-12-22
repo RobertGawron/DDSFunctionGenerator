@@ -1,14 +1,11 @@
 #include "dds_user_interface.h"
+#include "dds_user_interface_sim.h"
 #include "dds_u8g2_callbacks.h"
 #include <stdio.h> // TODO: for debug ony, remove later
 
 u8g2_t u8g2;
 
-
-#define display_height 64u
-#define display_width 128u
-
-static uint8_t DDSUserInterface_DisplayBuffer[display_height][display_width];
+uint8_t DDSUserInterface_DisplayBuffer[DDSUserInterface_DisplayHeight][DDSUserInterface_DisplayWidth];
 
 void DDSUserInterface_Init()
 {
@@ -40,7 +37,7 @@ void DDSUserInterface_Init()
 
         // parse the data
 
-        for(long x = 0; x < display_width; x++)
+        for(long x = 0; x < DDSUserInterface_DisplayWidth; x++)
         {
             uint16_t data_offset  = x;
 
@@ -68,11 +65,11 @@ void DDSUserInterface_Init()
     } while (u8g2_NextPage(&u8g2));
 
 
-
+#if 0
     // for debug, print the data on the stdout
-    for(uint16_t y = 0; y<display_height; y++)
+    for(uint16_t y = 0; y < DDSUserInterface_DisplayHeight; y++)
     {
-        for(uint16_t x = 0; x<display_width; x++)
+        for(uint16_t x = 0; x < DDSUserInterface_DisplayWidth; x++)
         {
             switch(DDSUserInterface_DisplayBuffer[y][x])
             {
@@ -90,10 +87,11 @@ void DDSUserInterface_Init()
                     printf("E");
             }
 
-            if(x == (display_width - 1u))
+            if(x == (DDSUserInterface_DisplayWidth - 1u))
             {
                 printf("\n");
             }
         }
     }
+#endif    
 }
