@@ -119,7 +119,7 @@ int main(void)
   MX_TIM2_Init();
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
-  DDSBuisnessLogicWrapper_Init();
+  DDSBusinessLogicWrapper_Init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
