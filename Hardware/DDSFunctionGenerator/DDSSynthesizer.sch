@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:DDSFunctionGenerator-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -833,7 +832,7 @@ AR Path="/5DE663D6" Ref="C?"  Part="1"
 AR Path="/5DAEEEF4/5DE663D6" Ref="C56"  Part="1" 
 F 0 "C56" V 7402 3050 50  0000 C CNN
 F 1 "15p" V 7311 3050 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 7188 2900 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 7188 2900 50  0001 C CNN
 F 3 "~" H 7150 3050 50  0001 C CNN
 	1    7150 3050
 	0    -1   -1   0   
