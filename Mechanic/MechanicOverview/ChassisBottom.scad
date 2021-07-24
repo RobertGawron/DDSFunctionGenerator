@@ -89,5 +89,17 @@ module ChassisBottom(Height)
 
         // add mounting for top and bottom chassis
         InsertNutSockets(Height, true);
+
+                // add hole for USB socket
+        TopHassisUsbYOffset = -2.4; // TODO parametrize it
+        translate([PCB_X/2 + COMPONENT_TOLERANCE, 
+                    USB_Y,
+                    Height + TopHassisUsbYOffset])
+        {
+            rotate([90,0,90])
+            {
+                USBConnector();
+            }
+        }
     }
 }
