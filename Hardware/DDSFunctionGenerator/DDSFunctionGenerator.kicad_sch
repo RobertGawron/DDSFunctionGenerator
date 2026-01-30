@@ -1,0 +1,495 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "228dbee6-2b52-45b3-9920-387781bf9830")
+	(paper "A4")
+	(lib_symbols)
+	(polyline
+		(pts
+			(xy 127 81.28) (xy 127 87.63)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "104f80c0-ac5b-49b7-a517-5752fd183f6a")
+	)
+	(polyline
+		(pts
+			(xy 130.81 100.33) (xy 130.81 91.44)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "33b462f4-88e1-44c6-8108-782c83788fe6")
+	)
+	(polyline
+		(pts
+			(xy 100.33 100.33) (xy 130.81 100.33)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "3a9cab75-841f-46a3-97d7-19412d288721")
+	)
+	(polyline
+		(pts
+			(xy 129.54 76.2) (xy 129.54 87.63)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "4bb66d4b-ee3a-4522-be0b-967e409abd38")
+	)
+	(polyline
+		(pts
+			(xy 100.33 74.93) (xy 123.19 74.93)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "522a5141-8eea-407e-b63b-8b12fef14306")
+	)
+	(polyline
+		(pts
+			(xy 96.52 76.2) (xy 96.52 81.28)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "76c5f19c-6075-437c-93ea-2c73dbe22d71")
+	)
+	(polyline
+		(pts
+			(xy 133.35 81.28) (xy 133.35 87.63)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "7fb8089b-9d85-4e81-8a3c-9e20f4763149")
+	)
+	(polyline
+		(pts
+			(xy 96.52 81.28) (xy 127 81.28)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "80c53551-13e5-490f-8dae-e6ec9a87777b")
+	)
+	(polyline
+		(pts
+			(xy 123.19 88.9) (xy 100.33 88.9)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "8ce6d5cd-25d9-4fbe-8bc9-c26218666388")
+	)
+	(polyline
+		(pts
+			(xy 153.67 88.9) (xy 137.16 88.9)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "8e0eb992-5568-44f4-93c8-fdae677d1180")
+	)
+	(polyline
+		(pts
+			(xy 137.16 74.93) (xy 152.4 74.93)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "8f1740e5-3ef6-4db3-adfe-5c2ce25ed9a8")
+	)
+	(polyline
+		(pts
+			(xy 157.48 81.28) (xy 133.35 81.28)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "b81ef605-a8d5-4778-9b07-5a3595f839b0")
+	)
+	(polyline
+		(pts
+			(xy 157.48 76.2) (xy 157.48 81.28)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "c70f2cd9-0491-479c-83f4-e90f61e84392")
+	)
+	(polyline
+		(pts
+			(xy 130.81 76.2) (xy 129.54 76.2)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "f96ef382-e20e-4f77-a7bb-8a0a379ae7e2")
+	)
+	(sheet
+		(at 152.4 72.39)
+		(size 19.05 3.81)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "00000000-0000-0000-0000-00005da34623")
+		(property "Sheetname" "Attenuators"
+			(at 152.4 71.7545 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Attenuators.kicad_sch"
+			(at 152.4 76.7085 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "DDSFunctionGenerator"
+				(path "/228dbee6-2b52-45b3-9920-387781bf9830"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 87.63 72.39)
+		(size 12.7 3.81)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "00000000-0000-0000-0000-00005daeeef4")
+		(property "Sheetname" "DDSSynthesizer"
+			(at 87.63 71.7545 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "DDSSynthesizer.kicad_sch"
+			(at 87.63 76.7085 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "DDSFunctionGenerator"
+				(path "/228dbee6-2b52-45b3-9920-387781bf9830"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 123.19 72.39)
+		(size 13.97 3.81)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "00000000-0000-0000-0000-00005db2ed33")
+		(property "Sheetname" "Amplifier"
+			(at 123.19 71.7545 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Amplifier.kicad_sch"
+			(at 123.19 76.7085 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "DDSFunctionGenerator"
+				(path "/228dbee6-2b52-45b3-9920-387781bf9830"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 153.67 87.63)
+		(size 12.7 3.81)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "00000000-0000-0000-0000-00005dc4991c")
+		(property "Sheetname" "ADC"
+			(at 153.67 86.9945 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ADC.kicad_sch"
+			(at 153.67 91.9485 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "DDSFunctionGenerator"
+				(path "/228dbee6-2b52-45b3-9920-387781bf9830"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 124.46 87.63)
+		(size 12.7 3.81)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "00000000-0000-0000-0000-00005dd5c7f6")
+		(property "Sheetname" "Microcontroller"
+			(at 124.46 86.9945 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Microcontroller.kicad_sch"
+			(at 124.46 91.9485 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "DDSFunctionGenerator"
+				(path "/228dbee6-2b52-45b3-9920-387781bf9830"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 86.36 86.36)
+		(size 13.97 3.81)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "00000000-0000-0000-0000-00005dd5c870")
+		(property "Sheetname" "UserInterface"
+			(at 86.36 85.7245 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "UserInterface.kicad_sch"
+			(at 86.36 90.6785 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "DDSFunctionGenerator"
+				(path "/228dbee6-2b52-45b3-9920-387781bf9830"
+					(page "10")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 87.63 97.79)
+		(size 12.7 3.81)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "00000000-0000-0000-0000-00005dd5cd1d")
+		(property "Sheetname" "ComputerInterface"
+			(at 87.63 97.1545 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ComputerInterface.kicad_sch"
+			(at 87.63 102.1085 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "DDSFunctionGenerator"
+				(path "/228dbee6-2b52-45b3-9920-387781bf9830"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 133.35 109.22)
+		(size 15.24 3.81)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "00000000-0000-0000-0000-00005e09f41d")
+		(property "Sheetname" "PowerSupply"
+			(at 133.35 108.5845 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "PowerSupply.kicad_sch"
+			(at 133.35 113.5385 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "DDSFunctionGenerator"
+				(path "/228dbee6-2b52-45b3-9920-387781bf9830"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 165.1 109.22)
+		(size 12.7 3.81)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "00000000-0000-0000-0000-00005fd89a84")
+		(property "Sheetname" "Mechanic"
+			(at 165.1 108.5845 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Mechanic.kicad_sch"
+			(at 165.1 113.5385 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "DDSFunctionGenerator"
+				(path "/228dbee6-2b52-45b3-9920-387781bf9830"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
