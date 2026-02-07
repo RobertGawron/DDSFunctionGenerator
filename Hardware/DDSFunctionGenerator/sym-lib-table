@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name NumericallyControlledOscillator)(type Legacy)(uri ${KIPRJMOD}/NumericallyControlledOscillator.lib)(options "")(descr ""))
-)

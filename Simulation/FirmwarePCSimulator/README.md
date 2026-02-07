@@ -10,7 +10,7 @@ This project consists of two parts:
 
 ## Requirements
 
-- Intsall PyQt5
+- Install PyQt5
 
 ```pip install PyQt5```
 

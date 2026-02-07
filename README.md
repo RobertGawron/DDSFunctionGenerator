@@ -1,6 +1,7 @@
 # 6MHz DDS Function Generator
 
-![Documentation](https://github.com/RobertGawron/DDSFunctionGenerator/workflows/Documentation/badge.svg) ![Forth Tests](https://github.com/RobertGawron/DDSFunctionGenerator/workflows/Forth%20Tests/badge.svg)
+
+[![Component Tests](https://github.com/RobertGawron/DDSFunctionGenerator/workflows/Component%20Tests/badge.svg)](https://github.com/RobertGawron/DDSFunctionGenerator/actions?query=workflow%3A%22Component+Tests%22) [![Static Code Analysis](https://github.com/RobertGawron/DDSFunctionGenerator/workflows/Static%20Code%20Analysis/badge.svg)](https://github.com/RobertGawron/DDSFunctionGenerator/actions?query=workflow%3A%22Static+Code+Analysis%22)
 
 **This project is unfinished.**
 
@@ -12,7 +13,7 @@ Function generator is a laboratory device to generate various electric waveforms
 
 ## System architecture
 
-![architecture](https://raw.githubusercontent.com/RobertGawron/DDSFunctionGenerator/master/Documentation/Diagrams/ArchitectureOverview-1.png)
+<img src="./Documentation/Diagrams/ArchitectureOverview.svg"  width="100%">
 
 ## Hardware
 
@@ -20,4 +21,4 @@ Hardware was done using KiCAD.
 
 ## Software
 
-Buisness logic is implemented in Forth. HAL is done in C using CubeMX.
+Business logic will be implemented in Forth. HAL was generated in C using CubeMX.
